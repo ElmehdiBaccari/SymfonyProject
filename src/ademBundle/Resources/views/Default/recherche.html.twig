@@ -1,0 +1,127 @@
+
+{% block title %}
+    Liste de mes Annonces
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
+{% endblock %}
+
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><b>Mes Produits </b></h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <br>
+                    <a href="{{ path('statistique_produit')}}" class="btn btn-info">
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        Statistique sur mes Annonces
+                    </a>
+                    <a href="{{ path('ajouter_produit') }}" class="btn btn-success">
+                        <i class="icon-plus">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            &nbsp;Ajouter un produit
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-borderless">
+
+                <div class="tab-content" >
+                    <div class="tab-pane active" id="annonce" aria-expanded="true">
+                        <form method="POST">
+
+                            nomProduit<input type="text" name="nomProduit">
+
+
+                            <input type="submit" name="submit" value="recherche">
+
+
+                        </form>
+                        <table id="ProduitTab" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Nom_produit</th>
+                                <th>Type_produit</th>
+                                <th>Prix_produit</th>
+                                <th>Image_produit</th>
+                                <th>Quantite</th>
+                                <th>ay7aja</th>
+
+                            </tr>
+                            </thead>
+                            <thead>
+                            <tbody>
+                            {% for p in Produits %}
+                                <tr>
+                                    <td>{{ p.nomproduit}}</td>
+                                    <td>{{ p.typeproduit }} </td>
+                                    <td>{{ p.prixproduit }} </td>
+
+                                    <td style="width: 60px; padding:0px; text-align: center">
+                                        {% if p.imageproduit != '' %}
+                                            <img alt="User Pic" style="width:150px;"
+                                                 src="http:\\localhost\web_projet\web\Uploads\produit\{{ p.imageproduit }}"
+                                                 class="img-circle img-responsive">
+
+                                        {% endif %}
+                                    <td>{{ p.quantite }}</td>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('modifier_produit', { 'id_produit': p.id_produit }) }}"
+                                               data-toggle="tooltip" title="Editer user">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('supprimer_produit', { 'id_produit': p.id_produit}) }}"
+                                               data-toggle="tooltip" title="Supprimer Utilisateur">
+                                                <i class="fa  fa-trash"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('pdfpA') }}"
+                                               data-toggle="tooltip" title="Generate PDF">
+                                                <i class="fa  fa-trash"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{#{{ path('du_annonce_show', { 'id': annonce.id }) }}#}"
+                                               data-toggle="tooltip" title="show Annonce">
+                                                <i class="fa fa-binoculars"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+

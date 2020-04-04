@@ -1,0 +1,319 @@
+adem_homepage:
+    path:     /
+    defaults: { _controller: ademBundle:Default:index }
+
+list:
+    path:     /list
+    defaults: { _controller: ademBundle:User:list }
+
+_add:
+    path:     /Add
+    defaults: { _controller: ademBundle:User:Add }
+
+_delete_user:
+    path:     /Delete/{id}
+    defaults: { _controller: ademBundle:User:Delete }
+
+_update:
+    path:     /Update/{id}
+    defaults: { _controller: ademBundle:User:Update }
+
+ajouter_film:
+    path:     /ajouterFilm
+    defaults: { _controller: ademBundle:Film:ajouterFilm }
+
+afficher_film:
+    path:     /afficherFilm
+    defaults: { _controller: ademBundle:Film:afficherFilm }
+
+afficher_film_detail:
+    path:     /afficherFilmDetail/{id}
+    defaults: { _controller: ademBundle:Film:afficherFilmDetailFront }
+
+modifier_film:
+    path:     /modifierFilm/{id}
+    defaults: { _controller: ademBundle:Film:modifierFilm }
+
+supprimer_film:
+    path:     /supprimerFilm/{id}
+    defaults: { _controller: ademBundle:Film:supprimerFilm }
+
+ajouter_acteur:
+    path:     /ajouter_acteur
+    defaults: { _controller: ademBundle:acteur:ajouter_acteur }
+
+ajouter_realisation:
+    path:     /ajouter_realisation/{id}
+    defaults: { _controller: ademBundle:acteur:ajouter_realisation }
+afficher_realisation:
+    path:     /afficher_realisation
+    defaults: { _controller: ademBundle:acteur:afficher_realisation }
+supprimer_realisation:
+    path:     /supprimer_realisation/{id}
+    defaults: { _controller: ademBundle:acteur:supprimer_realisation }
+
+
+modifier_acteur:
+    path:     /modifier_acteur/{id}
+    defaults: { _controller: ademBundle:acteur:modifier_acteur }
+
+supprimer_acteur:
+    path:     /supprimer_acteur/{id}
+    defaults: { _controller: ademBundle:acteur:supprimer_acteur }
+
+supprimer_commentaire:
+    path:     /supprimer_commentaire/{id}
+    defaults: { _controller: ademBundle:Film:supprimerCommentaire }
+
+afficher_acteur:
+    path:     /afficher_acteur
+    defaults: { _controller: ademBundle:acteur:afficher_acteur }
+
+afficher_film_front:
+    path:     /afficherFilm_front
+    defaults: { _controller: ademBundle:Film:afficherFilmFront }
+
+ajouterlivre:
+    path:     /ajouterlivre
+    defaults: { _controller: ademBundle:livre:ajouterlivre }
+
+afficher_livre:
+    path:     /afficherLivre
+    defaults: { _controller: ademBundle:livre:afficherLivre }
+
+afficher_livre_front:
+    path:     /afficherlivre_front
+    defaults: { _controller: ademBundle:livre:afficherLivreFront }
+
+afficher_livre_detail:
+    path: /afficherLivreDetail/{id}
+    defaults: { _controller: ademBundle:livre:afficherLivreDetailFront }
+
+modifier_livre:
+    path:     /modifierLivre/{id_livre}
+    defaults: { _controller: ademBundle:livre:modifierLivre }
+
+supprimer_livre:
+    path:     /supprimerLivre/{id_livre}
+    defaults: { _controller: ademBundle:livre:supprimerLivre }
+statistique_livre:
+    path:     /statistique_livre
+    defaults: { _controller: ademBundle:livre:statistique_livre }
+mail:
+    path:     /repondrec/{mail}
+    defaults: { _controller: ademBundle:livre:Mail }
+
+ajouter_salle:
+    path:     /ajouter_Salle
+    defaults: { _controller: ademBundle:Salle:ajouter_Salle }
+
+modifier_salle:
+    path:     /modifier_Salle/{id}
+    defaults: { _controller: ademBundle:Salle:modifier_Salle }
+
+supprimer_salle:
+    path:     /supprimer_Salle/{id}
+    defaults: { _controller: ademBundle:Salle:supprimer_Salle }
+
+afficher_salle:
+    path:     /afficher_Salle
+    defaults: { _controller: ademBundle:Salle:afficher_Salle }
+
+afficher_salle_front:
+    path:     /afficher_Salle_front
+    defaults: { _controller: ademBundle:Salle:afficherSalleFront }
+
+
+pdfp:
+    path:     /pdfp
+    defaults: {_controller :  ademBundle:livre:afficherpdf}
+pdfpA:
+    path:     /pdfpA
+    defaults: {_controller :  ademBundle:livre:pdf}
+ajouter_collection:
+    path:     /ajouterCollection
+    defaults: { _controller: ademBundle:Collection:ajouterCollection }
+
+modifier_collection:
+    path:     /modifierCollection/{num_collection}
+    defaults: { _controller: ademBundle:Collection:modifierCollection }
+
+supprimer_collection:
+    path:     /supprimerCollection/{num_collection}
+    defaults: { _controller: ademBundle:Collection:supprimerCollection }
+
+afficher_collection:
+    path:     /afficherCollection
+    defaults: { _controller: ademBundle:Collection:afficherCollection }
+
+afficher_produit:
+    path:     /afficherProduit
+    defaults: { _controller: ademBundle:Produit:afficherProduit }
+update_qte:
+    path:     /updateqte/{id}
+    defaults: { _controller: ademBundle:Produit:updateQte }
+
+ajouter_produit:
+    path:     /ajouterProduit
+    defaults: { _controller: ademBundle:Produit:ajouterProduit }
+
+supprimer_produit:
+    path:     /supprimerProduit/{id_produit}
+    defaults: { _controller: ademBundle:Produit:supprimerProduit }
+
+modifier_produit:
+    path:     /modifierProduit/{id_produit}
+    defaults: { _controller: ademBundle:Produit:modifierProduit }
+
+statistique_produit:
+    path:     /statistique_produit
+    defaults: { _controller: ademBundle:Produit:statistique_produit }
+
+mailcollection:
+    path:     /repondrec
+    defaults: {_controller :  ademBundle:Collection:envoyerMail}
+
+pdfpr:
+    path:     /pdfpr
+    defaults: {_controller :  ademBundle:Produit:afficherpdf}
+pdfpApr:
+    path:     /pdfpApr
+    defaults: {_controller :  ademBundle:Produit:pdf}
+
+recherche:
+    path:     /recherche
+    defaults: { _controller: ademBundle:Produit:recherche }
+
+afficherCollectionFront:
+    path:     /affichercollection_front
+    defaults: { _controller: ademBundle:Collection:afficherCollectionFront }
+
+afficherProduitFront:
+    path:     /afficherproduit_front
+    defaults: { _controller: ademBundle:Produit:afficherProduitFront}
+
+afficherProduitdetail:
+    path:     /afficherproduit_detail/{id}
+    defaults: { _controller: ademBundle:Produit:afficherProduitDetailFront }
+
+ajouter_visite:
+    path:     /ajouter_visite
+    defaults: { _controller: ademBundle:Musee:ajouter_visite }
+
+modifier_visite:
+    path:     /modifier_visite/{id}
+    defaults: { _controller: ademBundle:Musee:modifier_visite }
+
+supprimer_visite:
+    path:     /supprimer_visite/{id}
+    defaults: { _controller: ademBundle:Musee:supprimer_visite }
+
+afficher_visite:
+    path:     /afficher_visite
+    defaults: { _controller: ademBundle:Musee:afficher_visite }
+
+formulairevisie:
+    path:     /formulairevisite
+    defaults: { _controller: ademBundle:Musee:index }
+
+SendMail:
+    path:     /SendMail
+    defaults: { _controller: ademBundle:Musee:sendMail }
+_ajouter_demande:
+    path:     /AjouterDemande/{id}
+    defaults: { _controller: ademBundle:Demande:AjouterDemande }
+
+_gerer_demande:
+    path:     /GererDemande
+    defaults: { _controller: ademBundle:Demande:GererDemande }
+
+_afficher_demande:
+    path:     /AfficherDemande
+    defaults: { _controller: ademBundle:Demande:AfficherDemande }
+ajouter_evenement:
+    path:     /ajouterEvenement
+    defaults: { _controller: ademBundle:Evenement:ajouterEvenement }
+
+modifier_evenement:
+    path:     /modifierEvenement/{idevent}
+    defaults: { _controller: ademBundle:Evenement:modifierEvenement }
+
+supprimer_evenement:
+    path:     /supprimerEvenement/{idevent}
+    defaults: { _controller: ademBundle:Evenement:supprimerEvenement }
+
+afficher_evenement:
+    path:     /afficherEvenement
+    defaults: { _controller: ademBundle:Evenement:afficherEvenement }
+
+ajouter_sponsor:
+    path:     /ajouter_Sponsor
+    defaults: { _controller: ademBundle:Sponsor:ajouter_Sponsor }
+
+modifier_sponsor:
+    path:     /modifier_Sponsor/{idsponsors}
+    defaults: { _controller: ademBundle:Sponsor:modifier_Sponsor }
+
+supprimer_sponsor:
+    path:     /supprimer_Sponsor/{idsponsors}
+    defaults: { _controller: ademBundle:Sponsor:supprimer_Sponsor }
+
+afficher_sponsor:
+    path:     /afficher_Sponsor
+    defaults: { _controller: ademBundle:Sponsor:afficher_Sponsor }
+
+ajouter_even_sponsor:
+    path:     /ajouter_evenSponsor
+    defaults: { _controller: ademBundle:EventSponsor:ajouter_evenSponsor }
+
+modifier_event_sponsor:
+    path:     /modifier_eventSponsor
+    defaults: { _controller: ademBundle:EventSponsor:modifier_eventSponsor }
+
+supprimer_event_sponsor:
+    path:     /supprimer_eventSponsor
+    defaults: { _controller: ademBundle:EventSponsor:supprimer_eventSponsor }
+
+afficher_event_sponsor:
+    path:     /afficher_eventSponsor
+    defaults: { _controller: ademBundle:EventSponsor:afficher_eventSponsor }
+
+afficherEvenementFront:
+    path:     /afficherEvenementFront
+    defaults: { _controller: ademBundle:Evenement:afficherEvenementFront}
+afficherEvenementDetail:
+    path:     /afficherEvenementDetail/{id}
+    defaults: { _controller: ademBundle:Evenement:afficherEvenementDetail}
+ajouter_sponsorisation:
+    path:     /ajouter_Sponsorisation/{idsponsors}
+    defaults: { _controller: ademBundle:Sponsor:ajouter_Sponsorisation}
+afficher_sponsorisation:
+    path:     /afficher_Sponsorisation
+    defaults: { _controller: ademBundle:Sponsor:afficher_Sponsorisation}
+supprimer_sponsorisation:
+    path:     /supprimer_Sponsorisation/{id}
+    defaults: { _controller: ademBundle:Sponsor:supprimer_Sponsorisation}
+ajouter_participation:
+    path:     /ajouter_participation/{id}
+    defaults: { _controller: ademBundle:Evenement:ajouter_participation}
+supprimer_participation:
+    path:     /supprimer_participation/{id}
+    defaults: { _controller: ademBundle:Evenement:supprimer_participation}
+chart:
+    path:     /stat
+    defaults: { _controller: ademBundle:emprunterLivre:stat }
+
+retourner_livre:
+    path:     /retourner_livre/{id_emprunt}
+    defaults: { _controller: ademBundle:emprunterLivre:retourner_livre }
+
+afficher_livre_emprunter:
+    path:     /afficher_livre_emprunter
+    defaults: { _controller: ademBundle:emprunterLivre:afficher_livre_emprunter }
+
+gerer_demande:
+    path:     /gerer_demande/{id}/{token}
+    defaults: { _controller: ademBundle:Demande:GererDemande }
+accueil:
+    path: /accueil
+    defaults: {_controller: ademBundle:livre:accueil}

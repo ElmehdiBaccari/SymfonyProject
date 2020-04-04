@@ -1,0 +1,174 @@
+{#{% extends '@adem/Default/dashboard.html.twig' %}
+
+{% block title %}Liste {% endblock %}
+
+{% block body %}
+<h1>Formulaire</h1>
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.ajouter) }}
+
+
+    <h1>Liste des personnes</h1>
+{% for p in personnes %}
+
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="http:\\localhost\image\{{ p.photo }}" alt="Card image cap"   height="100" width="100">
+        <div class="card-body">
+            <p class="card-text">
+                {{ p.nom }} {{ p.prenom }}
+                <a href="{{ path('_delete', { 'id': p.id }) }}" > Supprimer</a>
+            </p>
+        </div>
+    </div>
+    {{ form_row(form.Supprimer) }}
+    {% endfor %}
+
+
+{% endblock %}#}
+{% extends '@adem/Default/dashboard.html.twig' %}
+
+
+{% block title %}
+    Liste de mes Collections
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+        $(document).ready(function () {
+            $('#ColectionTab').DataTable();
+        });
+    </script>
+<script>
+        function SubmitMail(id) {
+            {{ dump("aa") }}
+            document.getElementById(sendemail).submit();
+        }
+
+    </script>
+
+
+
+
+
+
+{% endblock %}
+
+{% block body %}
+
+<div class="page-content-wrapper ">
+
+    <div class="container sm-gutter">
+        <br><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1><b>Mes Annonces </b></h1>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <br>
+
+                        <a href="{{ path('ajouter_visite') }}" class="btn btn-success">
+                            <i class="icon-plus">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                &nbsp;Ajouter une collection
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br><br><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-borderless">
+
+                    <div class="tab-content" >
+                        <div class="tab-pane active" id="annonce" aria-expanded="true">
+                            <table id="ColectionTab" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>nom</th>
+                                    <th>arrive</th>
+                                    <th>prenom</th>
+                                    <th>email</th>
+                                    <th>telephone</th>
+                                    <th>personne</th>
+                                    <th>fee</th>
+                                    <th>Operations</th>
+
+                                </tr>
+                                </thead>
+                                <thead>
+                                <tbody>
+                                {% for p in musee %}
+                                    <tr>
+                                        <td>{{ p.prenom}}</td>
+                                        <td>{{ p.arrive  |date("m/d/Y") }} </td>
+                                        <td>{{ p.prenom }}</td>
+                                        <td>{{ p.email}}</td>
+                                        <td>{{ p.telephone}} </td>
+                                        <td>{{ p.personne }}</td>
+                                        <td>{{ p.fee }}</td>
+
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm btn-group-horizontal">
+                                                <a class="btn btn-secondary"
+                                                   href="{{ path('modifier_visite', { 'id': p.id }) }}"
+                                                   data-toggle="tooltip" title="Editer user">
+                                                    <i class="fa fa-pen-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="btn-group btn-group-sm btn-group-horizontal">
+                                                <a class="btn btn-secondary"
+                                                   href="{{ path('supprimer_visite', { 'id': p.id}) }}"
+                                                   data-toggle="tooltip" title="Supprimer Utilisateur">
+                                                    <i class="fa  fa-trash"></i>
+                                                </a>
+                                            </div>
+                                            <div class="btn-group btn-group-sm btn-group-horizontal">
+                                                <a class="btn btn-secondary"
+                                                   href=""
+                                                   data-toggle="tooltip" title="show Annonce">
+                                                    <i class="fa fa-binoculars"></i>
+                                                </a>
+                                            </div>
+                                            <div class="btn-group btn-group-sm btn-group-horizontal">
+                                                <form id="sendemail" action="SendMail">
+                                                   <input name="email" value="{{ p.email }}"hidden>
+                                                    <input name="nom"value="{{ p.nom}}"hidden>
+                                                    <input name="date"value="{{ p.arrive  |date("m/d/Y") }}"hidden>
+                                                    <button type="submit" class="fa fa-envelope" data-toggle="tooltip" title="envoyer mail" style="height: 32px"></button>
+
+                                                </form>
+
+                                            </div>
+
+
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% endblock %}
+

@@ -1,0 +1,26 @@
+esprit_api_homepage:
+    path:     /
+    defaults: { _controller: EspritApiBundle:Default:index }
+all:
+    path:     /all
+    defaults: { _controller: EspritApiBundle:Task:all }
+
+find:
+    path:     /find
+    defaults: { _controller: EspritApiBundle:Task:find }
+
+new:
+    path:     /new
+    defaults: { _controller: EspritApiBundle:Task:new }
+
+livre:
+    path:     /livre
+    defaults: { _controller: EspritApiBundle:Task:livre }
+
+emprunt:
+    path:     /{idlivre}/{iduser}/{dateemprunt}/{dateretour}
+    defaults: { _controller: EspritApiBundle:Task:emprunt }
+
+empruntlv:
+    path:     /emlivre
+    defaults: { _controller: EspritApiBundle:Task:emlivre }

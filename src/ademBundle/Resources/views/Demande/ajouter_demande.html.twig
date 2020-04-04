@@ -1,0 +1,29 @@
+{% extends "@adem/Default/front.html.twig" %}
+{% block body %}
+<div class="modal-contente"><div class="modal-header bootstrap-dialog-draggable"><div class="bootstrap-dialog-header"><div class="bootstrap-dialog-close-button" style="display: block;"><button class="close">×</button></div><div class="bootstrap-dialog-title" id="510d13b7-bc58-42fc-b1ea-ade7d8838894_title">Formulaire de Demande d'utilisation de la salle {{ salle.nom }} </div></div></div><div class="modal-body"><div class="bootstrap-dialog-body"><div class="bootstrap-dialog-message">
+
+                <div class="wrapper">
+                    <div class="screen-loader text-center" style="display: none;">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </div>
+                    <div class="screen-form" style="">
+
+                        <h4>Date de demande</h4>
+                        {{ form_start(demandeform) }}
+                        {{ form_widget(demandeform.datedemande)}}
+
+                        <hr>
+
+                        <h4>Le besoin</h4>
+                        {{ form_widget(demandeform.besoin,{'attr': {'class': 'form-control textinput','rows':'7','placeholder':'Mentionez votre besoin ici ...','value':''}})}}
+
+                    </div>
+
+                </div>
+
+            </div></div></div><div class="modal-footer" style="display: block;"><div class="bootstrap-dialog-footer"><div class="bootstrap-dialog-footer-buttons">
+                <a href="{{ path('_ajouter_demande',{ 'id': salle.id}) }}"><button class="btn btn-primary " >Envoyer</button></a></div></div></div></div></div>
+{{ form_end(demandeform) }}
+
+
+{% endblock %}

@@ -1,0 +1,153 @@
+{#{% extends '@adem/Default/dashboard.html.twig' %}
+
+{% block title %}Liste {% endblock %}
+
+{% block body %}
+<h1>Formulaire</h1>
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.ajouter) }}
+
+
+    <h1>Liste des personnes</h1>
+{% for p in personnes %}
+
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="http:\\localhost\image\{{ p.photo }}" alt="Card image cap"   height="100" width="100">
+        <div class="card-body">
+            <p class="card-text">
+                {{ p.nom }} {{ p.prenom }}
+                <a href="{{ path('_delete', { 'id': p.id }) }}" > Supprimer</a>
+            </p>
+        </div>
+    </div>
+    {{ form_row(form.Supprimer) }}
+    {% endfor %}
+
+
+{% endblock %}#}
+{% extends '@adem/Default/dashboard.html.twig' %}
+
+
+
+{% block title %}
+    Liste des Salles
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $('#SalleTab').DataTable();
+        });
+    </script>
+
+
+
+
+
+
+{% endblock %}
+
+{% block body %}
+<div class="page-content-wrapper ">
+
+    <div class="container sm-gutter">
+        <br><br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><b>Mes Salles </b></h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <br>
+                    <a href="{#{{ path('statistique_livre') }}#}" class="btn btn-info">
+                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                        Statistique sur les Salles
+                    </a>
+                    <a href="{{ path('ajouter_salle') }}" class="btn btn-success">
+                        <i class="icon-plus">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            &nbsp;Ajouter une Salle
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br/><br/><br/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-borderless">
+
+                <div class="tab-content" >
+                    <div class="tab-pane active" id="annonce" aria-expanded="true">
+                        <table id="SalleTab" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>nom</th>
+                                <th>type</th>
+                                <th>nbrplace</th>
+                                <th>statut</th>
+                                <th>description</th>
+                                <th>disponibilite</th>
+                                <th>Image</th>
+                                <th>opérations</th>
+
+                            </tr>
+                            </thead>
+                            <thead>
+                            <tbody>
+                            {% for p in salles %}
+                                <tr>
+                                    <td>{{ p.nom }}</td>
+                                    <td>{{ p.type}}</td>
+                                    <td>{{ p.nbrplace}} </td>
+                                    <td>{{ p.statut}}</td>
+                                    <td>{{ p.description}}</td>
+                                    <td>{{ p.disponibilite}}</td>
+                                    <td style="width: 60px; padding:0px; text-align: center">
+                                        {% if p.photo != '' %}
+                                            <img alt="Livre Pic" style="width:150px;"
+                                                 src="http:\\localhost\web_projet\web\Uploads\salle\{{ p.photo}}"
+                                                 class="img-circle img-responsive">
+
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('modifier_salle', { 'id': p.id }) }}"
+                                               data-toggle="tooltip" title="Editer user">
+                                                <i class="fa fa-pen-square"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('supprimer_salle', { 'id': p.id }) }}"
+                                               data-toggle="tooltip" title="Supprimer Utilisateur">
+                                                <i class="fa  fa-trash"></i>
+                                            </a>
+                                        </div>
+
+
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,243 @@
+{% extends '@adem/Default/front.html.twig' %}
+
+{% block body %}
+
+
+
+
+    <link href="{{ asset('assets/front/csssalle/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/csssalle/pe-icon-7-stroke.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/csssalle/rotating-card.css') }}" rel="stylesheet">
+
+
+
+    <!--     <link href='css/ct-navbar.css' rel='stylesheet' /> -->
+
+
+
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <h1 class="title">
+            Liste des salle de la cité de culture
+
+        </h1>
+        <br><br>
+        <div class="col-sm-10 col-sm-offset-1">
+
+            {% for s in salle %}
+            <div class="col-md-4 col-sm-6">
+                <div class="card-container manual-flip">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <img src="http:\\localhost\web_projet\web\Uploads\salle\{{ s.photo }}" width="360" height="200"/>
+                            </div>
+
+                            <div class="content">
+                                <div class="main">
+                                    <h3 class="name">{{ s.nom }}</h3>
+                                    <button class="btn btn-primary" onclick="rotateCard(this)">
+                                        Plus d'infos
+                                    </button>
+                                   </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                        <div class="back">
+                            <div class="header">
+                                <h5 class="motto">{{ s.nom }}</h5>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <br>
+                                    <p class="text-left">Type : {{ s.type }}</p>
+                                    <p class="text-left">Nombre de places : {{ s.nbrplace }}</p>
+                                    <p class="text-left">Description : {{ s.description }}</p>
+                                    <a href=""><button class="btn btn-primary" title="Programme" >Programme</button></a>
+                                    {% if app.user %}
+                                    <a href="{{ path('_ajouter_demande',{'id':s.id}) }}"><button  class="btn btn-primary" title="Demande" >Demander Salle</button></a>
+                                    {% else %}
+                                    <a href="{{ path('fos_user_security_login') }}"><button class="btn btn-primary ">Demander Salle</button></a>
+                                    {% endif %}
+
+
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-primary" rel="tooltip" title="retour" onclick="rotateCard(this)">
+                                     retour
+                                </button>
+                                <div class="social-links text-center">
+
+                                </div>
+                            </div>
+                        </div> <!-- end back panel -->
+                    </div> <!-- end card -->
+                </div> <!-- end card-container -->
+            </div> <!-- end col sm 3 -->
+
+                <div id="{{ s.id }}" class="modale bootstrap-dialog type-primary fade size-normal in">
+                    <div class="modal-contente"><div class="modal-header bootstrap-dialog-draggable"><div class="bootstrap-dialog-header"><div class="bootstrap-dialog-close-button" style="display: block;"><button class="close{{ s.id }}">×</button></div><div class="bootstrap-dialog-title" id="510d13b7-bc58-42fc-b1ea-ade7d8838894_title">Formulaire de Demande d'utilisation de la salle {{ s.nom }} </div></div></div><div class="modal-body"><div class="bootstrap-dialog-body"><div class="bootstrap-dialog-message">
+
+                                    <div class="wrapper">
+                                        <div class="screen-loader text-center" style="display: none;">
+                                            <i class="fa fa-cog fa-spin"></i>
+                                        </div>
+                                        <div class="screen-form" style="">
+
+                                            <h4>Date de demande</h4>
+                                            {{ form_start(demandeform,{'attr': {'id': s.id}}) }}
+                                            {{ form_widget(demandeform.datedemande)}}
+
+                                            <hr>
+
+                                            <h4>Le besoin</h4>
+                                            {{ form_widget(demandeform.besoin)}}
+
+                                        </div>
+
+                                    </div>
+
+                                </div></div></div><div class="modal-footer" style="display: block;"><div class="bootstrap-dialog-footer"><div class="bootstrap-dialog-footer-buttons">
+                                    <a href=""><button class="btn btn-primary " >Envoyer</button></a></div></div></div></div></div>
+                {{ form_end(demandeform) }}
+
+
+
+                <script>
+
+                    // Get the modal
+                    var modal{{ s.id }} = document.getElementById('{{ s.id }}');
+
+                    // Get the button that opens the modal
+                    var btn{{ s.id }} = document.getElementById("myBtn{{ s.id }}");
+
+                    // Get the <span> element that closes the modal
+                    var span{{ s.id }} = document.getElementsByClassName("close{{ s.id }}")[0];
+
+                    // When the user clicks on the button, open the modal
+                    btn{{ s.id }}.onclick = function() {
+                        modal{{ s.id }}.style.display = "block";
+
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span{{ s.id }}.onclick = function() {
+                        modal{{ s.id }}.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal{{ s.id }}.style.display = "none";
+                        }
+                    }
+
+
+                </script>
+
+
+            {% endfor %}
+
+
+        </div> <!-- end col-sm-10 -->
+
+    </div> <!-- end row -->
+    <div class="space-200"></div>
+</div>
+
+
+
+<script src="{{ asset('assets/front/csssalle/jquery-1.10.2.js') }}" type="text/javascript"></script>
+
+<script src="{{ asset('assets/front/csssalle/bootstrap.min.js') }}" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    $().ready(function(){
+        $('[rel="tooltip"]').tooltip();
+
+        $('a.scroll-down').click(function(e){
+            e.preventDefault();
+            scroll_target = $(this).data('href');
+            $('html, body').animate({
+                scrollTop: $(scroll_target).offset().top - 60
+            }, 1000);
+        });
+
+    });
+
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+
+
+</script>
+
+    <link href="{{ asset('assets/front/include.css') }}" rel="stylesheet">
+
+
+
+
+    <style>
+
+        /* The Modal (background) */
+        .modale {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-contente {
+            background-color: #fefefe;
+            margin: 10% auto; /* 15% from the top and centered */
+
+            padding: 0px;
+            border: 1px solid #888;
+            width: 40%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+
+
+
+
+{% endblock %}

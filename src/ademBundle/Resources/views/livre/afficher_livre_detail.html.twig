@@ -1,0 +1,2912 @@
+{% extends '@adem/Default/front.html.twig' %}
+
+
+{% block body %}
+    <link href="{{ asset('assets/front/include.css?v113.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="https:////ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <div class="row">
+        <div class="col-sm-12 site-content-container-inner">
+
+
+            <link rel="stylesheet" type="text/css" href="/version/v2/global/css/view.book.css?v=5">
+
+            <!--ne pas mettre d'id sur ce main[itemscope], sinon il semble que ggl prenne ça pour lui.. -->
+            <main class="view fmdesign" data-views="book" data-id="2053354" itemscope="" itemtype="http://schema.org/Book">
+                <!--<button class="ggfdp sur-starter" data-only-view="1" data-view-start="recorded" data-idbook="2053354"></button>-->
+
+
+
+
+
+
+                <div class="row fm-main-row">
+
+
+                    <div class="col-sm-2 fm-menu-left">
+                        <div class="menu-reference-width"></div>
+
+
+                    </div>
+
+
+
+
+
+                    <div class="col-sm-6 fm-respect-menu fm-mainbloc-wrapper">
+
+
+
+
+
+                        <style type="text/css">
+
+                            .fmdesign .covers-thumbs{
+                                margin-bottom: 15px;
+
+                            }
+                            .fmdesign .covers-thumbs ul{
+                                margin: 0;
+                                margin-top: 5px;
+                            }
+                            .fmdesign .covers-thumbs li{
+                                float: left;
+                                margin-right: 5px;
+                            }
+                            .fmdesign .book-thumb{
+                                display: inline-block;
+                                width: 33px;
+                            }
+                            .fmdesign .book-thumb img{
+                                width: 100%;
+                            }
+
+                            .fmdesign .main-cover{
+
+                                /*-webkit-filter: url(#standard_sharpen18);
+        filter: url(#standard_sharpen18);
+        */
+                            }
+
+
+                            .fmdesign .main-bloc-right{
+                                margin-bottom: 20px;
+                            }
+
+                            @media (max-width: 767px) {
+                                .cover-column{
+                                    padding-right: 0px;
+                                }
+
+                            }
+
+
+
+                        </style>
+
+
+                        <h1 itemprop="name">{{ livre.titreLivre}}</h1>
+
+
+
+                        <div class="row main-bloc">
+
+
+                            <div class="col-xs-7 col-sm-7 col-lg-6 cover-column">
+
+                                <a title="Toutes les couvertures du livre : Bossman" href="/bossman_02053354/covers" class="main-cover shadow4">
+                                    <img alt="Couverture du livre : Bossman" class="max_width " itemprop="image" src="http:\\localhost\web_projet\web\Uploads\livre\{{ livre.image }}"   width="300" height="60">
+                                </a>
+
+
+
+                            </div>
+
+                            <div class="col-xs-5 col-sm-5 col-lg-6 ">
+                                <div class="main-bloc-right">
+                                    <h3>Auteur:  <h5>{{ livre.auteur}} </h5></h3>
+                                </div>
+
+
+
+
+
+                                <div class="main-bloc-right hidden-xs row-buylinks ">
+                                    <h3>Categorie :  <h5>{{ livre.categorieLivre}} </h5></h3>
+
+                                    <h3>Emprunt de livre </h3>
+
+                                    {%  if app.user %}
+                                    {%  if emprunt %}
+                                        {% for e in emprunt  %}
+                                    {%  if e.id_livre.id_livre==livre.id_livre and e.id_user.id==app.user.id %}
+                                        Livre Emprunté , priére de le retourner avant {{ e.d_retour | date("d/M/y") }} .
+                                    {% endif %}
+                                        {% endfor %}
+                                    {% elseif livre.qteLivre ==0  %}
+                                        <h5>Ce livre n'est pas disponible pour emprunter .</h5>
+                                    {% else  %}
+                                        <button id="myBtn" class="btn btn-primary ">Emprunter livre</button>
+
+                                    {% endif %}
+
+
+                                    {% else %}
+                                        <h5>Connectez pour emprunter ce livre :</h5>
+                                        <a href="{{ path('fos_user_security_login') }}"><button class="btn btn-primary ">Connection</button></a>
+                                    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+                                <div class="main-bloc-right hidden-xs row-buylinks ">
+                                    {% if app.user %}
+
+                                        {#{% if rating %}
+                                            {% for r in rating %}
+                                                <h3>votre note :</h3>
+                                                {{	r.rating |rating }}
+                                            {% endfor %}
+                                        {% else %}
+                                            <h3>Noter livre :</h3>
+                                            #}{#{{ 0|rating }}#}{#
+                                            {{ form_start(formrate,{'attr': {'id': 'form_rating'}}) }}
+                                            {{ form_end(formrate) }}
+                                        {% endif %}#}
+                                    {% endif %}
+
+
+
+
+                                    {#	<a target="_blank" href="/modules/buylink_redirect.php?idstore=2&amp;idbook=2053354&amp;state=0&amp;context=bookpage" class="buylink amazon " data-namestore="amazon" data-country="FR" data-state="old" data-hasprice="1">
+                                            <span class="price">10.16€</span>
+
+                                            <span class="brand"><small class="text-one-line">Amazon
+                        </small></span>
+                                        </a>#}
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div><!--./row.main-bloc-->
+
+
+                        <style>
+                            .mobile-buylinks{
+                                margin-top: 10px;
+                            }
+                            .mobile-buylinks .brand small{
+                                display: inline-block;
+                            }
+                            .mobile-buylinks .buylink {
+                                padding: 5px 5px;
+                            }
+
+                            .row.mobile-buylinks{
+                                margin-left: -5px;
+                                margin-right: -5px;
+                            }
+
+                            .mobile-buylinks .col-xs-4, .mobile-buylinks .col-xs-12{
+                                padding-left: 10px;
+                                padding-right: 10px;
+                            }
+                        </style>
+
+
+
+
+                        <style>
+
+                            .fm-serie-wrapper{
+
+                                margin-top: 30px;
+                                margin-bottom: 30px;
+                            }
+
+                            .fm-serie-thumb-nav{
+                                text-align: center;
+                                display: block;
+                            }
+                            .fm-serie-thumb-nav .imgwrap{
+                                margin:auto;
+                                display: block;
+
+                                margin-top: 5px;
+
+                                width: 66px;
+                                width: 50px;
+
+                            }
+                            .fm-serie-thumb-nav img{
+                                width: 100%;
+                            }
+
+                            @media (max-width: 767px) {
+                                .fm-serie-wrapper{
+                                    border-top:1px solid #8e7674;
+                                    /*border-bottom:1px solid #8e7674;*/
+                                    margin-top:15px;
+                                    padding-top:15px;
+                                    /*
+                margin-bottom: 15px;
+                padding-bottom: 15px;*/
+                                }
+                            }
+
+                        </style>
+
+
+
+
+                        <div class="visible-xs">
+                            <hr>
+
+
+                            <style>
+
+                                .panel-sur .wrap{
+                                    margin-bottom: 15px;
+                                }
+
+                                .panel-sur .title{
+                                    font-weight: bold;
+                                }
+
+                                .panel-sur .data{
+                                    margin-left: 15px;
+                                }
+
+                                .panel-sur .data-missing{
+                                    display: inline;
+                                    padding: .2em .6em .3em;
+                                    font-size: 75%;
+                                    /*font-weight: bold;*/
+                                    line-height: 1;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    white-space: nowrap;
+                                    vertical-align: baseline;
+                                    border-radius: .25em;
+
+                                    /*background-color: #d9534f;*/
+                                    background-color: #B25757;
+                                    border-color: #A44C4C;
+                                }
+
+
+                                .panel-sur .action{
+                                    margin-left: 15px;
+                                    float: right;
+                                    width: 40%;
+                                }
+
+
+
+                                .panel-biblio-envies{
+                                    border-color: #64AD9A;
+                                }
+                                .panel-biblio-envies .panel-heading{
+                                    background-color: #64AD9A;
+                                    color: #FFFFFF;
+                                }
+
+
+                                .panel-biblio-or{
+                                    border-color: #C6A233;
+                                }
+                                .panel-biblio-or .panel-heading{
+                                    background-color: #C6A233;
+                                    color: #FFFFFF;
+                                }
+
+
+
+                                .panel-sur .panel-heading{
+                                    display: none;
+                                }
+
+
+                                /*panel-biblio-or*/
+                            </style>
+
+                            <div class="SURDashboard connected-yes" style="visibility: visible;"><div class="panel panel-default panel-sur"><div class="panel-heading"><h3 class="panel-title text-center"></h3></div> <div class="panel-body"><section><article><a data-view-start="addbook" data-idbook="2053354" href="#" class="btn btn-lg btn-block btn-primary sur-starter"><i class="fa fa-plus-square  pull-left"></i> Ajouter à ma bibliothèque
+                                                </a></article></section></div></div></div>
+
+                            <hr>
+                        </div>
+
+
+                        <!--description goes here-->
+
+
+
+                        <div class="panel panel-default extrait-impact usercomment frontbook-description">
+
+
+
+
+                            <div class="panel-body">
+
+
+
+
+
+
+
+
+
+                                <span class="actual-text"><p><span class=""><h3>Description :</h3></span><p>{{ livre.descriptionLivre }}</p></span>
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                        <!--center column-->
+
+
+                        <div class="middle-column-continued">
+
+                            <div class=" fm-figures-wrapper">
+
+                                <!--action-bloc.html.twig-->
+
+                                <style type="text/css">
+
+                                    .panel.panel-actions .panel-body{
+                                        /*
+        padding-left: 0;
+        padding-right: 0;
+        */
+
+
+                                    }
+                                    .action-main .fa{
+                                        font-size: 1.3em;
+                                    }
+
+
+                                    .little-actions{
+                                        margin-top: 15px;
+                                    }
+
+                                    .badgebiblio.badgebiblio-md{
+                                        min-width: 85px;
+                                    }
+
+                                    .panel-actions .badgebiblio.badge-inlist{
+                                        text-transform: capitalize;
+
+                                        padding: 6px 12px;
+                                        font-size: 14px;
+                                        line-height: 1.42857143;
+                                        display: block;
+                                        border-radius: 4px;
+                                    }
+
+                                    @media (min-width: 992px){
+                                        .little-actions{
+                                            text-align: center;
+                                        }
+                                        .little-actions .table{
+                                            text-align: left;
+                                        }
+                                    }
+
+                                </style>
+
+
+                                <!--./.panel-->
+
+
+                            </div>
+                            <!--
+    <div class="text-center dfp-pave mobile" style="margin-bottom:20px">
+        <div id='div-gpt-ad-1530564779324-0'></div>
+    </div>
+    -->
+
+
+
+
+
+
+
+
+
+
+
+                            <div class=" fm-bandeannonce-wrapper">
+
+                            </div>
+
+
+
+
+                            <a name="best_comments"></a>
+
+
+
+
+
+
+                            <hr>
+
+
+
+
+
+
+
+                            <!--
+                            <div class=" fm-description-wrapper" style="margin-bottom:15px">
+
+                                                                {% if app.user %}
+                                                                    <div class=" fm-description-wrapper " style="margin-bottom:15px">
+                                                                        <a name="newcomm"></a>
+
+                                                                        <h2 class="middle-section">Ajoutez votre commentaire</h2>
+
+                                                                        <div class="panel panel-crimson  moduleAdd moduleAddText" data-entity="book" data-entity-id="2886994" data-type="BookCommentaire" data-injectinside=".book-space-new-comment" data-appendmode="">
+
+                                                                            <div class="panel-heading">
+                                                                                <h3 class="panel-title text-center">Ajoutez votre commentaire</h3>
+                                                                            </div>
+
+
+
+                                                                            <div class="panel-body">
+                                                                           </div>
+
+                                                                            <div class="panel-footer text-center">
+
+                                                                                <div class="show-when-saving text-center">
+                                                                                    <button class="btn btn-crimson"><i class="fa fa-cog fa-spin fa-2x"></i></button>
+                                                                                </div>
+
+                                                                                <div class="hide-when-saving">
+
+                                                                                    <button class="btn btn-crimson button-validate pull-right" type="submit"><i class="fa fa-comment" aria-hidden="true"></i> Ajouter</button>
+                                                                                </div>
+
+                                                                                <div class="clearfix"></div>
+                                                                            </div>
+                                                                        </div>	</div>
+                                                                {% endif %}
+                                                                <a name="recentcomms"></a>
+
+
+                                                                    <h2 class="middle-section">Commentaires Récents</h2>
+
+                                                                    <h2 class="middle-section">Pas de commentaires pour ce livre </h2>
+
+
+
+
+                                                                <div class="front-comment-wrapper">
+                                                                    <div class="book-space-new-comment"></div>
+
+
+
+                                                                            <div>
+                                                                                <div class="panel panel-default extrait-impact usercomment ">
+
+
+                                                                                    <div class="panel-heading">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <span class="text_comment">Commentaire ajouté le </span>
+                                                                                            </div>
+
+                                                                                            <div class="col-sm-12 text-right">
+                                                                                                <small>
+                                                                                                    <a href="/bossman_02053354">Bossman</a> de <a href="/auteur/vi-keeland">Vi Keeland</a>
+                                                                                                </small>
+                                                                                            </div>
+
+                                                                                        </div>
+
+                                                                                    </div>
+
+                                                                                    <div class="panel-body">
+
+
+
+                                                                                        <div class="text-body js-readableMore  usercomment">
+
+
+                                                                                            <div class="usercomment_square">
+                                                                                                <a class="usercommentavatar" href="/dardoura_22729474" title="Dardoura"><img class="shadow4   lazyloaded" data-src="https://cdn1.booknode.com/avatarpic/std/sa.php?s=f&amp;w=60&amp;h=60" src="https://cdn1.booknode.com/avatarpic/std/sa.php?s=f&amp;w=60&amp;h=60"></a>
+
+
+                                                                                            </div>
+
+
+
+                                                                                            <span class="actual-text"><p></p></span>
+
+                                                                                            <a href="javascript:void(0)" class="btn btn-info readReadableMore">Afficher en entier</a>
+
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="panel-footer">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12 text-right">
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                </div>			</div>
+
+                                </div>
+
+
+
+
+                            </div>
+                             -->
+
+                            <hr class="visible-xs">
+
+
+                        </div><!--./row-->
+
+
+                    </div>
+
+
+
+
+                    <!--right column-->
+                    <div class="col-xs-12 col-sm-4 fm-right-column fm-side-col xs-min-padding">
+
+                        <div class="fm-right-box fm-side-col hidden-xs">
+
+
+                            <style>
+
+                                .panel-sur .wrap{
+                                    margin-bottom: 15px;
+                                }
+
+                                .panel-sur .title{
+                                    font-weight: bold;
+                                }
+
+                                .panel-sur .data{
+                                    margin-left: 15px;
+                                }
+
+                                .panel-sur .data-missing{
+                                    display: inline;
+                                    padding: .2em .6em .3em;
+                                    font-size: 75%;
+                                    /*font-weight: bold;*/
+                                    line-height: 1;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    white-space: nowrap;
+                                    vertical-align: baseline;
+                                    border-radius: .25em;
+
+                                    /*background-color: #d9534f;*/
+                                    background-color: #B25757;
+                                    border-color: #A44C4C;
+                                }
+
+
+                                .panel-sur .action{
+                                    margin-left: 15px;
+                                    float: right;
+                                    width: 40%;
+                                }
+
+
+
+                                .panel-biblio-envies{
+                                    border-color: #64AD9A;
+                                }
+                                .panel-biblio-envies .panel-heading{
+                                    background-color: #64AD9A;
+                                    color: #FFFFFF;
+                                }
+
+
+                                .panel-biblio-or{
+                                    border-color: #C6A233;
+                                }
+                                .panel-biblio-or .panel-heading{
+                                    background-color: #C6A233;
+                                    color: #FFFFFF;
+                                }
+
+
+
+                                .panel-sur .panel-heading{
+                                    display: none;
+                                }
+
+
+                                /*panel-biblio-or*/
+                            </style>
+
+                            <div class="SURDashboard connected-yes" style="visibility: visible;"><div class="panel panel-default panel-sur"><div class="panel-heading"><h3 class="panel-title text-center"></h3></div> <div class="panel-body"><section><article><a data-view-start="addbook" data-idbook="2053354" href="#" class="btn btn-lg btn-block btn-primary sur-starter"><i class="fa fa-plus-square  pull-left"></i> Ajouter à ma bibliothèque
+                                                </a></article></section></div></div></div>
+
+                        </div>
+
+
+                        <div class="fm-right-box fm-side-col">
+
+                            <style type="text/css">
+                                .panel-highlite-datesortie .panel-body h3{
+                                    margin-top: 5px;
+                                }
+
+                                .date_text_over{
+                                    position: absolute;
+                                }
+
+                            </style>
+
+                            <div class="panel panel-info panel-index panel-highlite-datesortie">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title text-center">Date d'édition</h3>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-xs-8">
+
+
+
+                                            <h3>Première publication </h3>
+
+                                             le {{ livre.dateEdition|date("d/m/Y") }}
+                                            Dans cité de la culture
+
+
+
+
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <!--http://editor.method.ac/-->
+
+
+                                            <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <title>background</title>
+                                                    <rect fill="none" id="canvas_background" height="3.504702" width="3.504702" y="-1" x="-1"></rect>
+                                                </g>
+
+                                                <g>
+                                                    <title>Layer 1</title>
+                                                    <g id="svg_1">
+                                                        <path id="svg_2" fill="#bdc3c7" d="m5,3.99998c-1.1046,0 -2,0.9 -2,2l0,14c0,1.1 0.8954,2 2,2l6,0l2,0l6,0c1.105,0 2,-0.9 2,-2l0,-14c0,-1.1 -0.895,-2 -2,-2l-6,0l-2,0l-6,0z"></path>
+                                                        <path id="svg_3" fill="#ecf0f1" d="m5,3c-1.1046,0 -2,0.8954 -2,2l0,14c0,1.105 0.8954,2 2,2l6,0l2,0l6,0c1.105,0 2,-0.895 2,-2l0,-14c0,-1.1046 -0.895,-2 -2,-2l-6,0l-2,0l-6,0z"></path>
+                                                        <path id="svg_4" fill="#e74c3c" d="m5,3c-1.1046,0 -2,0.8954 -2,2l0,3l0,1l18,0l0,-1l0,-3c0,-1.1046 -0.895,-2 -2,-2l-6,0l-2,0l-6,0z"></path>
+                                                        <path id="svg_5" fill="#c0392b" d="m7.5,5.5a1.5,1.5 0 1 1 -3,0a1.5,1.5 0 1 1 3,0z"></path>
+                                                        <path id="svg_6" fill="#bdc3c7" d="m6,1c-0.5523,0 -1,0.4477 -1,1l0,3c0,0.5523 0.4477,1 1,1s1,-0.4477 1,-1l0,-3c0,-0.5523 -0.4477,-1 -1,-1z"></path>
+                                                        <path id="svg_7" fill="#c0392b" d="m19.5,5.5a1.5,1.5 0 1 1 -3,0a1.5,1.5 0 1 1 3,0z"></path>
+                                                        <g id="svg_8" fill="#bdc3c7">
+                                                            <path id="svg_9" d="m18,0.99998c-0.552,0 -1,0.4 -1,1l0,3c0,0.5 0.448,1 1,1s1,-0.5 1,-1l0,-3c0,-0.6 -0.448,-1 -1,-1z"></path>
+                                                        </g>
+                                                    </g>
+
+                                                    <text font-weight="normal" stroke="null" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="6" id="svg_10" x="12" y="14.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">{{  date(livre.dateEdition) | date('d')}}</text>
+
+
+                                                    <text stroke="null" x="12" y="19" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="4" id="svg_11" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">
+
+                                                        {{  date(livre.dateEdition) | date('M')}}
+
+
+                                                    </text>
+                                                </g>
+                                            </svg>
+
+                                            <!--<img  src="/version/v2/book/pics/calendar-clear.svg" class="max_width" width="100%">-->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="clearfix"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="panel-publicitaire-right-lower hidden">
+
+                            <div class="panel panel-info  panel-index ">
+                                <!--
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">Annonce publicitaire</h3>
+            </div> -->
+                                <div class="panel-body text-center panel-publicitaire-content">
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="panel-book-sponso"></div>
+
+
+
+
+
+                        <div class="fm-right-box fm-right-box fm-side-col vos_favoris_lont_en_biblio hidden">
+
+
+                            <style type="text/css">
+                                .vos_favoris_lont_en_biblio .user_fiche{
+                                    margin-bottom: 30px;
+                                    font-size: 12px;
+                                }
+
+                                .vos_favoris_lont_en_biblio .user_fiche .username{
+
+                                    font-size: 11px;
+                                }
+
+
+
+                                .vos_favoris_lont_en_biblio .panel-main-body{
+
+
+                                    height: 360px;
+                                    overflow: auto;
+                                    overflow-x: hidden;
+                                    overflow-y: auto;
+                                    -webkit-overflow-scrolling: touch;
+                                    position: relative;
+
+
+                                }
+
+
+
+                                @media (max-width: 767px){
+
+
+                                    .vos_favoris_lont_en_biblio .panel-fiche{
+                                        clear:none;
+                                        margin-bottom: 0;
+
+                                    }
+
+
+                                    .vos_favoris_lont_en_biblio .panel-main-body{
+                                        height: 135px;
+                                        overflow: auto;
+                                        -webkit-overflow-scrolling: touch;
+                                    }
+
+
+                                    .vos_favoris_lont_en_biblio .user_list{
+                                        margin:0;
+                                        padding:0;
+                                        height:100%;
+                                        width: 2000px;
+                                    }
+
+
+                                    .vos_favoris_lont_en_biblio .user_fiche{
+                                        width: 90px;
+                                        height:100%;
+                                        float:left;
+                                        /*margin-right:10px;*/
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+
+
+                                }
+
+
+                            </style>
+
+
+                            <div class="panel panel-info panel-index ">
+
+                                <div class="panel-heading">
+                                    <h3 class="panel-title text-center">Vos favoris l'ont en bibliothèque</h3>
+                                </div>
+
+                                <div class="panel-body panel-main-body">
+
+                                    <div class="user_list">
+                                        [#user]
+                                        <div class="col-xs-4 text-center user_fiche">
+                                            <a href="[userhref]"><img data-src="[usericon60square]" class="lazyload shadow4  max_width"></a>
+                                            <div class="text-one-line username"><a href="[userhref]">[username]</a></div>
+                                            <div class="badgebiblio badgebiblio-[inlistbadge_class]">[inlistname]</div>
+                                        </div>
+                                        [/user]
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+
+
+
+            </main>
+
+
+
+
+            <!--
+<script type="text/javascript" src="/version/v2/global/lib/vendors/vuejs/vue.2.2.1.js"></script>
+-->
+
+
+            <style type="text/css">
+
+                @media (min-width: 768px) {
+                    .sur-dialog .modal-lg {
+                        width: 90%;
+                        max-width:1200px;
+                    }
+
+                    .sur-dialog .modal-dialog {
+                        /*width: 100%;*/
+                        height: 90%;
+                        /*margin: 0;
+            padding: 0;*/
+                    }
+
+                    .sur-dialog .modal-content {
+                        height: auto;
+                        min-height: 100%;
+                        /*border-radius: 0;*/
+                    }
+
+                }
+
+
+                .sur-dialog .modal-body{
+                    padding-top: 0
+                }
+
+                .sur-dialog .modal-header{
+                    padding: 6px 15px 3px 15px;
+                }
+                .sur-dialog h3{
+                    margin-top: 10px;
+                }
+
+                .sur-slide-fade-active, .list-leave-active {
+                    transition: all 5s;
+                }
+                .sur-slide-fade, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                .no-mode-translate-fade-enter-active, .no-mode-translate-fade-leave-active {
+                    transition: all .5s;
+                }
+                .no-mode-translate-fade-enter, .no-mode-translate-fade-leave-active {
+                    opacity: 0;
+                }
+                .no-mode-translate-fade-enter {
+                    transform: translateX(31px);
+                }
+                .no-mode-translate-fade-leave-active {
+                    transform: translateX(-31px);
+                }
+
+                .img-hor {
+                    -moz-transform: scaleX(-1);
+                    -o-transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                    filter: FlipH;
+                    -ms-filter: "FlipH";
+                }
+
+
+                .well.well-success{
+                    background-color: #dff0d8;
+                    color: #3c763d;
+                    font-size: 130%;
+                }
+
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--SUR CSS-->
+            <style type="text/css">
+                .sur-component-addbook .add-to-list, .sur-component-addbook .add-to-group {
+                    background:white;
+                    border:transparent 6px solid;
+                    white-space: normal;
+                }
+
+            </style>
+
+            <style type="text/css">
+                .well-arrow{
+                    position: relative;
+                }
+
+                .well-arrow > .arrow,
+                .well-arrow > .arrow:after {
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent;
+                    border-style: solid;
+                }
+                .well-arrow > .arrow {
+                    border-width: 11px;
+                }
+                .well-arrow > .arrow:after {
+                    content: "";
+                    border-width: 10px;
+                }
+
+                .well-arrow.top > .arrow {
+                    bottom: -11px;
+                    left: 50%;
+                    margin-left: -11px;
+                    border-top-color: #999;
+                    border-top-color: rgba(0, 0, 0, .25);
+                    border-bottom-width: 0;
+                }
+                .well-arrow.top > .arrow:after {
+                    bottom: 1px;
+                    margin-left: -10px;
+                    content: " ";
+                    border-top-color: #fff;
+                    border-bottom-width: 0;
+                }
+
+                .well-arrow.topleft > .arrow{
+                    left: 10%;
+                }
+
+            </style>
+            <!--SUR COMPONENTS-->
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="sur-component hidden">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+                    window.sur_components.push(function(){
+
+
+                        return {
+                            name:'sur-menu',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.sur-menu').html(),
+                            props:['step'],
+                            methods:{
+                                setStep:function(step){
+                                    app.tools.SUR.bus().$emit('setStep', step)
+                                }
+                            }
+                        };
+
+                    });
+                </script>
+
+
+                <script type="text/template" class="component-sur-html sur-menu">
+                    <div class="sur-component-sur-menu hidden">
+
+                        <ul class="nav nav-pills nav-justified">
+                            <li :class="{'active':step=='addbook'}"><a @click.prevent="setStep('addbook')"  href="#">Biblio</a></li>
+                            <li :class="{'active':step=='addread'}"><a @click.prevent="setStep('addread')"  href="#">Date de lecture</a></li>
+                            <li :class="{'active':step=='addeval'}"><a @click.prevent="setStep('addeval')"  href="#">Evaluation</a></li>
+                            <li :class="{'active':step=='finalstep'}"><a @click.prevent="setStep('finalstep')"  href="#">Etape finale</a></li>
+
+                        </ul>
+
+
+
+                    </div>
+
+                </script>
+
+            </section>
+
+            <section class="sur-component hidden" data-help="addbook">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+
+                    window.sur_components.push(function(){
+
+
+                        return {
+                            name:'addbook',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.addbook').html(),
+                            props: ['idbook'],
+                            mounted:function(){
+                                var vm=this;
+                                this.loadStructure().then(function(){
+                                    vm.loading=false;
+                                });
+
+                                this.loadBook(this.idbook);
+                            },
+                            data:function(){
+
+                                var data={
+                                    'loading':true,
+                                    'lists':[],
+                                    'groups':[],
+                                    'book_name':'',
+                                    'book_img':''
+                                };
+
+
+                                return data;
+
+                            },
+                            methods:{
+                                loadBook:function(){
+                                    var vm=this;
+                                    return app.ajax({'action':'book-info', 'idbook':this.idbook}).then(function(rep){
+                                        vm.book_img=rep.message.cover132;
+                                        vm.book_name=rep.message.name;
+
+                                    })
+                                },
+                                loadStructure:function(){
+                                    var vm=this;
+                                    return app.ajax({'action':'biblio_user_structure'}).then(function(rep){
+                                        if(!rep.success)return alert(rep.message);
+                                        var struct=rep.message;
+                                        vm.lists.push.apply(vm.lists, struct.lists);
+                                        vm.groups.push.apply(vm.groups, struct.groups);
+                                        //dfd.resolve(rep.message);
+                                    });
+
+                                },
+                                addToGroup:function(idgroup,idliste){
+                                    var data={
+                                        action:'add2biblio_group',
+                                        idgroup:idgroup,
+                                        idbook:this.idbook
+                                    };
+
+                                    this.loading=true;
+
+                                    app.ajax(data).then(function(rep){
+                                        if(!rep.success)return alert(rep.message);
+
+                                        app.data.booksOwned[vm.idbook]=idliste;
+
+                                        app.tools.SUR.bus().$emit('component-complete', 'addbook');
+
+                                        app.views.book.setup_ajout_display();
+                                    })
+
+                                },
+
+                                addToListe:function(idliste){
+                                    var vm = this;
+
+                                    var data={
+                                        action:'add2biblio_liste',
+                                        idliste:idliste,
+                                        idbook:this.idbook
+                                    };
+
+                                    this.loading=true;
+
+                                    app.ajax(data).then(function(rep){
+                                        if(!rep.success)return alert(rep.message);
+
+                                        app.data.booksOwned[vm.idbook]=idliste;
+
+                                        app.tools.SUR.bus().$emit('component-complete', 'addbook');
+
+                                        app.views.book.setup_ajout_display();
+
+                                    });
+
+                                }
+
+                            },
+                            computed:{
+                                BonjourBonsoir:function(){
+                                    var h=new Date().getHours();
+                                    return (h>19 || h<4) ? 'Bonsoir' : 'Bonjour';
+                                }
+                            }
+                        }
+
+
+                    })
+
+
+                </script>
+
+
+                <script type="text/template" class="component-sur-html addbook">
+                    <div class="sur-component-addbook">
+
+
+                        <h3>Choisir un emplacement pour ce livre</h3>
+
+                        <div class="row">
+
+
+                            <div class="col-sm-4 col-md-5 "><!--col-sm-push-8 col-md-push-7-->
+                                <h3 class="hidden-xs">&nbsp;</h3>
+
+                                <div class="well well-arrow top topleft">
+                                    <p>[[BonjourBonsoir]] cher Booknaute</p>
+                                    <p>Où souhaites-tu ranger ce livre ?</p>
+                                    <div class="arrow"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div style="max-width:128px">
+                                            <img class="max_width"  src="/version/v2/SUR/pics/idle_1.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6" v-if="book_name!=''">
+                                        <div style="max-width:128px">
+                                            <img :src="book_img" class="max_width">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-8 col-md-7 "><!--col-sm-pull-4 col-md-pull-5-->
+
+                                <transition-group name="sur-slide-fade">
+
+                                    <div v-if="loading" class="text-center" key="loading">
+                                        <i class="fa fa-3x fa-cog fa-spin"></i>
+                                    </div>
+
+
+                                    <div v-else key="loaded">
+
+                                        <div class="row">
+
+                                            <div :class="{'col-sm-6':groups.length>0,'col-sm-12':groups.length==0}">
+                                                <h3>Listes</h3>
+                                                <template v-for="list in lists">
+                                                    <button @click="addToListe(list.id)" :idliste="list.id" :style="{borderColor:list.bgcolor}" class="btn btn-block add-to-list"  > [[list.nom]] </button>
+                                                </template>
+
+                                            </div>
+
+                                            <div class="col-sm-6" v-if="groups.length>0">
+                                                <h3>Groupes</h3>
+
+                                                <template v-for="group in groups">
+                                                    <button @click="addToGroup(group.id,group.listid)" :idgroup="group.id" :idliste="group.listid" :style="{borderColor:group.listbgcolor}" class="btn btn-block add-to-group"  > [[group.name]] </button>
+                                                </template>
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </transition-group>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </script>
+
+            </section>
+
+
+            <section class="sur-component hidden" data-help="addread">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+
+                    window.sur_components.push(function(){
+
+
+                        return {
+                            name:'addread',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.addread').html(),
+                            props: ['idbook','onlyview'],
+                            mounted:function(){
+                                var vm=this;
+
+                                if(this.$root.$options.globals.flashsuccess){
+                                    this.$root.$options.globals.flashsuccess='';
+                                }
+
+                            },
+                            data:function(){
+
+                                return {
+                                    'flashsuccess':this.$root.$options.globals.flashsuccess
+                                };
+
+                            },
+                            methods:{
+                                changeSaved:function(info){
+
+                                    app.tools.SUR.bus().$emit('component-complete', 'addread', info);
+                                },
+                                skip:function(){
+                                    app.tools.SUR.bus().$emit('component-complete', 'addread', {count:0});
+                                },
+                                close:function(){
+                                    app.tools.SUR.bus().$emit('closeDialog');
+                                }
+                            }
+                        }
+
+
+                    })
+
+
+                </script>
+
+
+                <script type="text/template" class="component-sur-html addread">
+                    <div class="sur-component-addread">
+
+
+
+
+                        <div class="row">
+
+
+                            <div class="col-sm-4 col-md-5 "><!--col-sm-push-8 col-md-push-7-->
+                                <h3 class="hidden-xs">&nbsp;</h3>
+
+                                <div class="well well-success" v-if="flashsuccess!=''">
+                                    [[flashsuccess]]
+                                </div>
+
+                                <div class="well well-arrow top topleft">
+                                    <p v-if="onlyview==false">J'aimerais prendre note de ta date de lecture</p>
+                                    <p v-else>
+                                        Prenons note de ta date de lecture !
+                                    </p>
+                                    <div class="arrow"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div style="max-width:128px">
+                                            <img class="max_width"  src="/version/v2/SUR/pics/idle_1.png">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-8 col-md-7 "><!--col-sm-pull-4 col-md-pull-5-->
+
+                                <h3>Date de lecture</h3>
+
+                                <div class="well theme-onwhite">
+                                    <module-date-de-lecture @changeSaved="changeSaved" :mode-sur="true" :idbook="idbook"></module-date-de-lecture>
+                                </div>
+
+                                <hr>
+
+                                <div class="text-right" v-if="onlyview==false">
+                                    <button class="btn btn-link" @click="skip()">Passer cette étape</button>
+                                </div>
+                                <div class="text-right" v-else>
+                                    <button class="btn btn-default" @click="close()">Annuler</button>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </script>
+
+            </section>
+
+            <script type="text/javascript">
+
+                function component_vModuleDateDeLecture(){
+                    if( !('Vue' in window) )return;
+
+                    Vue.component('module-date-de-lecture', {
+                        delimiters: ['[[', ']]'],
+                        template:$('#v-module-date-de-lecture').html(),
+                        props: ['idbook', 'modeSur'],
+                        mounted:function(){
+
+                            var vm=this;
+                            if(vm.modeSur==true){
+                                vm.toggleOpen();
+
+                                /*
+                    setTimeout(function(){
+                        vm.addDate();
+                    },70)
+                    */
+                            }
+
+                        },
+                        data: function(){
+
+
+
+                            return {
+                                userDates:[],
+                                isOpen:false,
+                                saveSuccess:false,
+                                force_advanced_mode:false,
+                                idx_date_entry:100000,
+                                appStatus:'editing'
+                            };
+                        },
+
+                        methods:{
+
+                            //fonction contactée depuis l'extérieur de vue.js
+                            toggleOpen:function(){
+
+                                var dfd = $.Deferred();
+                                var compo=this;
+                                if(this.isOpen==false){
+
+                                    app.ajax({'action':'user2book_read-load', 'idbook':this.idbook}).then(function(retour){
+                                        compo.userDates=retour.message;
+                                        if(compo.userDates.length>0){
+                                            compo.force_advanced_mode=true;
+                                        }
+
+                                        compo.isOpen=true;
+
+                                        dfd.resolve();
+                                    })
+
+                                }else{
+                                    this.instantClose();
+                                    dfd.resolve();
+                                }
+                                return dfd.promise();
+
+                            },
+
+                            instantClose:function(){
+                                this.isOpen=false;
+                            },
+
+                            saveToday:function(){
+                                var compo=this;
+                                compo.addDate();
+                                Vue.nextTick(function () {
+                                    compo.saveDates();
+                                })
+
+                            },
+                            saveDates:function(){
+                                var compo=this;
+                                compo.appStatus='saving';
+
+                                /* dont know about that...
+                    $('html, body').animate({
+                        scrollTop: $("#app-date-de-lecture").offset().top-30
+                    }, 150);
+                    */
+
+                                var data={
+                                    'action':'user2book_read-save',
+                                    'idbook':compo.idbook,
+                                    'dates':JSON.stringify(compo.getDates())
+                                };
+                                var count = compo.getDates().length
+                                var dates = JSON.parse(JSON.stringify(compo.getDates()))
+                                app.ajax(data).then(function(retour){
+                                    compo.appStatus='saved';
+                                    compo.$emit('changeSaved', {count:count, dates:dates})
+                                    setTimeout(function(){
+                                        compo.instantClose();
+                                        compo.appStatus='editing';
+                                    },2000);
+                                });
+
+                            },
+
+
+                            moduleOpened:function(){
+                                return this.isOpen
+                            },
+                            getDates:function(){
+                                var arr=[];
+
+                                if( !('dateEnd' in this.$refs) ){
+                                    return arr;
+                                }
+
+                                for(var i=0;i<this.$refs.dateEnd.length;i++){
+                                    arr.push({'start':this.$refs.dateStart[i].getDate(),
+                                        'end':this.$refs.dateEnd[i].getDate() })
+                                }
+                                return arr;
+                            },
+
+                            userDateCount:function(){
+                                return this.userDates.length;
+                            },
+                            advancedModeVisible:function(){
+                                return this.userDates.length>0 || this.force_advanced_mode;
+                            },
+                            advancedModeToggleVisible:function(){
+                                return this.userDateCount() == 0;
+                            },
+                            saveTodayVisible:function(){
+                                return this.advancedModeVisible() == false ;
+                            },
+
+                            saveSuccessVisible:function(){
+                                return this.saveSuccess;
+                            },
+
+                            addDate:function(event){
+
+                                var date = new Date();
+                                var start = {'y':date.getFullYear(),'m':date.getMonth()+1,'d':date.getDate()}
+                                var start = {'y':0,'m':0,'d':0}
+                                var end = {'y':0,'m':0,'d':0}
+
+
+                                var end = {'y':date.getFullYear(),'m':date.getMonth()+1,'d':date.getDate()}
+
+
+                                this.userDates.unshift(
+                                    {'id':this.idx_date_entry++,'start':start,'end':end}
+                                )
+
+
+                            },
+                            removeDate: function (user_date) {
+                                //if( !event.shiftKey && !confirm("Confirmation?"))return;
+                                this.userDates.splice(this.userDates.indexOf(user_date), 1)
+                            }
+
+
+
+                        }
+
+
+                    });
+
+
+                }
+
+
+            </script>
+
+            <style>
+
+                .section-appear {
+                    -webkit-transition: all .3s;
+                    transition: all .3s;
+
+                }
+
+                .section-appear.v-enter, .section-appear.v-leave-active {
+                    opacity: 0;
+
+                }
+
+
+
+
+            </style>
+
+
+
+            <style>
+
+                .list-complete-item {
+                    -webkit-transition: all .7s;
+                    transition: all .7s;
+
+                }
+                .list-complete-enter, .list-complete-leave-active {
+                    opacity: 0;
+                    -webkit-transform: translateY(30px);
+                    transform: translateY(30px);
+                }
+                .list-complete-leave-active {
+                    position: absolute;
+                    left: 15px;
+                    right: 15px;
+                }
+
+
+                .module-date-de-lecture{
+                    padding: 15px 0;
+                }
+
+                .module-date-de-lecture .close-wrapper{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                }
+
+                .module-date-de-lecture .label-advanced{
+                    font-weight: normal;
+                    color: white;
+                    padding: 6px 12px;
+                }
+
+                .module-date-de-lecture .section-simple{
+                    margin-bottom: 15px;
+                }
+
+
+                @media (max-width: 1199px){
+                    .well-one-entry{
+                        padding: 19px 4px;
+                    }
+                    #app-date-de-lecture{
+                        padding: 0 5px;
+                    }
+                    #app-date-de-lecture .form-control{
+                        font-size: 13px;
+                    }
+                }
+                @media (max-width: 767px){
+
+                }
+
+            </style>
+
+            <style>
+                .btn-today .fa-check-square-o{
+                    display: none;
+                }
+
+                .btn-today:hover .fa-square-o{
+                    display: none;
+                }
+
+                .btn-today:hover .fa-check-square-o{
+                    display: inline;
+                }
+            </style>
+
+
+            <style>
+                .theme-onwhite .module-date-de-lecture .label-advanced{
+
+                    color: black;
+
+                }
+
+            </style>
+
+
+            <script type="text/x-template" id="v-module-date-de-lecture">
+
+                <transition appear>
+
+                    <section v-if="moduleOpened()" class="section-appear module-date-de-lecture" >
+
+                        <transition-group name="list-complete" tag="div">
+
+                            <article class="row section-simple list-complete-item" v-if="appStatus === 'saved'" key="saved">
+
+                                <div class="text-center">
+
+                                    <div class="alert alert-success" role="alert" style="font-size:20px">
+
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+
+                                        <span v-if="getDates().length<=1">Date de lecture enregistrée !</span>
+                                        <span v-else>Dates de lecture enregistrées !</span>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <article class="row section-simple list-complete-item" v-if="appStatus === 'saving'" key="saving">
+
+                                <div class="text-center">
+
+                                    <div class="alert alert-danger" role="alert" style="font-size:20px">
+                                        <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+                                        <span>Enregistrement...</span>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <article v-if="appStatus === 'editing'" key="editing">
+
+                                <transition-group name="list-complete" tag="div">
+
+                                    <article class="row section-simple list-complete-item" v-if="saveTodayVisible()" key="simple">
+
+                                        <div class="text-center">
+
+                                            <button class="btn btn-lg btn-primary text-left btn-today" @click="saveToday()">
+
+                                                <i class="fa fa-check-square-o fa-3x pull-left" aria-hidden="true"></i>
+                                                <i class="fa fa-square-o fa-3x pull-left" aria-hidden="true"></i>
+
+                                                J'ai terminé ce livre<br>aujourd'hui
+                                            </button>
+
+                                        </div>
+
+                                    </article>
+
+
+                                    <article class="row text-left list-complete-item" v-if="advancedModeToggleVisible()" key="advanced_toggle">
+                                        <label class="label-advanced"><input type="checkbox" v-model="force_advanced_mode"> Autre date&nbsp;&nbsp;</label>
+                                    </article>
+
+                                    <article class="advanced_mode list-complete-item" v-if="advancedModeVisible()" key="advanced">
+
+                                        <div class="row" style="margin-bottom:15px">
+                                            <div class="text-center">
+
+                                                <button class="btn btn-default " @click="addDate"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter une date de lecture</button>
+
+                                            </div>
+                                        </div>
+
+                                        <transition-group name="list-complete" tag="div">
+
+
+                                            <article class="  list-complete-item" v-for="user_date in userDates" :key="user_date.id">
+
+
+                                                <div class="well well-one-entry" style="position:relative">
+
+
+                                                    <div class="col-md-6 md-no-padding">
+                                                        <date-selector-ymd title="Date de début de lecture"
+                                                                           :day-set="user_date.start.d"
+                                                                           :month-set="user_date.start.m"
+                                                                           :year-set="user_date.start.y" ref="dateStart" ></date-selector-ymd>
+                                                    </div>
+                                                    <div class="col-md-6 md-no-padding">
+                                                        <date-selector-ymd title="Date de fin de lecture"
+                                                                           :day-set="user_date.end.d"
+                                                                           :month-set="user_date.end.m"
+                                                                           :year-set="user_date.end.y" ref="dateEnd"></date-selector-ymd>
+                                                    </div>
+
+                                                    <div class="close-wrapper">
+                                                        <button title="Supprimer" class="btn btn-sm btn-default" @click="removeDate(user_date)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    </div>
+
+                                                    <div class="clearfix"></div>
+                                                </div>
+
+
+                                            </article>
+
+
+                                            <div class="row list-complete-item"  key="bottom-save">
+                                                <div class="text-center">
+
+
+                                                    <button class="btn btn-primary " @click="saveDates"><i class="fa fa-save" aria-hidden="true"></i> Enregistrer mes changements</button>
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </transition-group>
+
+
+
+
+
+
+                                    </article><!--/.advanced_mode-->
+
+                                </transition-group>
+
+                            </article>
+                        </transition-group>
+
+                    </section>
+
+                </transition>
+
+
+
+            </script><!--/#module-date-de-lecture-->
+            <style>
+                @media (min-width:992px){
+
+                    .date-selector-component .date-selector select.form-control{
+                        padding: 0;
+                        width: auto;
+                    }
+                }
+                .date-selector-component .date-selector-year select.form-control{
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+                .date-selector-component .date-selector-day select.form-control{
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+
+                .date-selector .form-control{
+                    /*background: lightgreen;
+        background: #5a3d3e;
+        background: #8e7674;
+        color: white;*/
+                }
+                .date-selector .form-control.showingTitle{
+                    color: #888;
+
+                    background: white;
+
+                }
+            </style>
+
+            <script type="text/javascript">
+
+                function component_vDateSelectorYmd(){
+                    if( !('Vue' in window) )return;
+                    //Vue.config.devtools = true
+                    var computeDays_init=function(y, m){
+
+                        if(y==0 || m==0){
+                            max_day=31
+                        }else{
+                            var d= new Date(y, m-1, 1);
+                            d.setMonth(d.getMonth()+1)
+                            d.setDate(d.getDate()-1);
+                            var max_day = d.getDate()
+                        }
+
+                        var arr=[];
+                        for(var i=1;i<=max_day;i++){
+                            arr.push(i)
+                        }
+                        return arr;
+                    }
+
+
+
+                    Vue.component('date-selector-ymd', {
+                        delimiters: ['[[', ']]'],
+                        template:$('#v-date-selector-ymd').html(),
+                        props: ['day-set', 'month-set', 'year-set', 'title'],
+                        data:function(){
+                            return {
+                                'day':this.daySet,
+                                'month':this.monthSet,
+                                'year':this.yearSet,
+                                'available_days':computeDays_init(this.yearSet, this.monthSet),
+                                'available_years':(function(){
+                                    var arr=[];
+
+                                    var start=(new Date().getFullYear())
+                                    var end=1900;
+                                    for(var i=start; i>=end;i--){
+                                        arr.push(i)
+                                    }
+                                    return arr;
+                                }())
+                            }
+                        },
+                        methods:{
+                            'getDate':function(){
+                                return {
+                                    'year':this.year,
+                                    'month':this.month,
+                                    'day':this.day
+                                }
+                            },
+                            'computeDays':function(){
+
+                                var d= new Date(this.year, this.month-1, 1);
+                                d.setMonth(d.getMonth()+1)
+                                d.setDate(d.getDate()-1);
+                                var max_day = d.getDate()
+
+
+                                while(this.available_days.length>max_day){
+                                    this.available_days.pop();
+                                }
+
+                                while(this.available_days.length<max_day){
+                                    this.available_days.push( this.available_days.length+1 );
+                                }
+
+                            }
+                        }
+                    });
+
+                }
+
+            </script>
+
+            <script type="text/x-template" id="v-date-selector-ymd">
+
+                <div class="form-group date-selector-component">
+                    <label class="control-label ">[[title]]</label>
+                    <div class="">
+                        <div class="input-group ">
+
+				<span class="input-group-btn date-selector date-selector-day" >
+					<select class="form-control" v-model="day" v-bind:class="[day==0 ? 'showingTitle' : '']">
+						<option value="0">Jour</option>
+						<option v-bind:value="n" v-for="n in available_days">[[ n ]]</option>
+					</select>
+				</span>
+                            <span class="input-group-btn date-selector date-selector-month">
+					<select class="form-control " v-model="month" v-on:change="computeDays" v-bind:class="[month==0 ? 'showingTitle' : '']">
+						<option value="0">Mois</option>
+						<option value="1">Janvier</option>
+						<option value="2">Février</option>
+						<option value="3">Mars</option>
+						<option value="4">Avril</option>
+						<option value="5">Mai</option>
+						<option value="6">Juin</option>
+						<option value="7">Juillet</option>
+						<option value="8">Août</option>
+						<option value="9">Septembre</option>
+						<option value="10">Octobre</option>
+						<option value="11">Novembre</option>
+						<option value="12">Décembre</option>
+					</select>
+				</span>
+                            <span class="input-group-btn date-selector date-selector-year">
+					<select class="form-control " v-model="year" v-on:change="computeDays" v-bind:class="[year==0 ? 'showingTitle' : '']">
+						<option value="0">Année</option>
+						<option :value="n" v-for="n in available_years">[[ n ]]</option>
+					</select>
+				</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </script>
+
+            <section class="sur-component hidden" data-help="finalstep">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+
+                    window.sur_components.push(function(){
+
+
+                        return {
+                            name:'finalstep',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.finalstep').html(),
+                            props: ['idbook'],
+                            mounted:function(){
+                                var vm=this;
+
+                                if(this.$root.$options.globals.flashsuccess){
+                                    this.$root.$options.globals.flashsuccess='';
+                                }
+
+                                app.ajax({'action':'book-info', 'idbook':this.idbook}).then(function(rep){
+                                    vm.commenthref=rep.message.href+'#newcomm'
+
+                                    var completelink="https://booknode.com"+rep.message.href
+
+                                    vm.facebookhref="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(completelink)
+
+                                    vm.twitterhref="https://twitter.com/home?status="+encodeURIComponent(completelink)
+
+                                    vm.instagramhref="/SUR/justread/"+vm.idbook
+
+                                })
+
+
+
+
+
+                            },
+                            data:function(){
+
+                                return {
+                                    'flashsuccess':this.$root.$options.globals.flashsuccess,
+                                    'commenthref':'',
+                                    'facebookhref':'',
+                                    'twitterhref':'',
+                                    'instagramhref':''
+                                };
+
+                            },
+                            methods:{
+                                close:function(){
+                                    app.tools.SUR.bus().$emit('closeDialog');
+                                }
+                            }
+                        }
+
+
+                    })
+
+
+                </script>
+
+
+                <script type="text/template" class="component-sur-html finalstep">
+                    <div class="sur-component-finalstep">
+
+
+                        <h3>Options de fin</h3>
+
+                        <div class="row">
+
+
+
+
+                            <div class="col-sm-4 col-md-5 ">
+                                <h3 class="hidden-xs">&nbsp;</h3>
+
+                                <div class="well well-success" v-if="flashsuccess!=''">
+                                    [[flashsuccess]]
+                                </div>
+
+                                <div class="well well-arrow top topleft">
+                                    <p>Nous allons bientôt nous quitter jusqu'à ta prochaine lecture, voici en attendant quelques actions supplémentaires possibles à faire !</p>
+                                    <div class="arrow"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div style="max-width:128px">
+                                            <img class="max_width"  src="/version/v2/SUR/pics/idle_1.png">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="col-sm-8 col-md-7 ">
+                                <h3 class="hidden-xs">&nbsp;</h3>
+                                <a v-if="commenthref" :href="commenthref" target="_blank" class="btn btn-lg btn-primary btn-block">Ajouter un commentaire sur ce livre</a>
+
+
+
+                                <hr>
+                                <a v-if="instagramhref" :href="instagramhref" target="_blank" class="btn btn-lg btn-primary btn-block">
+                                    Partager sur instagram</a>
+
+
+
+                                <hr>
+                                <a v-if="facebookhref" :href="facebookhref" target="_blank" class="btn btn-lg btn-primary btn-block">
+                                    Partager ce livre sur Facebook</a>
+
+
+                                <hr>
+                                <a v-if="twitterhref" :href="twitterhref" target="_blank" class="btn btn-lg btn-primary btn-block">Partager ce livre sur Twitter</a>
+
+
+                                <hr>
+                                <div class="text-center">
+                                    <button class="btn btn-lg btn-info" @click="close()">Retourner à mes lectures !</button>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </script>
+
+            </section>
+
+
+
+
+            <section class="sur-component hidden" data-help="addeval">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+                    window.sur_components.push(function(){
+
+                        var my_rainbow = new Rainbow();
+                        my_rainbow.setSpectrum('ff3232', 'ffff32', '32ff32')
+
+                        function hex2rgba_convert(hex,opacity){
+                            hex = hex.replace('#','');
+                            r = parseInt(hex.substring(0, hex.length/3), 16);
+                            g = parseInt(hex.substring(hex.length/3, 2*hex.length/3), 16);
+                            b = parseInt(hex.substring(2*hex.length/3, 3*hex.length/3), 16);
+
+                            result = 'rgba('+r+','+g+','+b+','+opacity+')';
+                            return result;
+                        }
+
+                        var getSpectrumVal=function(val){
+                            if(val==0)return 0;
+
+                            //on passe les valeur en mode 0 à 9
+                            val-=1;
+                            var percent = val / 9;
+                            return Math.round(percent*100);
+                        }
+
+
+
+                        return {
+                            name:'addeval',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.addeval').html(),
+                            props: ['idbook', 'onlyview'],
+                            mounted:function(){
+                                var vm=this;
+                                app.ajax({'action':'load-evaluation', 'idbook':this.idbook}).then(function(rep){
+
+                                    var human = rep.message.human
+                                    for(var h in human){
+                                        vm.human[h]=human[h];
+                                    }
+
+                                    vm.rows.push.apply(vm.rows, rep.message.row)
+                                    Vue.nextTick(function () {
+                                        $(vm.$el).find('.rating-help').popover()
+                                    });
+
+                                    vm.loading=false;
+
+
+                                });
+
+
+                                if(this.$root.$options.globals.flashsuccess){
+                                    this.$root.$options.globals.flashsuccess='';
+                                }
+
+
+
+                            },
+                            data:function(){
+                                return {
+                                    'loading':true,
+                                    'human':{},
+                                    'rows':[],
+                                    'flashsuccess':this.$root.$options.globals.flashsuccess
+                                }
+                            },
+
+                            methods:{
+                                toHuman:function(rating){
+                                    return this.human[rating]
+                                },
+                                rateChanged:function(rating, key){
+                                    console.log(key)
+                                    console.log(rating)
+                                    //Vue.set(this.rows[key], 'personal', rating)
+                                    for(var i=0;i<this.rows.length;i++){
+                                        if(this.rows[i].id==key){
+                                            this.rows[i].personal=rating
+                                        }
+                                    }
+
+                                    //this.rows[key].personal=rating
+                                    //Vue.set(this, key, rating);
+
+                                },
+                                getBadgeStyle:function(n){
+
+                                    var color = my_rainbow.colourAt(  getSpectrumVal(n) );
+                                    console.log(color)
+                                    /*
+                        couleur plus mat
+
+                        */
+
+                                    var style={
+                                        //'backgroundImage':"radial-gradient(circle at 50% 50%, #"+color+", #aaa)",
+                                        'background-color':hex2rgba_convert("#"+color,.6),
+                                        'color':'black'
+
+                                    };
+                                    console.log(JSON.stringify(style) )
+
+                                    return style;
+
+                                },
+                                skip:function(){
+                                    app.tools.SUR.bus().$emit('component-complete', 'addeval');
+                                },
+                                save:function(){
+                                    var vm=this;
+
+                                    var data={'action':'save-evaluation', 'idbook':this.idbook};
+
+                                    for(var i=0;i<this.rows.length;i++){
+                                        var row=this.rows[i];
+                                        data['rate-'+row.id]=row.personal;
+                                    }
+
+                                    this.loading=true;
+
+                                    app.ajax(data).then(function(rep){
+                                        app.tools.SUR.bus().$emit('component-complete', 'addeval', vm.rows);
+
+                                    });
+
+
+                                }
+                            }
+                        };
+
+                    });
+                </script>
+
+                <style>
+                    .one-rating-line{
+                        margin-bottom: 15px;
+                    }
+                    .rating-title{
+                        font-weight: bold;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+
+                    .rating-info{
+                        position: relative;
+                        top: -2px;
+                    }
+
+
+                    .rating-help{
+                        color:#874A3B;
+                        font-size:15px;
+                        font-weight:normal;
+                    }
+                </style>
+
+                <script type="text/template" class="component-sur-html addeval">
+                    <div class="sur-component-addeval">
+
+                        <h3>Evaluation</h3>
+
+                        <transition-group name="sur-slide-fade">
+
+                            <div v-if="loading" class="text-center" key="loading">
+                                <i class="fa fa-3x fa-cog fa-spin"></i>
+                            </div>
+
+                            <div class="row" v-else key="loaded">
+
+                                <div class="col-sm-4 col-md-5   col-sm-push-8 col-md-push-7">
+
+                                    <div class="well well-success" v-if="flashsuccess!=''">
+                                        [[flashsuccess]]
+                                    </div>
+
+                                    <div class="well well-arrow top topleft">
+                                        <p v-if="onlyview==false">Peux tu me donner une évaluation précise de ce livre ?</p>
+                                        <p v-else>Quelle est ton évaluation de ce livre ?</p>
+                                        <div class="arrow"></div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div style="max-width:128px">
+                                                <img class="max_width img-hor"  src="/version/v2/SUR/pics/idle_1.png">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-8 col-md-7  col-sm-pull-4 col-md-pull-5">
+
+                                    <div class="row">
+                                        <template v-for="row in rows">
+                                            <div class="col-sm-6">
+                                                <div  class="one-rating-line">
+
+
+
+
+										<span class="rating-title">[[row.name]]
+
+											<span v-if="row.help"  role="button" tabindex="0" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-html="true" data-container="body" :data-content="row.help" class="rating-help">
+												<i class="fa fa-question-circle-o" aria-hidden="true"></i>
+											</span>
+
+										</span>
+
+
+
+
+                                                    <span v-if="row.personal>0">
+											<span> </span>
+											<span class="badge rating-info" :style="getBadgeStyle(row.personal)">[[row.personal]] / 10  - [[toHuman(row.personal)]]</span>
+										</span>
+
+                                                    <span class="help-block" style="display:none">[[row.help]]</span>
+
+                                                    <circle-eval class="" @ratechanged="rateChanged" :ratingid="row.id" :rating="row.personal"></circle-eval>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </div>
+
+
+                                    <hr>
+                                    <div class="text-right">
+                                        <button v-if="onlyview==false" class="btn btn-link" @click="skip()">Passer cette étape</button>
+                                        <button class="btn btn-primary" @click="save()">Enregistrer mon évaluation</button>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </transition-group>
+
+
+                    </div>
+
+                </script>
+
+            </section>
+            <section class="sur-component" data-help="circle-eval">
+
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+                    window.sur_components.push(function(){
+                        console.log('adding circle-eval')
+
+
+                        return {
+                            name:'circle-eval',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.circle-eval').html(),
+                            props: {
+                                'ratingid':null,
+                                'rating':{
+                                    type:Number,
+                                    default:0
+                                },
+                                'max':{
+                                    type:Number,
+                                    default:10
+                                }
+                            },
+                            data:function(){
+                                return {
+                                    'highlite':0
+                                }
+                            },
+                            methods:{
+
+                                itemStyle:function(n){
+                                    if(n>this.rating || this.rating==0){
+                                        return {};
+                                    }
+
+                                    var color = my_rainbow.colourAt(  getSpectrumVal(this.rating) );
+
+                                    var style={
+                                        'backgroundImage':"radial-gradient(circle at 30% 30%, #"+color+", #aaa)",
+
+                                    };
+
+                                    return style;
+
+
+                                },
+
+                                setRating:function(n){
+
+                                    if(n==this.rating){
+                                        n=0;
+                                        //this.hightlite=0;
+                                    }
+
+                                    this.$emit('ratechanged',n, this.ratingid)
+                                }
+                            }
+
+                        };
+
+                    });
+                </script>
+
+
+                <script type="text/template" class="component-sur-html circle-eval">
+                    <div class="sur-component-circle-eval">
+
+                        <div class="circle-eval-wrapper">
+                            <template v-for="n in max">
+                                <div class="circle-eval-box" @click="setRating(n)" @mouseover="highlite=n" @mouseout="highlite=0">
+                                    <div  class="circle-eval-item" :class="{active:n<=rating,highlite:n<=highlite&&n>rating}"></div>
+                                    <!--:style="itemStyle(n)"-->
+
+                                </div>
+                            </template>
+                        </div>
+
+                    </div>
+
+                </script>
+
+
+
+                <style type="text/css">
+                    .circle-eval-wrapper{
+
+                        max-width: 500px;
+                    }
+
+
+
+                    .circle-eval-box{
+                        width: calc( 100% / 10);
+                        padding-top: calc( 100% / 10 );
+                        /*padding-top: calc( ((100% - 140px ) / 10) - 2px );*/
+                        text-align: center;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                    }
+
+                    .circle-eval-item{
+                        display: inline-block;
+                        position: absolute;
+                        top: 5%;
+                        left: 5%;
+                        width: 90%;
+                        height: 90%;
+
+                        border-radius: 50%;
+                        border:1px solid #5A3D3E;
+                        /*transition: all .3s;*/
+                        background: #ffffff;
+
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75) inset;
+
+
+
+                    }
+
+
+                    .circle-eval-item.highlite{
+                        background-color: #ECE4E4;
+                    }
+
+                    .circle-eval-box .circle-eval-item.active{
+                        border-width:0px;
+                        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75) inset;
+                        background-color: #5A3D3E;
+
+                    }
+
+
+
+                    .circle-space{
+                        display: inline-block;
+                        overflow: hidden;
+                        width: 2px;
+                    }
+
+                </style>
+            </section>
+
+
+
+            <section class="sur-component hidden" data-help="recorded">
+
+                <script type="text/javascript">
+                    window.sur_components=window.sur_components||[];
+
+
+                    window.sur_components.push(function(){
+
+
+                        return {
+                            name:'recorded',
+                            delimiters: ['[[', ']]'],
+                            template:$('script.component-sur-html.recorded').html(),
+                            data:function(){
+
+                                return {
+                                    buylinks:[]
+                                }
+                            },
+                            created:function(){
+
+                                if(app.data.booksOwned[this.$root.idbook] == 6){
+
+                                    var url="/modules/buylink_json.php?idbook="+this.$root.idbook+"&context=sur";
+                                    var vm=this;
+                                    $.getJSON(url).then(function(retour){
+                                        vm.buylinks = retour.list
+                                        console.log(retour.list);
+                                    });
+
+                                }
+                            },
+                            methods:{
+                                close:function(){
+                                    app.tools.SUR.bus().$emit('closeDialog');
+                                },
+                                showBuyLink:function(){
+                                    return app.data.booksOwned[this.$root.idbook] == 6;
+                                },
+                                getBuyLinks:function(state){
+
+                                    var arr=[];
+
+
+                                    for(var i=0;i<this.buylinks.length;i++){
+
+                                        var line = this.buylinks[i];
+                                        console.log(new Date()+" line.state "+line.state)
+                                        if(line.state==state && line.countrycode=='FR'){
+                                            arr.push(line);
+                                        }
+
+                                    }
+
+                                    return arr;
+
+                                },
+                                buylinkicon:function(link){
+                                    return "/version/v1/_res/buylink_module/"+link.nameshortstore+'_icon.png';
+                                }
+                            }
+
+                        }
+
+
+                    })
+
+
+                </script>
+
+
+                <style type="text/css">
+
+                    .sur-buylink{
+                        background:#EFEFEF;
+                    }
+                </style>
+
+
+                <script type="text/template" class="component-sur-html recorded">
+                    <div class="sur-component-recorded">
+
+                        <div class="row">
+
+
+                            <div class="col-sm-6  col-sm-offset-3 ">
+                                <h3>&nbsp;</h3>
+
+                                <div class="well well-arrow top  well-success text-center">
+                                    <p>C'est enregistré !</p>
+                                    <div class="arrow"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6 col-xs-offset-3 text-center">
+                                        <div style="max-width:128px;margin:auto">
+                                            <img class="max_width"  src="/pics/character/wizard/wizard_ice/idle_4.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div v-if="showBuyLink()" class="row-buylinks">
+                                    <hr>
+                                    <div class="text-center">
+                                        <h3>Acheter ce livre</h3>
+                                    </div>
+                                    <div class="row">
+
+
+                                        <div class="col-sm-6" v-if="getBuyLinks('1').length==0 && getBuyLinks('0').length==0 &&getBuyLinks('-1').length>0">
+                                            <h4>Vérifier la disponibilité</h4>
+
+                                            <a class="btn btn-default btn-block sur-buylink" target="_blank" :href="link.fullurl" v-for="link in getBuyLinks('-1')" :data-namestore="link.nameshortstore" :data-country="link.countrycode" data-spot="book-sur" data-state="new">
+                                                <span class="pull-left"> <img :src="buylinkicon(link)"></span>
+                                                [[link.namestore]]
+                                            </a>
+
+                                        </div>
+
+                                        <div class="col-sm-6" v-if="getBuyLinks('1').length>0">
+                                            <h4>Neuf</h4>
+                                            <a class="btn btn-default btn-block sur-buylink" target="_blank" :href="link.fullurl" v-for="link in getBuyLinks('1')" :data-namestore="link.nameshortstore" :data-country="link.countrycode" data-spot="book-sur" data-state="new">
+                                                <span class="pull-right"> [[link.price]] [[link.currency]]</span>
+                                                <span class="pull-left"> <img :src="buylinkicon(link)"></span>
+                                                [[link.namestore]]
+
+                                            </a>
+                                        </div>
+
+                                        <div class="col-sm-6" v-if="getBuyLinks('0').length>0">
+                                            <h4>Occasion</h4>
+                                            <a class="btn btn-default btn-block sur-buylink" target="_blank" :href="link.fullurl" v-for="link in getBuyLinks('0')" :data-namestore="link.nameshortstore" :data-country="link.countrycode" data-spot="book-sur" data-state="old">
+                                                <span class="pull-right"> [[link.price]] [[link.currency]]</span>
+                                                <span class="pull-left"> <img :src="buylinkicon(link)"></span>
+                                                [[link.namestore]]
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <hr>
+                                <div class="text-center">
+                                    <button class="btn btn-lg btn-info" @click="close()">Fermer</button>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </script>
+
+            </section>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+
+        $(function(){
+            var labelWasClicked = function labelWasClicked(){
+                var input = $(this).siblings().filter('input');
+                if (input.attr('disabled')) {
+                    return;
+                }
+                input.val($(this).attr('data-value'));
+            }
+
+            var turnToStar = function turnToStar(){
+                if ($(this).find('input').attr('disabled')) {
+                    return;
+                }
+                var labels = $(this).find('div');
+                labels.removeClass();
+                labels.addClass('star');
+            }
+
+            var turnStarBack = function turnStarBack(){
+                var rating = parseInt($(this).find('input').val());
+                if (rating > 0) {
+                    var selectedStar = $(this).children().filter('#rating_star_'+rating)
+                    var prevLabels = $(selectedStar).nextAll();
+                    prevLabels.removeClass();
+                    prevLabels.addClass('star-full');
+                    selectedStar.removeClass();
+                    selectedStar.addClass('star-full');
+                }
+            }
+
+            $('.star, .rating-well').click(labelWasClicked);
+            $('.rating-well').each(turnStarBack);
+            $('.rating-well').hover(turnToStar,turnStarBack);
+
+        });
+
+
+    </script>
+    <script>
+        var form = document.getElementById("form_rating");
+
+        document.getElementById("ratingwell").addEventListener("click", function () {
+            form.submit();
+        });
+
+    </script>
+
+
+    <style>
+
+        /* The Modal (background) */
+        .modale {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-contente {
+            background-color: #fefefe;
+            margin: 10% auto; /* 15% from the top and centered */
+
+            padding: 0px;
+            border: 1px solid #888;
+            width: 40%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+
+
+    <div id="myModal" class="modale bootstrap-dialog type-primary fade size-normal in">
+    <div class="modal-contente"><div class="modal-header bootstrap-dialog-draggable"><div class="bootstrap-dialog-header"><div class="bootstrap-dialog-close-button" style="display: block;"><button class="close">×</button></div><div class="bootstrap-dialog-title" id="510d13b7-bc58-42fc-b1ea-ade7d8838894_title">Formulaire D'emprunt</div></div></div><div class="modal-body"><div class="bootstrap-dialog-body"><div class="bootstrap-dialog-message">
+
+                    <div class="wrapper">
+                        <div class="screen-loader text-center" style="display: none;">
+                            <i class="fa fa-cog fa-spin"></i>
+                        </div>
+                        <div class="screen-form" style="">
+
+                            <h4>Date d'emprunt :</h4>
+                            {{ form_start(formemprunt) }}
+                            {{ form_widget(formemprunt.d_emprunt)}}
+
+                            <hr>
+
+                            <h4>Date de retour :</h4>
+                            {{ form_widget(formemprunt.d_retour)}}
+
+                        </div>
+
+                    </div>
+
+                </div></div></div><div class="modal-footer" style="display: block;"><div class="bootstrap-dialog-footer"><div class="bootstrap-dialog-footer-buttons"><button class="btn btn-primary js-action-url" type="submit">Envoyer</button></div></div></div></div></div>
+    {{ form_end(formemprunt) }}
+
+
+<script>
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+    </script>
+
+{% endblock %}

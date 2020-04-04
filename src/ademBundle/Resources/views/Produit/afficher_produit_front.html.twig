@@ -1,0 +1,238 @@
+{% extends '@adem/Default/front.html.twig' %}
+
+
+{% block body %}
+
+    <script type="text/javascript">
+        buybox_context='listes-envies';
+
+
+
+        $(function(){
+            var bmod=new buylink_module();
+
+            $('a.datesortiebuy').live('click',function(event){
+
+                event.preventDefault();
+                bmod.trigger($(this),buybox_context);
+
+            });
+
+        });
+
+
+
+    </script>
+
+    <style type="text/css">
+        #divanylisting{
+
+            min-height:800px;
+            width:990px;
+            padding:0px;
+            font-size:12px;
+            position:relative;
+            overflow:hidden;
+            b!ackground:url(/pics/template/anylist/readingbook.jpg) no-repeat  0px 20px ;
+            b!order:1px solid #e8e8e8;
+            padding-top: 20px;
+
+        }
+        #divanylisting .title{
+
+            font-size:16px;
+            font-weight:bold;
+            margin:auto;
+            margin-top:30px;
+            text-align:center;
+        }
+        #divanylisting a{
+            color:#5a3d3e;
+            font-size:14px;
+        }
+
+        #divanylisting a.datesortiebuy{
+            font-size:12px;
+        }
+
+
+
+        #divanylisting a.auteur{
+            color:#787878;
+            font-size:12px;
+        }
+
+        .listing_wrap{ margin-top: 40px; width: 1020px; overflow: visible;}
+
+        #divanylisting .oneofthebook{
+
+            margin-right:12px;
+            width:290px;
+            height:200px;
+            float:left;
+            margin-bottom:12px;
+            position:relative;
+            padding: 15px;
+            padding-bottom: 10px;
+        }
+        #divanylisting h4{
+            font-size:18px;
+        }
+
+        #logopage{
+            position:absolute;
+            top:0px;
+            left:10px;
+        }
+        #logopage2{
+            position:absolute;
+            top:10px;
+            left:870px;
+        }
+
+        ul.authorlist{
+            margin:0;
+            padding:0;
+        }
+
+        ul.authorlist li{
+            list-style-type:none;
+
+        }
+
+
+        img.imgadd{
+            cursor:pointer;
+            position:absolute;
+            top:5px;
+            left:5px;
+        }
+
+
+
+
+
+        div.toprating_legend{
+
+            font-size:12px;
+
+
+
+
+            margin-bottom:10px;
+            margin-right:10px;
+
+
+
+            width:477px;
+
+            margin-top:0px;
+            m!argin-left:180px;
+
+        }
+
+        #useragefilter{
+            float:left;
+            margin-left:5px;
+
+            font-size:12px
+        }
+        #userageslider{
+
+            font-size:11px;
+            margin-top:5px;
+            width:300px;
+        }
+        #userageslider_vals{
+
+            font-size:11px;
+            margin-top:5px;
+            width:300px;
+            text-align:center;
+            float:left;
+        }
+
+        #imk{
+            margin:0px;
+            padding:0px;
+            position:relative;
+            top:-4px;
+        }
+        .setlabel{ display: inline-block; padding-left: 15px; font-weight: bold;line-height: 22px;}
+        .readinit{ padding-top: 15px; font-size: 11px; color: #787878; }
+
+        a.acover{
+
+        }
+
+        img.imgcover{
+            margin-right:10px;
+        }
+
+        .shadow10{
+
+            /* For IE 8 */
+            /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#a1a1a1')";*/
+            /* For IE 5.5 - 7 */
+            /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#a1a1a1');*/
+
+            -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+            -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+            box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+
+        }
+
+        .infiniteimgloader{
+            clear: left;
+            display: block;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+
+        $(function(){
+
+            var o=new bkn_infinite();
+            o.init({
+                'container':'.listing_wrap'
+            });
+
+        });
+
+
+
+    </script>
+
+
+
+
+
+    <div id="divanylisting">
+        <h1>Liste des Produits :</h1>
+    <div class="listing_wrap">
+    {% for f in Produits %}
+    <div class="oneofthebook data-block" idbook="56972">
+        <a class="acover" title="Voir la page du livre Les Anges déchus, Tome 1 : Hush, Hush" href="/film/6680/avatar-2">
+            <img class="imgcover shadow10" alt="Les Anges déchus, Tome 1 : Hush, Hush" height="150" width="100" title="Les Anges déchus, Tome 1 : Hush, Hush" align="left" src="http:\\localhost\web_projet\web\Uploads\produit\{{ f.imageproduit }}" border="0">
+            {{ f.nomProduit }}
+        </a>
+        <br>
+        <ul class="authorlist">
+
+            <li><a title="Voir la page de l'auteur Becca  Fitzpatrick" class="auteur" href="https://booknode.com/auteur/becca-fitzpatrick">Becca  Fitzpatrick</a></li>
+
+        </ul>
+        <span class="readinit">4486 envies</span>
+        <br>
+        <span class="venteTop_achat"><a href="{{ path('afficherProduitdetail',{'id':f.id_produit}) }}" idbook="56972" class="datesortiebuy "><br><br><button class="btn btn-primary ">Plus de detail</button></a></span>
+       </div>
+     {% endfor %}
+
+</div>
+    </div>
+
+
+
+{% endblock %}

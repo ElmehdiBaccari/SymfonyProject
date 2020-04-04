@@ -1,0 +1,123 @@
+{% extends '@adem/Default/front.html.twig' %}
+
+
+{% block body %}
+    <link href="{{ asset('assets/front/realistic.css') }}" rel="stylesheet">
+<h2>Les listes des Livres dans notre Bibliothèque</h2>
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf"></figure>
+        {% set sp = 0 %}
+    {% for f in livres %}
+        {% if f.categorieLivre =='sport' %}
+        <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+            <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+
+        </a>
+            {% set sp = sp-70 %}
+        {% endif %}
+
+    {% endfor %}
+
+
+
+    </article>
+
+
+
+
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf1"></figure>
+        {% set sp = 0 %}
+        {% for f in livres %}
+            {% if f.categorieLivre =='scientifique' %}
+                <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+                    <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+                </a>
+                {% set sp = sp-70 %}
+            {% endif %}
+
+        {% endfor %}
+
+
+    </article>
+
+
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf2"></figure>
+        {% set sp = 0 %}
+        {% for f in livres %}
+            {% if f.categorieLivre =='art' %}
+                <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+                    <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+                </a>
+                {% set sp = sp-70 %}
+            {% endif %}
+
+        {% endfor %}
+
+
+    </article>
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf3"></figure>
+        {% set sp = 0 %}
+        {% for f in livres %}
+            {% if f.categorieLivre =='medecine' %}
+                <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+                    <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+                </a>
+                {% set sp = sp-70 %}
+            {% endif %}
+
+        {% endfor %}
+
+
+    </article>
+
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf4"></figure>
+        {% set sp = 0 %}
+        {% for f in livres %}
+            {% if f.categorieLivre =='informatique' %}
+                <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+                    <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+                </a>
+                {% set sp = sp-70 %}
+            {% endif %}
+
+        {% endfor %}
+
+
+    </article>
+
+
+
+    <article class="liste_wrapper_large">
+
+        <figure class="shelf5"></figure>
+        {% set sp = 0 %}
+        {% for f in livres %}
+            {% if f.categorieLivre =='economie' %}
+                <a class="wrap_img" style="left:{{ sp }}px" href="{{ path('afficher_livre_detail', { 'id': f.id_livre})  }}">
+                    <div class="img" style="background-image:url( http://localhost/web_projet/web/Uploads/livre/{{ f.image }} )"></div>
+                </a>
+                {% set sp = sp-70 %}
+            {% endif %}
+
+        {% endfor %}
+
+
+
+    </article>
+
+
+{% endblock %}

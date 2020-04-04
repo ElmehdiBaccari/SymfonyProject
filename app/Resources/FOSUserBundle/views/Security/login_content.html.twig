@@ -1,0 +1,95 @@
+
+{% trans_default_domain 'FOSUserBundle' %}
+{% if error is defined %}
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+{% endif %}
+<style>
+
+    .modal-content
+    {
+
+        display: block;
+    }
+
+
+</style>
+<div class="modal-content"><div class="modal-header bootstrap-dialog-draggable"><div class="bootstrap-dialog-header"><div class="bootstrap-dialog-close-button" style="display: block;"></div><div class="bootstrap-dialog-title" id="36980f0b-fa3e-4cc5-bff1-67a5096d7d11_title">Connexion</div></div></div><div class="modal-body"><div class="bootstrap-dialog-body"><div class="bootstrap-dialog-message">
+
+                <div class="row">
+
+
+                    <div class="col-xs-12">
+
+
+<form class="form-horizontal" role="form" action="{{ path("fos_user_security_check") }}" method="POST" >
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    <div class="form-group">
+        <label for="username" class="col-sm-4 control-label">{{ 'security.login.username'|trans }}</label>
+        <div class="col-sm-7">
+
+            <input type="text"  class="form-control" id="username" placeholder="Votre nom d'utilisateur" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-4 control-label">{{ 'security.login.password'|trans }}</label>
+        <div class="col-sm-7">
+            <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <div class="col-sm-4">
+
+
+        </div>
+        <div class="col-sm-3">
+
+            <input type="checkbox"   id="remember_me" name="_remember_me" value="on" />
+            <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        </div>
+        <div class="col-sm-3">
+            <a href="/inscription.php" class="pull-right btn-xs btn-success">Pas encore inscrit ?</a>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-7 col-sm-offset-4 ">
+
+            {#<a href="javascript:void(0)" class="show_forgotpass_form">Mot de passe oublié</a>#}
+        </div>
+    </div>
+
+
+
+
+
+{#<div class="alert alert-success" role="alert">Connexion acceptée, patientez un instant</div>#}
+{#<div class="alert alert-warning" role="alert">Erreur, vérifiez vos nom d'utilisateur et mot de passe</div>#}
+
+
+<div class="loader-area text-center" style="display:none">
+    <div class="loader-elegant">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+
+</div><!--/.col-sm-12-->
+
+
+</div>
+
+                {% if app.request.get('_route') != app.request.headers.get('referer') %}
+                    <input type="hidden" name="_target_path" value="{{ app.request.headers.get('referer') }}" />
+                {% endif %}
+
+</div></div></div><div class="modal-footer" style="display: block;"><div class="bootstrap-dialog-footer"><div class="bootstrap-dialog-footer-buttons">{#<button class="btn btn-facebook btn-sm" id="btn-connect-facebook"><span class="hidden-xs">Connexion </span>Facebook</button>#}<button class="btn btn-default" id="dc55a6d1-ac67-48c2-b5c3-77abdb9fd927">Acceuil</button><button class="btn btn-info" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >Connexion</button></div></div></form>
+
+
+

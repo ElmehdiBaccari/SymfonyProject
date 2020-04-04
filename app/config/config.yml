@@ -1,0 +1,179 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: "@ademBundle/Resources/config/services.yml" }
+    - { resource: "@EspritApiBundle/Resources/config/services.yml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: fr
+
+
+framework:
+    #esi: ~
+    translator: { fallbacks: ['%locale%'] }
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    #serializer: { enable_annotations: true }
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+    templating:
+        engines: ['twig']
+
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes:
+            - 'bootstrap_3_layout.html.twig'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: '%database_host%'
+        port: '%database_port%'
+        dbname: '%database_name%'
+        user: '%database_user%'
+        password: '%database_password%'
+        charset: UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #path: '%database_path%'
+
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+    username: '%mailer_user%'
+    password: '%mailer_password%'
+    spool: { type: memory }
+
+sensio_framework_extra:
+   router:
+        annotations: false
+
+
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        taswira:
+            uri_prefix:         /Uploads/user/photo
+            upload_destination: %kernel.root_dir%/../web/Uploads/user/photo
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        photofilm:
+            uri_prefix:         /Uploads/film
+            upload_destination: %kernel.root_dir%/../web/Uploads/film
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        photolivre:
+            uri_prefix:         /Uploads/livre
+            upload_destination: %kernel.root_dir%/../web/Uploads/livre
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        photoSalle:
+            uri_prefix:         /Uploads/salle
+            upload_destination: %kernel.root_dir%/../web/Uploads/salle
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        photocollection:
+            uri_prefix:         /Uploads/collection
+            upload_destination: %kernel.root_dir%/../web/Uploads/collection
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+        photoproduit:
+            uri_prefix:         /Uploads/produit
+            upload_destination: %kernel.root_dir%/../web/Uploads/produit
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        photoevenement:
+            uri_prefix:         /Uploads/evenement
+            upload_destination: %kernel.root_dir%/../web/Uploads/evenement
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        photosponsor:
+            uri_prefix:         /Uploads/sponsor
+            upload_destination: %kernel.root_dir%/../web/Uploads/sponsor
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: ademBundle\Entity\User
+    service:
+        mailer: fos_user.mailer.twig_swift
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
+
+knp_snappy:
+    pdf:
+        enabled:    true
+        # If you have wkhtmltopdf as an environment variable you don't need to provide the
+        # full path to the executable, use it in the same way as you use in the console
+        #binary:  "wkhtmltopdf"
+
+        binary:     "\"C:\\Program Files (x86)\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\""
+        options:
+            no-outline: true
+            page-size: LETTER
+            encoding: UTF-8
+    image:
+        enabled:    true
+        binary:     "\"C:\\Program Files (x86)\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\""
+        options:    []
+
+    temporary_folder: %kernel.cache_dir%/snappy
+
+piano_solo_weather:
+    api_key: "109177ee07096fd1f3f33bde17c04fb0" # Required (OpenWeatherMap Api Key)
+    options:
+        download_csv: True # Default True
+        cache: False # Default False (To use cache the system needs Php-Apc cache)
+dwr_open_weather:
+    api_key: "109177ee07096fd1f3f33bde17c04fb0"

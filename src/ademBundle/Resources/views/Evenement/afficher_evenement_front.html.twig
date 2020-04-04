@@ -1,0 +1,404 @@
+{% extends '@adem/Default/front.html.twig' %}
+
+
+{% block body %}
+    <div id="page_wraper2" style="font-size:13px">
+
+        <style type="text/css">
+
+
+            /*----------INCENTIVE 2 LAYOUT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+            .incentive2 {
+                width: 934px;
+                height: 155px;
+                margin: 0px auto;
+                margin-bottom: 35px;
+                margin-left: 3px;
+                padding: 25px;
+                border-radius: 2px;
+                background-color: #241E1A;
+                overflow: hidden;
+
+                position: relative;
+
+                -webkit-box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.75);
+                box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.75);
+            }
+
+
+
+            .in_close{
+                color:#796162;
+                font-size: 21px;
+                position: absolute;
+                top: 8px;
+                right: 6px;
+                cursor: pointer;
+            }
+            .in_close:hover{ color: #fbfbfb;}
+
+            .in_left {
+                float: left;
+                padding: 0px 35px 0 40px;
+
+                height: 135px;
+                border-right: 1px solid #2F2A26;
+            }
+
+            .in_left .icon-right-circle{ font-size: 16px; margin-left: 3px; margin-top: 5px;}
+
+            .incentive2 .btn{
+                display: block;
+
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: normal;
+                color: #FBFBFB !important;
+                background-color: #5a3d3e;
+                border: 1px solid #5a3d3e;
+                padding: 11px 30px 10px 30px;
+                padding: 11px 0 10px 0;
+                width:441px;
+
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0px;
+                text-align: center;
+                w!idth: auto;
+                height: auto;
+                float: left;
+
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s;
+                -o-transition: all .2s;
+                -ms-transition: all .2s;
+                transition: all .2s;
+                border-radius: 18px;
+                cursor: pointer;
+                font: Arial, Helvetica, sans-serif;
+
+                text-decoration: none !important;
+                margin-top: 16px;
+            }
+
+            .incentive2 .btn:hover {
+                background:#7A6364!important;
+
+                border:1px solid #7A6364!important;
+                cursor:pointer;
+            }
+            .topnewincentive_inner{ width:360px;}
+            .topincentive_content a { display: block; padding: 0 12px 0px 0; top: 1px; float: left; position: relative;}
+            .topincentive_txt { float: left; position: relative; width: 295px; color:#DDD8D8;  }
+            .topincentive_txt a { display: inline-block; padding: 0px; top: 0px;
+
+                color:#796162;
+                color:#DDD8D8;
+
+                text-transform: uppercase;}
+            .topincentive_txt a:hover{ color:#fbfbfb;}
+
+
+            .in_right {
+
+
+                float: left;
+                width:363px;
+                overflow:hidden;
+                padding-left: 35px;
+                padding-top: 5px;
+
+            }
+            .in_right h3{
+                font-size: 24px;
+                font-family: 'museo_sans_100regular', Arial, Helvetica, sans-serif;
+                line-height: normal;
+                font-weight: normal;
+                color: #796162;
+                margin: 0;
+
+            }
+            .in_right h3.sub{
+                color:#DDD8D8;
+                font-size: 18px;
+                position: relative;
+                top:-3px;
+                left: 1px;
+                margin: 0;
+                margin-bottom: 16px;
+            }
+            .in_reviews{
+                color: #796162;
+                font-size: 12px;
+
+
+            }
+
+            .incentive_keypoint{
+                color: #AC9D9E;
+                text-align:left;
+                font-size:14px;
+            }
+
+            .incentive_keypoint .keypoint_title{
+                font-weight:bold;
+                color:#fbfbfb;
+
+            }
+
+
+            .incentive_keypoint .keypoint_desc{
+
+            }
+
+
+            .incentive_keypoint .keypoint_highlite{
+                color:white;
+            }
+
+
+
+            .incentive_keypoint .free{
+
+                text-align: center;
+                margin:0px;
+                margin-top:4px;
+                margin-bottom:4px;
+                margin-bottom: 2px;
+            }
+
+
+
+        </style>
+        <div class="incentive2 incentive_newversion" id="divincentive" style="display:none">
+            <div class="icon-cancel in_close" onclick="remIncent()"></div>
+            <div class="in_left">
+                <div class="incentive_keypoint">
+                    <div><span class="keypoint_title">Entrez : </span><span class="keypoint_desc">Soyez le créateur de votre propre <span class="keypoint_highlite">bibliothèque virtuelle</span>.</span></div>
+                    <div><span class="keypoint_title">Découvrez : </span><span class="keypoint_desc">Trouvez les <span class="keypoint_highlite">dates de sortie</span> des livres que vous attendez.</span></div>
+                    <div><span class="keypoint_title">Partagez : </span><span class="keypoint_desc">Ayez des <span class="keypoint_highlite">débats passionnés</span> sur les livres dans le forum.</span></div>
+                    <div><span class="keypoint_title">Jouez : </span><span class="keypoint_desc">Mettez vos connaissances à l'epreuve dans des <span class="keypoint_highlite">quizz</span>.</span></div>
+                    <div class="free"><span class="keypoint_highlite">100% Gratuit</span>, <strong>Booknode</strong> est fait pour vous !</div>
+                </div>
+                <a class="btn registerbutton4event" eventdata="register:click:incentive" href="/inscription.php" rel="nofollow">
+                    CREER MON COMPTE
+                </a>
+            </div>
+            <div class="in_right">
+                <h3>LA COMMUNAUTÉ DU LIVRE</h3>
+                <h3 class="sub">ILS SE SONT INSCRITS, ILS SONT RAVIS</h3>
+                <div class="in_reviews" id="topnewincentive"></div>
+            </div>
+        </div>
+
+
+
+        <style type="text/css">
+            #divanylisting{
+
+                min-height:800px;
+                width:990px;
+                padding:0px;
+                font-size:12px;
+                position:relative;
+                overflow:hidden;
+                b!ackground:url(/pics/template/anylist/readingbook.jpg) no-repeat  0px 20px ;
+                b!order:1px solid #e8e8e8;
+                padding-top: 20px;
+
+            }
+            #divanylisting .title{
+
+                font-size:16px;
+                font-weight:bold;
+                margin:auto;
+                margin-top:30px;
+                text-align:center;
+            }
+            #divanylisting a{
+                color:#5a3d3e;
+                font-size:14px;
+            }
+
+            #divanylisting a.datesortiebuy{
+                font-size:12px;
+            }
+
+
+
+            #divanylisting a.auteur{
+                color:#787878;
+                font-size:12px;
+            }
+
+            .listing_wrap{ margin-top: 40px; width: 1020px; overflow: visible;}
+
+            #divanylisting .oneofthebook{
+                margin-right:12px;
+                width:290px;
+                height:180px;
+                float:left;
+                margin-bottom:12px;
+                position:relative;
+                padding: 15px;
+                padding-bottom: 10px;
+            }
+            #divanylisting h4{
+                font-size:18px;
+            }
+
+            #logopage{
+                position:absolute;
+                top:0px;
+                left:10px;
+            }
+            #logopage2{
+                position:absolute;
+                top:10px;
+                left:870px;
+            }
+
+            ul.authorlist{
+                margin:0;
+                padding:0;
+            }
+
+            ul.authorlist li{
+                list-style-type:none;
+
+            }
+
+
+            img.imgadd{
+                cursor:pointer;
+                position:absolute;
+                top:5px;
+                left:5px;
+            }
+
+
+
+
+
+            div.toprating_legend{
+
+                font-size:12px;
+
+
+
+
+                margin-bottom:10px;
+                margin-right:10px;
+
+
+
+                width:477px;
+
+                margin-top:0px;
+                m!argin-left:180px;
+
+            }
+
+            #useragefilter{
+                float:left;
+                margin-left:5px;
+
+                font-size:12px
+            }
+            #userageslider{
+
+                font-size:11px;
+                margin-top:5px;
+                width:300px;
+            }
+            #userageslider_vals{
+
+                font-size:11px;
+                margin-top:5px;
+                width:300px;
+                text-align:center;
+                float:left;
+            }
+
+            #imk{
+                margin:0px;
+                padding:0px;
+                position:relative;
+                top:-4px;
+            }
+            .setlabel{ display: inline-block; padding-left: 15px; font-weight: bold;line-height: 22px;}
+            .readinit{ padding-top: 15px; font-size: 11px; color: #787878; }
+
+            a.acover{
+
+            }
+
+            img.imgcover{
+                margin-right:10px;
+            }
+
+            .shadow10{
+
+                /* For IE 8 */
+                /*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#a1a1a1')";*/
+                /* For IE 5.5 - 7 */
+                /*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#a1a1a1');*/
+
+                -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+                -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+                box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 8px;
+
+            }
+
+            .infiniteimgloader{
+                clear: left;
+                display: block;
+            }
+        </style>
+        <script type="text/javascript">
+
+
+            $(function(){
+
+                var o=new bkn_infinite();
+                o.init({
+                    'container':'.listing_wrap'
+                });
+
+            });
+
+
+
+        </script>
+        <div class="title"><h1>Liste des evenements dans cité de la culture</h1></div>
+        <div id="divanylisting">
+
+            <div class="listing_wrap">
+                {% for f in evenements %}
+                    <div class="oneofthebook data-block" idbook="6680">
+                        <a target="_blank" class="acover" title="Voir la page du livre Avatar 2" href="{{ path('afficherEvenementDetail',{'id':f.idEvent})}}">
+                            <img class="imgcover shadow10" alt="Avatar 2" height="150" width="100" title="Avatar 2" align="left" src="http:\\localhost\web_projet\web\Uploads\evenement\{{ f.image }}" border="0">
+                            {{ f.nom }}
+                        </a>
+                        <br>
+                        <ul class="authorlist">
+                            <li><a title="Voir la page de l'auteur James Cameron" class="auteur" href="/realisateur/8/james-cameron">{{ f.nom }}</a></li>
+                        </ul>
+                        <span class="readinit">1388 envies</span>
+                        <br>
+                        <span class="venteTop_achat"><a href="javascript:void(0)" idbook="6680" class="datesortiebuy ">Acheter</a></span>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+
+        <div class="mypager" style="display: none;"><ul class="mypager"><li>aller en page : </li><li><a style="font-weight:bold;text-decoration:underline" href="/listes/envies">1</a></li><li><a href="/listes/envies?offset=2">2</a></li><li><a href="/listes/envies?offset=3">3</a></li><li><a href="/listes/envies?offset=4">4</a></li><li><a href="/listes/envies?offset=5">5</a></li><li><a href="/listes/envies?offset=6">6</a></li><li><a href="/listes/envies?offset=7">7</a></li><li><a href="/listes/envies?offset=8">8</a></li><li><a href="/listes/envies?offset=9">9</a></li><li><a href="/listes/envies?offset=10">10</a></li></ul></div><div style="clear:left"></div>
+
+        <textarea style="display:none" id="booksIHave"></textarea>
+
+    </div>
+{% endblock %}

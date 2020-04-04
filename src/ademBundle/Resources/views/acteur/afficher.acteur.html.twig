@@ -1,0 +1,159 @@
+{#{% extends '@adem/Default/dashboard.html.twig' %}
+
+{% block title %}Liste {% endblock %}
+
+{% block body %}
+<h1>Formulaire</h1>
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.ajouter) }}
+
+
+    <h1>Liste des personnes</h1>
+{% for p in personnes %}
+
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="http:\\localhost\image\{{ p.photo }}" alt="Card image cap"   height="100" width="100">
+        <div class="card-body">
+            <p class="card-text">
+                {{ p.nom }} {{ p.prenom }}
+                <a href="{{ path('_delete', { 'id': p.id }) }}" > Supprimer</a>
+            </p>
+        </div>
+    </div>
+    {{ form_row(form.Supprimer) }}
+    {% endfor %}
+
+
+{% endblock %}#}
+{% extends '@adem/Default/dashboard.html.twig' %}
+
+
+
+
+
+
+
+
+
+
+{% block title %}
+    Liste des films
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+        $(document).ready(function () {
+            $('#acteurTab').DataTable({
+                "paging": true,
+                "stateSave": true,
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.13/i18n/French.json",
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+{% endblock %}
+
+{% block body %}
+
+<div class="page-content-wrapper ">
+
+    <div class="container sm-gutter">
+        <br><br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><b>Liste  des acteurs </b></h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <br>
+
+                    <a href="{{ path('ajouter_acteur') }}" class="btn btn-success">
+                        <i class="icon-plus">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            &nbsp;Ajouter un Acteur
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-borderless">
+
+                <div class="tab-content" >
+                    <div class="tab-pane active" id="annonce" aria-expanded="true">
+                        <table id="acteurTab" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>date_naissance</th>
+                                <th>nationalité</th>
+                                <th>Operations</th>
+
+
+                            </tr>
+                            </thead>
+                            <thead>
+                            <tbody>
+                            {% for f in acteur %}
+                                <tr>
+                                    <td>{{ f.nom }}</td>
+                                    <td>{{ f.prenom }} </td>
+                                    <td>{{ f.date_Naissance |date("m/d/Y")}}</td>
+                                    <td>{{ f.nationalite }}</td>
+
+                                    <td>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('modifier_acteur', { 'id': f.id }) }}"
+                                               data-toggle="tooltip" title="Editer film">
+                                                <i class="fa fa-pen-square"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('supprimer_acteur', { 'id': f.id }) }}"
+                                               data-toggle="tooltip" title="Supprimer Film">
+                                                <i class="fa  fa-trash"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group btn-group-sm btn-group-horizontal">
+                                            <a class="btn btn-secondary"
+                                               href="{{ path('ajouter_realisation', { 'id': f.id }) }}"
+                                               data-toggle="tooltip" title="Affecter a un film">
+                                                <i> Affecter a un film</i>
+                                            </a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+

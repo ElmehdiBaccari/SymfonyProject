@@ -1,0 +1,4451 @@
+
+{%  if is_granted('ROLE_ADMIN') %}
+{{  render(path('list')) }}
+{% else %}
+<!DOCTYPE html>
+<!-- saved from url=(0134)file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne.html -->
+<html lang="fr" class="modern"><!--[endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta property="fb:admins" content="100002300211111">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cité de la culture</title>
+
+    <meta name="description" content="Booknode, Une vraie expérience littéraire, partagez, commentez et découvrez vos lectures et livres de demain. Votre bibliothèque et votre club de lecture en ligne !">
+    <meta name="theme-color" data-darker-content="#8e7674" content="#5a3d3e">
+
+    <meta name="msvalidate.01" content="6C189F140D527CDEA32438BCE192F93E">
+    <meta name="google-site-verification" content="J5nr4jBA6BEHEdY-5yEeefJ-QD8J4b4vRB5nRwkjg4M">
+    <meta name="google-site-verification" content="d7_iRyxp6iJjMmJj69l76uz972fFBooPxJXl4a6U0qU">
+    <meta name="y_key" content="3558db9fe50fae8c">
+    <meta http-equiv="content-language" content="fr">
+    <meta name="verify-v1" content="bdUn4GrrsYY6qpYkbIf9sQf1MJN88fgPtMaoR+uCqCY=">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://booknode.com/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://booknode.com/favicon.ico">
+
+    <!--<script type="text/javascript" src="/version/v2/global/js/standalone.error.js"></script>-->
+
+    <!--
+    <script src="https://cdn.ravenjs.com/3.10.0/raven.min.js"></script>
+    <script type="text/javascript">
+        Raven.config('https://48034478bde24b6091cd9d6e12dee7cb@sentry.io/96709').install()
+    </script>
+-->
+
+
+    <!--vendors things-->
+
+    <link
+            href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+            rel="stylesheet"  type='text/css'>
+    <link href="{{ asset('assets/front/main2.css') }}" rel="stylesheet">
+    <!--[if lte IE 9 ]>
+    <link type="text/css" href="/version/v2/global/css/include.css?v71.css" rel="stylesheet" />
+    <![endif]-->
+
+
+    <!--[if !IE]-->
+    <link type="text/css" href="{{ asset('assets/front/include.css') }}" rel="stylesheet">
+    <!--[endif]-->
+
+
+
+    <link href="{{ asset('assets/front/css') }}" rel="stylesheet" type="text/css">
+    <!--<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>-->
+
+    <link href="{{ asset('assets/front/css(1)') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/css(2)') }}" rel="stylesheet">
+
+
+    <!--[if lte IE 9 ]>
+    <script type="text/javascript" src="/version/v2/global/lib/vendors/matchMedia/matchMedia.js"></script>
+    <script type="text/javascript" src="/version/v2/global/lib/vendors/matchMedia/matchMedia.addListener.js"></script>
+    <![endif]-->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script href=="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/version/v2/global/lib/vendors/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" async="" defer="" src="file://pwk.booknode.com/piwik.js"></script><script type="text/javascript" async="" src="{{ asset('assets/front/ga.js.download') }}"></script><script type="text/javascript" async="" defer="" src="file://pwk.booknode.com/piwik.js"></script><script type="text/javascript" async="" src="{{ asset('assets/front/ga.js.download') }}"></script><script type="text/javascript" async="" defer="" src="file://pwk.booknode.com/piwik.js"></script><script type="text/javascript" async="" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/ga.js.download"></script><script src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/pubads_impl_rendering_2019032001.js.download"></script><script async="" type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/gpt.js.download"></script><script type="text/javascript" async="" defer="" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/piwik.js.download"></script><script type="text/javascript" async="" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/ga.js.download"></script><script>
+        if( (/loadgoogletag=1/).test(document.location.search) ){
+
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-K34FVLC');
+
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        window.ad_vars=window.ad_vars || {};
+        ad_vars.pagetype=''
+    </script>
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/shared.css') }}">
+
+
+    <style type="text/css">
+        .mobile-os-ios .hide-ios{
+            display: none!important;
+        }
+
+    </style>
+    <!--fix dans le cas où le premier char est un font awesome icon, IE9 essaie d ecrire ... avec la police de FA -->
+    <!--[if IE 9]>
+
+    <style>
+        .text-ellipsis:before, .text-one-line:before{
+            content:'';
+        }
+    </style>
+    <![endif]-->
+
+
+    <style type="text/css">
+
+        body.loading .loading-overlay{
+            display: flex;
+        }
+        .loading-overlay{
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background: rgba(250,250,250,.7);
+            top: 0;
+            left: 0;
+            z-index: 100000;
+        }
+
+
+        body.premium-no .premium-yes{
+            display: none!important;
+        }
+
+        body.premium-yes .premium-no{
+            display: none!important;
+        }
+
+        /*utile uniquement pour l'habillage qui reglait mal le zindex,
+        possible à retirer n'importe quand apres le 15 juillet*/
+        .site-content-container{
+            z-index:10!important;
+        }
+
+        .bkmessenger-opened #site-footer{
+            display:none;
+        }
+        .bkmessenger-opened .site-content-container{
+            display: none;
+        }
+
+    </style>
+
+
+
+    <style type="text/css">
+        .v--modal-block-scroll {
+            overflow: hidden;
+            width: 100vw;
+        }
+        .v--modal-overlay {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            opacity: 1;
+        }
+        .v--modal-overlay.scrollable {
+            height: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .v--modal-overlay .v--modal-background-click {
+            min-height: 100%;
+            width: 100%;
+        }
+        .v--modal-overlay .v--modal-box {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .v--modal-overlay.scrollable .v--modal-box {
+            margin-bottom: 2px;
+        }
+        .v--modal {
+            background-color: white;
+            text-align: left;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+            padding: 0;
+        }
+        .v--modal.v--modal-fullscreen {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+        .v--modal-top-right {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .overlay-fade-enter-active,
+        .overlay-fade-leave-active {
+            transition: all 0.2s;
+        }
+        .overlay-fade-enter,
+        .overlay-fade-leave-active {
+            opacity: 0;
+        }
+        .nice-modal-fade-enter-active,
+        .nice-modal-fade-leave-active {
+            transition: all 0.4s;
+        }
+        .nice-modal-fade-enter,
+        .nice-modal-fade-leave-active {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    </style><style type="text/css">
+        .vue-modal-resizer {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 0;
+            bottom: 0;
+            z-index: 9999999;
+            background: transparent;
+            cursor: se-resize;
+        }
+        .vue-modal-resizer::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #ddd;
+            border-left: 10px solid transparent;
+        }
+        .vue-modal-resizer.clicked::after {
+            border-bottom: 10px solid #369be9;
+        }
+    </style><style type="text/css">
+        .vue-dialog div {
+            box-sizing: border-box;
+        }
+        .vue-dialog .dialog-flex {
+            width: 100%;
+            height: 100%;
+        }
+        .vue-dialog .dialog-content {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .vue-dialog .dialog-c-title {
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .vue-dialog .dialog-c-text {
+        }
+        .vue-dialog .vue-dialog-buttons {
+            display: flex;
+            flex: 0 1 auto;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .vue-dialog .vue-dialog-buttons-none {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        .vue-dialog-button {
+            font-size: 12px !important;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 40px;
+            height: 40px;
+            color: inherit;
+            font: inherit;
+            outline: none;
+        }
+        .vue-dialog-button:hover {
+            background: rgba(0, 0, 0, 0.01);
+        }
+        .vue-dialog-button:active {
+            background: rgba(0, 0, 0, 0.025);
+        }
+        .vue-dialog-button:not(:first-of-type) {
+            border-left: 1px solid #eee;
+        }
+    </style><link rel="preload" href="{{ asset('assets/front/f.txt') }}" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f.txt"></script><link rel="preload" href="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt"></script><link rel="preload" href="./Booknode _ Votre Club de Lecture et Communauté Littéraire en ligne_files/f.txt" as="script"><script type="text/javascript" src="./Booknode _ Votre Club de Lecture et Communauté Littéraire en ligne_files/f.txt"></script><link rel="preload" href="./Booknode _ Votre Club de Lecture et Communauté Littéraire en ligne_files/f(1).txt" as="script"><script type="text/javascript" src="./Booknode _ Votre Club de Lecture et Communauté Littéraire en ligne_files/f(1).txt"></script><script src="./Booknode _ Votre Club de Lecture et Communauté Littéraire en ligne_files/pubads_impl_2019032001.js.download" async=""></script><link rel="preload" href="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f.txt" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f.txt"></script><link rel="preload" href="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt"></script><script src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/pubads_impl_2019032001.js.download" async=""></script><link rel="preload" href="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f.txt" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f.txt"></script><link rel="preload" href="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt" as="script"><script type="text/javascript" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/f(1).txt"></script><script src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/pubads_impl_2019032001.js.download" async=""></script><script src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/pubads_impl_2019032001.js.download" async=""></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-32/html/container.html"><style type="text/css">
+        .v--modal-block-scroll {
+            overflow: hidden;
+            width: 100vw;
+        }
+        .v--modal-overlay {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            opacity: 1;
+        }
+        .v--modal-overlay.scrollable {
+            height: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .v--modal-overlay .v--modal-background-click {
+            min-height: 100%;
+            width: 100%;
+        }
+        .v--modal-overlay .v--modal-box {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .v--modal-overlay.scrollable .v--modal-box {
+            margin-bottom: 2px;
+        }
+        .v--modal {
+            background-color: white;
+            text-align: left;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+            padding: 0;
+        }
+        .v--modal.v--modal-fullscreen {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+        .v--modal-top-right {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .overlay-fade-enter-active,
+        .overlay-fade-leave-active {
+            transition: all 0.2s;
+        }
+        .overlay-fade-enter,
+        .overlay-fade-leave-active {
+            opacity: 0;
+        }
+        .nice-modal-fade-enter-active,
+        .nice-modal-fade-leave-active {
+            transition: all 0.4s;
+        }
+        .nice-modal-fade-enter,
+        .nice-modal-fade-leave-active {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    </style><style type="text/css">
+        .vue-modal-resizer {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 0;
+            bottom: 0;
+            z-index: 9999999;
+            background: transparent;
+            cursor: se-resize;
+        }
+        .vue-modal-resizer::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #ddd;
+            border-left: 10px solid transparent;
+        }
+        .vue-modal-resizer.clicked::after {
+            border-bottom: 10px solid #369be9;
+        }
+    </style><style type="text/css">
+        .vue-dialog div {
+            box-sizing: border-box;
+        }
+        .vue-dialog .dialog-flex {
+            width: 100%;
+            height: 100%;
+        }
+        .vue-dialog .dialog-content {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .vue-dialog .dialog-c-title {
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .vue-dialog .dialog-c-text {
+        }
+        .vue-dialog .vue-dialog-buttons {
+            display: flex;
+            flex: 0 1 auto;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .vue-dialog .vue-dialog-buttons-none {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        .vue-dialog-button {
+            font-size: 12px !important;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 40px;
+            height: 40px;
+            color: inherit;
+            font: inherit;
+            outline: none;
+        }
+        .vue-dialog-button:hover {
+            background: rgba(0, 0, 0, 0.01);
+        }
+        .vue-dialog-button:active {
+            background: rgba(0, 0, 0, 0.025);
+        }
+        .vue-dialog-button:not(:first-of-type) {
+            border-left: 1px solid #eee;
+        }
+    </style><style type="text/css">
+        .v--modal-block-scroll {
+            overflow: hidden;
+            width: 100vw;
+        }
+        .v--modal-overlay {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            opacity: 1;
+        }
+        .v--modal-overlay.scrollable {
+            height: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .v--modal-overlay .v--modal-background-click {
+            min-height: 100%;
+            width: 100%;
+        }
+        .v--modal-overlay .v--modal-box {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .v--modal-overlay.scrollable .v--modal-box {
+            margin-bottom: 2px;
+        }
+        .v--modal {
+            background-color: white;
+            text-align: left;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+            padding: 0;
+        }
+        .v--modal.v--modal-fullscreen {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+        .v--modal-top-right {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .overlay-fade-enter-active,
+        .overlay-fade-leave-active {
+            transition: all 0.2s;
+        }
+        .overlay-fade-enter,
+        .overlay-fade-leave-active {
+            opacity: 0;
+        }
+        .nice-modal-fade-enter-active,
+        .nice-modal-fade-leave-active {
+            transition: all 0.4s;
+        }
+        .nice-modal-fade-enter,
+        .nice-modal-fade-leave-active {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    </style><style type="text/css">
+        .vue-modal-resizer {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 0;
+            bottom: 0;
+            z-index: 9999999;
+            background: transparent;
+            cursor: se-resize;
+        }
+        .vue-modal-resizer::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #ddd;
+            border-left: 10px solid transparent;
+        }
+        .vue-modal-resizer.clicked::after {
+            border-bottom: 10px solid #369be9;
+        }
+    </style><style type="text/css">
+        .vue-dialog div {
+            box-sizing: border-box;
+        }
+        .vue-dialog .dialog-flex {
+            width: 100%;
+            height: 100%;
+        }
+        .vue-dialog .dialog-content {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .vue-dialog .dialog-c-title {
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .vue-dialog .dialog-c-text {
+        }
+        .vue-dialog .vue-dialog-buttons {
+            display: flex;
+            flex: 0 1 auto;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .vue-dialog .vue-dialog-buttons-none {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        .vue-dialog-button {
+            font-size: 12px !important;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 40px;
+            height: 40px;
+            color: inherit;
+            font: inherit;
+            outline: none;
+        }
+        .vue-dialog-button:hover {
+            background: rgba(0, 0, 0, 0.01);
+        }
+        .vue-dialog-button:active {
+            background: rgba(0, 0, 0, 0.025);
+        }
+        .vue-dialog-button:not(:first-of-type) {
+            border-left: 1px solid #eee;
+        }
+    </style><style type="text/css">
+        .v--modal-block-scroll {
+            overflow: hidden;
+            width: 100vw;
+        }
+        .v--modal-overlay {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            opacity: 1;
+        }
+        .v--modal-overlay.scrollable {
+            height: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .v--modal-overlay .v--modal-background-click {
+            min-height: 100%;
+            width: 100%;
+        }
+        .v--modal-overlay .v--modal-box {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .v--modal-overlay.scrollable .v--modal-box {
+            margin-bottom: 2px;
+        }
+        .v--modal {
+            background-color: white;
+            text-align: left;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+            padding: 0;
+        }
+        .v--modal.v--modal-fullscreen {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            left: 0;
+            top: 0;
+        }
+        .v--modal-top-right {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .overlay-fade-enter-active,
+        .overlay-fade-leave-active {
+            transition: all 0.2s;
+        }
+        .overlay-fade-enter,
+        .overlay-fade-leave-active {
+            opacity: 0;
+        }
+        .nice-modal-fade-enter-active,
+        .nice-modal-fade-leave-active {
+            transition: all 0.4s;
+        }
+        .nice-modal-fade-enter,
+        .nice-modal-fade-leave-active {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    </style><style type="text/css">
+        .vue-modal-resizer {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 0;
+            bottom: 0;
+            z-index: 9999999;
+            background: transparent;
+            cursor: se-resize;
+        }
+        .vue-modal-resizer::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #ddd;
+            border-left: 10px solid transparent;
+        }
+        .vue-modal-resizer.clicked::after {
+            border-bottom: 10px solid #369be9;
+        }
+    </style><style type="text/css">
+        .vue-dialog div {
+            box-sizing: border-box;
+        }
+        .vue-dialog .dialog-flex {
+            width: 100%;
+            height: 100%;
+        }
+        .vue-dialog .dialog-content {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .vue-dialog .dialog-c-title {
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .vue-dialog .dialog-c-text {
+        }
+        .vue-dialog .vue-dialog-buttons {
+            display: flex;
+            flex: 0 1 auto;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        .vue-dialog .vue-dialog-buttons-none {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+        .vue-dialog-button {
+            font-size: 12px !important;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 40px;
+            height: 40px;
+            color: inherit;
+            font: inherit;
+            outline: none;
+        }
+        .vue-dialog-button:hover {
+            background: rgba(0, 0, 0, 0.01);
+        }
+        .vue-dialog-button:active {
+            background: rgba(0, 0, 0, 0.025);
+        }
+        .vue-dialog-button:not(:first-of-type) {
+            border-left: 1px solid #eee;
+        }
+    </style></head>
+<body class="connected-no premium-no  mobile-os-    view" data-views="common,authent">
+
+
+
+
+
+<div class="loading-overlay">
+    <i class="fa fa-spinner fa-spin fa-4x" style="color:#5A3D3E"></i>
+</div>
+
+<main id="site-wrapper">
+    <section id="site-content">
+
+
+        <style type="text/css">
+            .qsearch2 .searchinput_mobile{
+                float: none;
+                height: 48px;
+            }
+
+            .qsearch2.mobile .btn-search{
+                padding: 12px 16px;
+            }
+
+            .input-group-addon.primary {
+                color: rgb(255, 255, 255);
+                background-color: #5a3d3e;
+                /*border: 1px solid #6A5151;
+                border: 1px solid #4b3334;*/
+                border-color:  #cccccc;
+            }
+            /*
+            .qsearch2.empty .qclose{
+            display: none;
+            }
+            */
+        </style>
+
+        <section class="header-first  ">
+
+
+
+
+            <div class="container">
+
+
+                <div class="row">
+
+                    <form class="visible-xs qsearch2 mobile empty" action="https://booknode.com/search" role="search" style="margin:4px 0">
+
+                        <div class="input-group">
+                            <span class="twitter-typeahead" style="position: relative; display: inline-block;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><span class="twitter-typeahead" style="position: relative; display: inline-block;"><input autocomplete="off" type="text" class="form-control searchinput searchinput_mobile s!ite-searchbox tt-input" name="q" placeholder="Rechercher un livre ou un auteur..." spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-book"></div><div class="tt-dataset tt-dataset-author"></div><div class="tt-dataset tt-dataset-user"></div></div></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-book"></div><div class="tt-dataset tt-dataset-author"></div><div class="tt-dataset tt-dataset-user"></div></div></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-book"></div><div class="tt-dataset tt-dataset-author"></div><div class="tt-dataset tt-dataset-user"></div></div></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-book"></div><div class="tt-dataset tt-dataset-author"></div><div class="tt-dataset tt-dataset-user"></div></div></span>
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-search"><i class="fa fa-search"></i></button>
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-xs btn-info qclose"><i class="fa fa-close"></i></button>
+                    </form>
+
+                </div>
+
+
+                <div class="row ">
+
+                    <div class="col-sm-5  hidden-xs">
+                        <div style="position: absolute;left:0;top:0;width:331px;height:77px;overflow: hidden;">
+                            <img src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/logo_icon-half2.png" class="site-logo-back">
+                        </div>
+                        <a href="https://booknode.com/" class="site-logo"><img src="{{ asset('assets/front/logocc.png') }}"></a>
+
+
+                    </div>
+
+                    <!--
+                    <style>
+
+
+
+                        #chimist-syringe-wrap{
+                            width:100%;
+                            height: 60px;
+                            margin-top: 10px;
+                            overflow: hidden;
+
+                            /*-webkit-filter: drop-shadow(4px 4px 4px #111);*/
+
+                        }
+                        #chimist-syringe{
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            background: url(/pics/newsletter/chimiste/straight120.png) no-repeat center center;
+                            cursor: pointer;
+                            background-size: contain;
+                            -webkit-transform: rotate(30deg);
+                            -moz-transform: rotate(30deg);
+                            -ms-transform: rotate(30deg);
+                            -o-transform: rotate(30deg);
+                            transform: rotate(30deg);
+                        }
+                    </style>
+                -->
+
+                    <style>
+                        .accroche-challenges{
+                            margin:auto;
+                            margin-top: 15px;
+                            width:100%;max-width: 50px;
+                            display:block;
+                            opacity: .7;
+                            transition: all .5s;
+                        }
+                        .accroche-challenges:hover{
+                            opacity: 1;
+                        }
+
+                        .accroche-challenges img{
+                            width: 100%;
+                        }
+
+
+                        .accroche-fnr{
+                            margin:auto;
+                            margin-top: 15px;
+                            width:100%;max-width: 50px;
+
+                            max-width: 55px;
+                            display:block;
+                            opacity: .8;
+                            transition: all .5s;
+
+                        }
+                        .accroche-fnr:hover{
+                            opacity:1;
+                        }
+
+                        .accroche-fnr img{
+                            width: 100%;
+                        }
+
+                    </style>
+
+
+
+
+                    <div class="col-sm-4 col-xs-7">
+                        <div class="row">
+
+
+                            <div class="col-xs-4 text-center visible-xs">
+                                <!--
+                                <a style="display:inline-block;margin-top:15px" onclick="_gaq.push(['_trackEvent','fnr2018', 'click','ribbon', null]);" target="_blank" href="http://www.festivalnewromance.com/?utm_source=Booknode&utm_medium=Header&utm_campaign=FNR_Booknode">
+                                    <img style="max-width:100%"  src="/pics/fnr/2018/fnr-ruban50.png" alt="">
+                                </a>
+                                -->
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <style>
+                        @media (max-width:767px){
+                            .messenger-menu-button{
+                                margin-top: 10px;
+                            }
+                        }
+                    </style>
+                    <div class="col-sm-2 col-xs-5 text-right " style="padding-right: 0px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       {# {% if app.user %}
+                            <div class="pull-left p-r-10 fs-14 font-heading hidden-md-down text-white">
+                                <span class="semi-bold">{{ app.user.prenom}}</span> <span class="">{{ app.user.nom | upper }}</span>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+              <span class="thumbnail-wrapper d32 circular inline sm-m-r-5">
+                {% if app.user.photo != '' %}
+                    <img alt="User Pic" style="width:50px;" width="32" height="32"
+                         src="{{ asset('uploads/user/photo/' ~ app.user.photo) }}"
+                         class="img-circle img-responsive">
+                                    {% else %}
+                    <img alt="User Pic" style="width:50px;" src="{{ asset('assets/img/profile.png') }}" width="32" height="32"
+                         id="profile-image1" class="img-circle img-responsive">
+                {% endif %}
+                </span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+                                    <a href="{{ path('da_users_edit', { 'id': app.user.id }) }}" class="dropdown-item" data-unsp-sanitized="clean"><i class="fa fa-wrench" aria-hidden="true"></i> Settings</a>
+                                    <a href="{{ path('fos_user_security_logout') }}" class="clearfix bg-master-lighter dropdown-item">
+                                        <span class="pull-left">Logout</span>
+                                        <span class="pull-right"><i class="fa  fa-sign-out" aria-hidden="true"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {% block Panier %}{% endblock %}
+                            <!-- END User Info-->
+                            #}{#notification section dropdown#}{#
+                        {% else %}
+                            <a href="{{ path('inscription') }}">
+                                <button class="btn btn-default btn-cons  btn-sm">S'inscrire</button>
+                            </a>
+                            <a href="{{ path('fos_user_security_login') }}">
+                                <button class="btn btn-primary btn-cons  btn-sm">Se Connecter</button>
+                            </a>
+                        {% endif %}#}
+
+
+
+
+
+
+
+
+
+                        {% if app.user %}
+                        <article class="connected-no">
+                            <div class="login_loggedin" style="display:block;">
+
+                                <a class="username_link" href="">{{ app.user.username}}</a>
+                                <ul class="username_menu">
+                                    <li><a href="{{ path('fos_user_security_logout') }}">déconnexion</a> </li>
+
+                                </ul></div>
+                        </article>
+                        {% else %}
+                        <article class="connected-no">
+                            <a href="http://localhost/web_projet/web/app_dev.php/login"> <button class="btn btn-nsm btn-primary " >S'identifier</button> </a>
+                            <a href="http://localhost/web_projet/web/app_dev.php/register"><button class="btn btn-nsm btn-info header-button js-create-account" style="    margin-bottom: 5px;">Inscription</button> </a>
+
+                        </article>
+                        {% endif %}
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+
+        <!--marker4forum : menustart-->
+
+        <nav class="navbar site-navbar " id="main-menu">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed btn-primary" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand visible-xs " href="https://booknode.com/"><img class="site-logo-sm" src="file:///C:/Users/Damdoub/Desktop/Booknode%20_%20Votre%20Club%20de%20Lecture%20et%20Communaut%C3%A9%20Litt%C3%A9raire%20en%20ligne_files/logo-retina2.png"></a>
+                </div>
+
+                <style type="text/css">
+                    .input-group .twitter-typeahead .form-control:not(:first-child):not(:last-child) {
+                        border-radius: 4px 0px 0px 4px;
+                    }
+
+                    .qsearch2 .input-group{
+                        width: 100%;
+                    }
+                    .qsearch2 .form-control.searchinput_desktop{
+                        float:none;
+                        width:100%;
+                    }
+
+                    .site-navbar .qsearch2 .fa{
+                        margin: 0;
+                    }
+                    .site-navbar .qsearch2 .btn{
+                        border: 1px solid #cccccc;
+                    }
+
+                </style>
+
+                <div id="navbar" class="navbar-collapse collapse" style=";/*margin-right: -15px;*/">
+
+                    <ul class="nav navbar-nav">
+
+                        <li class="active hidden-sm "><a href="{{ path('accueil') }}">Accueil</a></li>
+                        <li class="dropdown">
+
+                            <ul class="dropdown-menu connected-yes" role="menu">
+                                <li><a href="https://booknode.com/#" data-href=""><i class="fa fa-user"></i> Profil</a></li>
+                                <li><a href="https://booknode.com/#" data-href=""><i class="fa fa-book"></i> Ma Biblio</a></li>
+                                <li><a href="https://booknode.com/#" data-href=""><i class="fa fa-file-o"></i> Notes</a></li>
+
+                                <li><a data-messenger-open="" href="javascript:void(0)"><i class="fa fa-inbox"></i> Messagerie</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://booknode.com/#" data-href="/perso"><i class="fa fa-cog"></i> Paramètres</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://booknode.com/#" data-href=""><i class="fa fa-user-plus"></i> Premium</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                                Les Salles
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+
+                            <!--[section:UniversFantastique]-->
+                                <li><a href="{{ path('afficher_salle_front') }}"><i class=""></i> Les Salles</a></li>
+                            <li><a href="{{ path('afficher_livre_front') }}"><i class=""></i> Mes demandes</a></li>
+                            <!--[/section:UniversFantastique]-->
+                                </ul>
+
+                        </li>
+
+                        <li class="dropdown">
+
+                            <a href="{{ path('afficher_livre_front') }}" class="dropdown-toggle"  role="button" aria-expanded="false">
+                                Les Livres <span class="caret"></span>
+                            </a>
+
+
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="{{ path('afficher_film_front') }}" class="dropdown-toggle" role="button" aria-expanded="false">
+                                Les Films<span class="caret"></span>
+                            </a>
+
+                            {#<ul class="dropdown-menu" role="menu">#}
+
+                                {#<!--[section:UniversFantastique]-->#}
+                                {#<li><a href="https://booknode.com/univers/fantastique"><i class=""></i> Fantastique</a></li>#}
+                                {#<!--[/section:UniversFantastique]-->#}
+
+                                {#<!--[section:UniversHerosAdolescents]-->#}
+                                {#<li><a href="https://booknode.com/univers/heros-adolescents"><i class=""></i> Héros Adolescents</a></li>#}
+                                {#<!--[/section:UniversHerosAdolescents]-->#}
+
+                                {#<!--[section:UniversDystopie]-->#}
+                                {#<li><a href="https://booknode.com/univers/dystopie"><i class=""></i> Dystopie</a></li>#}
+                                {#<!--[/section:UniversDystopie]-->#}
+
+                                {#<!--[section:UniversFantasy]-->#}
+                                {#<li><a href="https://booknode.com/univers/fantasy"><i class=""></i> Fantasy</a></li>#}
+                                {#<!--[/section:UniversFantasy]-->#}
+
+                                {#<!--[section:UniversBandeDessinee]-->#}
+                                {#<li><a href="https://booknode.com/univers/bande-dessinee"><i class=""></i> Bande Dessinée</a></li>#}
+                                {#<!--[/section:UniversBandeDessinee]-->#}
+
+                                {#<!--[section:UniversManga]-->#}
+                                {#<li><a href="https://booknode.com/univers/manga"><i class=""></i> Manga</a></li>#}
+                                {#<!--[/section:UniversManga]-->#}
+
+                                {#<!--[section:UniversScienceFiction]-->#}
+                                {#<li><a href="https://booknode.com/univers/science-fiction"><i class=""></i> Science Fiction</a></li>#}
+                                {#<!--[/section:UniversScienceFiction]-->#}
+
+                                {#<!--[section:UniversPolarThriller]-->#}
+                                {#<li><a href="https://booknode.com/univers/polar"><i class=""></i> Polar et Thriller</a></li>#}
+                                {#<!--[/section:UniversPolarThriller]-->#}
+
+                                {#<!--[section:UniversErotisme]-->#}
+                                {#<li><a href="https://booknode.com/univers/erotisme"><i class=""></i> Érotisme</a></li>#}
+                                {#<!--[/section:UniversErotisme]-->#}
+
+                                {#<!--[section:UniversLitteratureClassique]-->#}
+                                {#<li><a href="https://booknode.com/univers/litterature-classique"><i class=""></i> Littérature Classique</a></li>#}
+                                {#<!--[/section:UniversLitteratureClassique]-->#}
+
+                                {#<!--[section:UniversRomance]-->#}
+                                {#<li><a href="https://booknode.com/univers/romance"><i class=""></i> Romance</a></li>#}
+                                {#<!--[/section:UniversRomance]-->#}
+
+                                {#<!--[section:UniversNewRomance]-->#}
+                                {#<li><a href="https://booknode.com/univers/new-romance"><i class=""></i> New Romance</a></li>#}
+                                {#<!--[/section:UniversNewRomance]-->#}
+
+                                {#<!--[section:UniversHistoire]-->#}
+                                {#<li><a href="https://booknode.com/univers/histoire"><i class=""></i> Histoire</a></li>#}
+                                {#<!--[/section:UniversHistoire]-->#}
+
+                                {#<!--[section:UniversJeunesse]-->#}
+                                {#<li><a href="https://booknode.com/univers/jeunesse"><i class=""></i> Jeunesse</a></li>#}
+                                {#<!--[/section:UniversJeunesse]-->#}
+
+                                {#<!--[section:UniversAventure]-->#}
+                                {#<li><a href="https://booknode.com/univers/aventure"><i class=""></i> Aventure</a></li>#}
+                                {#<!--[/section:UniversAventure]-->#}
+
+                                {#<!--[section:UniversChickLit]-->#}
+                                {#<li><a href="https://booknode.com/univers/chick-lit"><i class=""></i> Chick Lit</a></li>#}
+                                {#<!--[/section:UniversChickLit]-->#}
+
+                                {#<!--[section:UniversHorreurTerreur]-->#}
+                                {#<li><a href="https://booknode.com/univers/horreur"><i class=""></i> Horreur / Terreur</a></li>#}
+                                {#<!--[/section:UniversHorreurTerreur]-->#}
+
+                                {#<!--[section:UniversSteampunk]-->#}
+                                {#<li><a href="https://booknode.com/univers/steampunk"><i class=""></i> Steampunk</a></li>#}
+                                {#<!--[/section:UniversSteampunk]-->#}
+
+                                {#<!--[section:UniversRomance]-->#}
+                                {#<li><a href="https://booknode.com/univers/young-adult"><i class=""></i> Young Adult</a></li>#}
+                                {#<!--[/section:UniversRomance]-->#}
+
+
+                            {#</ul>#}
+
+
+
+
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="https://booknode.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+
+                                <span class="hidden-sm hidden-md">Spectacles</span><span class="visible-sm visible-md">Activ.</span> <span class="caret"></span>
+
+
+                            </a>
+
+                            {#<ul class="dropdown-menu" role="menu">#}
+
+                                {#<!--[section:quizz]-->#}
+                                {#<li><a href="https://booknode.com/decouverte/decouverte"><i class="fa fa-eye"></i> Livres à découvrir</a></li>#}
+                                {#<!--[/section:quizz]-->#}
+
+                                {#<!--[section:quizz]-->#}
+                                {#<li><a href="https://booknode.com/challenges"><i class="fa fa-trophy"></i> Challenges littéraires</a></li>#}
+                                {#<!--[/section:quizz]-->#}
+
+                                {#<!--[section:quizz]-->#}
+                                {#<li><a href="https://booknode.com/quizz/"><i class="fa fa-check-square"></i> Quizz</a></li>#}
+                                {#<!--[/section:quizz]-->#}
+
+                                {#<li style=""><a href="https://booknode.com/myhome">Compléter ma biblio</a></li>#}
+
+                                {#<!--[section:ihelp]-->#}
+                                {#<li style=""><a href="https://booknode.com/help">J'aide Booknode</a></li>#}
+                                {#<!--[/section:ihelp]-->#}
+
+
+                                {#<!--[section:premium]-->#}
+                                {#<li><a href="https://booknode.com/islands/"><i class="fa fa-ship"></i> L'embarcadère vers les îles</a></li>#}
+                                {#<!--[/section:premium]-->#}
+
+                                {#<!--[section:forum]-->#}
+                                {#<li><a href="https://booknode.com/forum/search.php?search_id=unanswered"><i class="fa fa-bed"></i> Forum sans réponse</a></li>#}
+                                {#<!--[/section:forum]-->#}
+
+
+                                {#<!--[section:labo]-->#}
+                                {#<li><a href="https://booknode.com/labo"><i class="fa fa-rocket"></i> Labo</a></li>#}
+                                {#<!--[/section:labo]-->#}
+
+
+
+                                {#<!--[section:lireavecbooknode]-->#}
+                                {#<li><a href="https://booknode.com/decouverte/lire-avec-booknode"><i class="fa fa-newspaper-o"></i> Lire avec Booknode</a></li>#}
+                                {#<!--[/section:lireavecbooknode]-->#}
+
+
+
+
+
+                            {#</ul>#}
+
+                        </li><li class="dropdown">
+                            <a href="{{ path('afficherEvenementFront') }}" class="dropdown-toggle" role="button" aria-expanded="false"><span class="hidden-sm hidden-md">Evenements</span> <span class="caret"></span></a>
+
+
+                            {#<ul class="dropdown-menu" role="menu">#}
+
+
+                                {#<!--[section:actus]-->#}
+                                {#<li><a href="https://booknode.com/actus/"><i class="fa fa-newspaper-o "></i> Actus littéraires</a></li>#}
+                                {#<!--[/section:actus]-->#}
+
+                                {#<!--[section:blog]-->#}
+                                {#<li><a href="https://booknode.com/blog/"><i class="fa fa-wordpress "></i> Blog</a></li>#}
+                                {#<!--[/section:blog]-->#}
+
+
+                                {#<!--[section:bestvente]-->#}
+                                {#<li><a href="https://booknode.com/meilleures_ventes_france"><i class="fa fa-trophy "></i> Meilleures ventes</a></li>#}
+                                {#<!--[/section:bestvente]-->#}
+
+
+                                {#<!--[section:datesortie]-->#}
+                                {#<li><a href="https://booknode.com/dates_de_sortie"><i class="fa fa-calendar "></i> Dates de sortie</a></li>#}
+                                {#<!--[/section:datesortie]-->#}
+                                {#<li class="onlysiteversion_en" style="display: none;"><i class="fa fa-calendar "></i> <a href="https://booknode.com/release_dates">Dates de sortie</a></li>#}
+
+                                {#<!--[section:happen]-->#}
+                                {#<li><a href="https://booknode.com/happen/"><i class="fa fa-calendar-o "></i> Évènements littéraires</a></li>#}
+                                {#<!--[/section:happen]-->#}
+
+                            {#</ul>#}
+
+
+                        </li>
+                        <li class="dropdown"><a href="https://booknode.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="hidden-sm hidden-md">Musée</span> <span class="caret"></span></a>
+
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ path('afficherCollectionFront') }}"><i class="fa fa-location-arrow"></i> Liste des collections</a></li>
+                                <li><a href="{{ path('afficherProduitFront') }}"><i class="fa fa-question-circle "></i> Liste des produits</a></li>
+                                <li><a href="{{ path('ajouter_visite') }}"><i class="fa fa-heartbeat"></i> Programmer une visite </a></li>
+                            </ul>
+
+                        </li>
+
+
+                        <li class="visible-xs "><a href="https://booknode.com/disco.pph">Déconnexion</a></li>
+
+                    </ul>
+
+
+
+
+
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!--marker4forum : menuend-->
+        <section class="wrap_dfp_site">
+            <link type="text/css" href="{{ asset('assets/front/animate.css') }}" rel="stylesheet">
+
+
+
+
+
+
+            <!--googleoff: all-->
+
+
+            <style>
+                @media (min-width: 768px) {
+                    .register-wide-col{
+                        padding-right: 0;
+                        padding-left: 0;
+
+                    }
+
+                }
+
+                .wrap-register{
+                    font-family:'Open Sans', arial;
+                    margin-top: -15px;
+                }
+
+                .wrap-register .herotitle{
+                    font-family:'Open Sans', arial;
+
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 50px;
+                    color: #5A3D3E;
+
+                    margin-bottom: 34px;
+
+                }
+
+                .wrap-register .herotitle2-wrapper{
+
+                }
+                .wrap-register .herotitle2{
+                    font-family:'Open Sans', arial;
+
+                    text-align: left;
+                    font-size: 17px;
+                    line-height: 40px;
+                    color: #5A3D3E;
+
+                }
+
+                @media (max-width: 991px){
+                    .wrap-register .herotitle2{
+                        line-height: 30px;
+                    }
+                    .wrap-register .herotitle{
+                        margin-bottom: 20px;
+                    }
+                }
+
+
+                .wrap-register{
+
+                    padding: 0px 0px 15px 0;
+                    margin-bottom: 30px;
+                    border-bottom: 8px solid #eee;
+                }
+
+                .wrap-register .form-group{
+                    margin-bottom: 5px;
+                }
+
+                @media (max-width: 767px){
+
+                    .display-block-xs{
+                        display: block;
+                    }
+                }
+
+                body.habillage_enabled .wrap-register{
+                    display: none;
+                }
+
+            </style>
+
+
+
+            <!--googleon: all-->
+
+
+
+            <div class="container site-content-container">
+
+                <div class="row">
+                    <div class="col-sm-12 site-content-container-inner">
+
+
+                        <script type="text/javascript">
+                            window.ad_vars=window.ad_vars || {};
+                            window.ad_vars['pagetype']='home';
+                        </script>
+
+                        <style type="text/css">
+                            .panel-comment-recemment{
+                                margin-top: 20px;
+                            }
+                            .view-index .column-bookscomposite{
+                                margin-bottom: 15px;
+                                /* padding-left: 0; */
+                            }
+                            .view-index .column-center{
+                                /* padding-left: 0; */
+                            }
+
+                        </style>
+
+                        <!--fix dans le cas où le premier char est un font awesome icon, IE9 essaie d ecrire ... avec la police de FA -->
+                        <!--[if IE 9]>
+
+                        <style>
+                            .text-ellipsis:before{
+                                content:'';
+                            }
+                        </style>
+                        <![endif]-->
+
+
+
+                        <main class="view view-index" data-views="index">
+
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-7 col-sm-7 column-center">
+
+
+
+
+
+
+
+                                    <style type="text/css">
+                                        .moment-light{
+                                            color: #8e989a;
+                                            font-size: 85%;
+                                        }
+                                        .moment-light a.light{
+                                            color: #8e989a;
+                                        }
+
+
+                                        .list-group-item.userpicto-left .moment-light{
+                                            f!ont-style: italic;
+                                        }
+
+
+                                        .userspeak{
+                                            width: 40px;
+                                            display: inline-block;
+                                            float: right;
+                                            margin-left: 10px;
+                                            d!isplay: none;
+                                        }
+                                        .userspeak img{
+                                            border-radius: 4px;
+                                            width: 100%;
+                                        }
+
+                                        .list-group-item.userpicto-left{
+                                            padding: 5px 10px;
+                                            border-color: #dfdfdf;
+                                        }
+
+
+                                        .list-group-item.userpicto-left .topic_title{
+
+                                        }
+
+
+                                        .list-group-item.userpicto-left .entry-right{
+                                            float:left;
+                                            width: calc( 100% - 55px );
+                                            w!idth: 100%;
+                                        }
+                                    </style>
+
+
+
+
+
+
+
+                                    <!--
+                                    <div class="dfp-pave mobile">
+                                        <div class="text-center" style="margin-bottom:20px">
+                                            <div id='div-gpt-ad-1530564779324-0'></div>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                    <style>
+                                        .panel-list-square .thumb{
+                                            width: 96px;
+                                            height: 64px;
+                                            background: no-repeat center #aaa top center;
+                                            background-size: cover;
+                                            border-radius: 5px;
+                                            float: left;
+                                            margin-right: 15px;
+                                            -webkit-transition: background-position 1.9s;
+                                            -o-transition: background-position 1.9s;
+                                            transition: background-position 1.9s;
+                                            border: 0;
+
+                                        }
+
+                                        .panel-list-square .entry:hover .thumb{
+                                            background-position: bottom center;
+                                        }
+                                        .panel-list-square .entry{
+                                            display: block;
+                                            cursor: pointer;
+                                            background-color: rgba(255,255,255,1);
+                                            -webkit-transition: background-color .3s;
+                                            -o-transition: background-color .3s;
+                                            transition: background-color .3s;
+
+
+                                        }
+                                        .panel-list-square .entry:hover{
+                                            text-decoration: none;
+                                            background-color: rgba(142, 118, 116,.3)
+                                        }
+                                        .panel-list-square .picto{
+                                            color: #5a3d3e;
+                                            display: inline-block;
+                                        }
+
+                                        .panel-list-square .datec{
+                                            color: #8e989a;
+                                            font-size: 85%;
+                                        }
+
+                                        .panel-list-square .right{
+                                            display: block;
+                                            float: left;
+                                            width: calc( 100% - 115px );
+                                        }
+                                        .panel-list-square .maintitle{
+                                            font-weight: bold;
+                                            f!ont-size: 16px;
+
+                                            white-space: nowrap;
+                                            width: 100%;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            -o-text-overflow: ellipsis;
+                                            -webkit-text-overflow: ellipsis;
+                                        }
+
+                                        .panel-list-square .subtitle{
+                                            font-size: 85%;
+                                            color: #8e989a;
+                                            font-style: italic;
+                                            white-space: nowrap;
+                                            width: 100%;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            -o-text-overflow: ellipsis;
+                                            -webkit-text-overflow: ellipsis;
+                                        }
+
+                                        @media (max-width: 767px){
+                                            .panel-list-square .maintitle{
+                                                font-weight: normal;
+                                                white-space: normal;
+                                            }
+                                            .panel-list-square .thumb{
+                                                width: 80px;
+                                            }
+                                            .panel-list-square .right{
+                                                width: calc( 100% - 95px );
+                                            }
+
+                                        }
+
+
+
+                                    </style>
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+                                        .panel-sortiesdumois{
+                                            position: relative;
+                                            margin-top: 40px;
+                                        }
+
+                                        .panel-sortiesdumois .panel-title{
+                                            font-size: 18px;
+                                        }
+                                        .panel-sortiesdumois .panel-heading{
+                                            padding-top: 30px;
+                                        }
+                                        .panel-sortiesdumois .rings{
+                                            width: 100%;
+                                            height: 40px;
+                                            position: absolute;
+                                            top: -22px;
+                                            background-position: 9px 0;
+                                            left: 0;
+                                            background-image: url(https://cdn1.booknode.com/pics/rings.png);
+                                            background-repeat: repeat-x;
+                                        }
+
+
+                                        .panel-sortiesdumois .day{
+                                            float: left;
+                                            width:14%;
+                                            padding: 10px;
+                                            position: relative;
+
+                                            /*border-right: 1px solid lightgrey;
+                                            border-bottom: 1px solid lightgrey;*/
+                                        }
+
+
+
+                                        .panel-sortiesdumois .day_number{
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            z-index: 2;
+                                            background: rgba(90, 61, 62,.5);
+                                            color: white;
+                                            display: block;
+                                            border-bottom-right-radius: 2px;
+                                            border-radius: 2px;
+                                            /* padding: 1px; */
+                                            width: 16px;
+                                            font-size: 10px;
+                                            line-height: 13px;
+                                            text-align: center;
+
+                                        }
+
+
+                                        .panel-sortiesdumois .day_number.today{
+                                            background: rgb(210, 81, 81);
+                                        }
+
+
+                                        .daycontent{
+                                            position: relative;
+                                        }
+                                        .daycontent:before{
+                                            display: block;
+                                            content: "";
+                                            width: 100%;
+                                            padding-top: 163.636363%;
+                                        }
+                                        .daycontent .content{
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                        }
+
+                                        /*@media (max-width: 767px){*/
+                                        @media (max-width: 991px){
+
+                                            .panel-sortiesdumois .day{
+                                                padding: 5px;
+                                            }
+
+                                            .weekstube{
+                                                width: 100%;
+                                                overflow: auto;
+                                                -webkit-overflow-scrolling: touch;
+                                            }
+
+                                            .weeks{
+                                                width: 600px;
+                                            }
+
+                                        }
+
+                                        .daytext{
+                                            text-align: center;
+                                            font-size: 90%;
+                                        }
+                                        .week_daytext .day{
+                                            border-bottom: dotted 1px #8e7674;
+                                            border-bottom: solid 4px rgba(142, 118, 116,.3);
+                                            margin-bottom: 3px;
+                                            /*padding-bottom: 3px;*/
+                                        }
+
+                                        .weeks .week .day:nth-child(odd){
+                                            background: #f0f0f0;
+                                        }
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+
+
+
+
+
+                                        .panel-meilleuresventes .index{
+                                            background-color:#8e7674;
+                                            color:white;
+                                            text-align: center;
+                                            display: inline-block;
+                                            border-radius: 4px;
+                                            width: 30px;
+                                            line-height: 30px;
+
+
+                                        }
+
+
+
+                                        .panel-meilleuresventes .index-lighter{
+                                            border-radius: 4px;
+                                            width: 20px;
+                                            line-height: 20px;
+
+                                        }
+
+
+
+                                        .panel-meilleuresventes .panel{
+                                            float:left;
+                                            width: 48%;
+                                            margin-bottom: 10px;
+
+                                        }
+                                        .panel-meilleuresventes .panel:nth-of-type(even){
+                                            float:right;
+                                            position: relative;
+                                            /*top: 10px;*/
+                                        }
+
+                                        .panel-meilleuresventes .index-wrapper{
+                                            width: 30px;
+                                            float:right;
+                                        }
+                                        .panel-meilleuresventes .cover-wrapper{
+                                            width: 142px;
+                                            float:left;
+                                        }
+
+                                        .panel-meilleuresventes .text-wrapper{
+                                            width: calc(100% - 142px);
+                                            float:left;
+                                        }
+
+
+
+                                        @media (max-width: 767px){
+                                            .panel-meilleuresventes .body-1{
+                                                height:285px;
+                                                overflow: auto;
+                                                overflow-y:hidden;
+                                                -webkit-overflow-scrolling: touch;
+                                            }
+
+                                            .panel-meilleuresventes .panel-default{
+                                                border-color: transparent;
+                                            }
+
+                                            .panel-meilleuresventes .body-1 .item-body{
+                                                float:left!important;
+                                                top: 0px!important;
+                                                width: 200px;
+                                                margin-right: 10px;
+                                            }
+
+                                            .panel-meilleuresventes .body-1 .wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 2100px;
+                                            }
+
+                                            .panel-meilleuresventes .cover-wrapper{
+                                                text-align: center;
+                                            }
+
+
+                                            .panel-meilleuresventes .text-wrapper{
+                                                display: none;
+                                                float: none;
+                                                width: 100%;
+
+
+                                            }
+
+                                        }
+
+
+                                        @media (max-width: 991px){
+                                            .panel-meilleuresventes .text-wrapper{
+                                                display: none;
+                                                float: none;
+                                                width: 100%;
+
+
+                                            }
+                                        }
+
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+                                <div class="col-md-4 col-sm-5 index-side-col ">
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+
+                                        .list-group li {
+                                            list-style: none;
+                                        }
+
+                                        .recently-commented{
+                                            height: 444px;
+                                            height: 546px;
+
+                                            overflow: auto;
+                                            -webkit-overflow-scrolling: touch;
+                                        }
+
+                                        .recently-commented .panel{
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .recently-commented .image{
+                                            float: left;
+                                            margin-right: 20px;
+                                            vertical-align: top;
+                                        }
+
+
+
+                                        .recently-commented .book-link{
+                                            font-weight: bold;
+                                        }
+
+
+                                        /*stats*/
+                                        .recently-commented .fiche-panel .panel-body{
+                                            position:relative;
+                                        }
+                                        .recently-commented .fiche-panel .stats{
+
+                                            position:absolute;
+                                            bottom:5px;
+                                            right: 5px;
+                                            width:100%;
+                                            text-align:right;
+                                        }
+
+                                        .recently-commented .stat{
+                                            display: inline-block;
+                                            margin-left: 5px;
+                                            margin-bottom: 5px;
+                                            border:1px solid #eee;
+                                            border-radius: 4px;
+                                            padding: 2px 0px;
+                                            width: 60px;
+                                            font-size: 85%;
+                                            color:gray;
+                                            -webkit-transition: all .3s;
+                                            -o-transition: all .3s;
+                                            transition: all .3s;
+                                            text-align: center;
+                                        }
+                                        .recently-commented .stat:hover{
+                                            text-decoration: none;
+                                            background-color: rgba(142, 118, 116,.3);
+                                        }
+
+                                        @media (max-width: 991px){
+
+                                            .recently-commented .stat{
+                                                width: 50px;
+                                            }
+
+                                        }
+
+
+                                        @media (max-width: 767px){
+
+                                            .recently-commented .stat{
+                                                width: 44px;
+                                            }
+                                            .recently-commented .stat .count{
+                                                display: block;
+                                                text-align: center;
+                                            }
+
+
+
+                                        }
+
+                                        @media (max-width: 767px){
+
+
+                                            .recently-commented{
+                                                height:210px;
+                                                overflow: auto;
+                                            }
+
+                                            .recently-commented .fiche-wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 13000px;
+                                            }
+
+                                            .recently-commented .fiche-wrapper .fiche-panel{
+                                                width: 250px;
+                                                height:100%;
+                                                float:left;
+                                                margin-right:10px;
+                                            }
+                                            .recently-commented .image{
+                                                margin-right: 10px;
+                                            }
+
+                                            .recently-commented .book-link{
+                                                /*font-weight: normal;*/
+                                                margin-bottom: 15px;
+                                                width: 100%;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                -o-text-overflow: ellipsis;
+                                                -webkit-text-overflow: ellipsis;
+                                            }
+
+
+
+
+
+                                        }
+
+
+                                        .recently-commented .right_bloc{
+
+                                            float: left;
+                                            width: calc(100% - 86px);
+                                        }
+
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+
+                                        .panel-userportrait{
+                                            margin-bottom: 5px;
+
+                                        }
+
+                                        .member-panel-body .panel-userportrait{
+                                            float:left;
+                                            width: 48%;
+                                            margin-bottom: 10px;
+
+                                        }
+                                        .member-panel-body .panel-userportrait:nth-of-type(even){
+                                            float:right;
+                                            position: relative;
+                                            top: 10px;
+                                        }
+
+
+
+                                        .member-panel-body .first-line{
+                                            width: calc(100% - 35px);
+                                        }
+                                        .member-panel-body .avatar img{
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 4px;
+                                        }
+                                        .member-panel-body .avatar{
+                                            width: 30px;
+                                            height: 30px;
+
+                                            float: right;
+                                            display: block;
+                                            margin-bottom: -30px;
+                                        }
+
+                                        @media (max-width: 767px){
+                                            .member-panel-body{
+                                                height:185px;
+                                                overflow: auto;
+                                                overflow-y:hidden;
+                                                -webkit-overflow-scrolling: touch;
+                                            }
+
+                                            .member-panel-body .panel-userportrait{
+                                                float:left!important;
+                                                top: 0px!important;
+                                                width: 140px;
+                                                margin-right: 10px;
+                                            }
+
+                                            .member-panel-body .wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 900px;
+                                            }
+
+                                        }
+
+
+                                    </style>
+
+
+
+
+
+
+
+                                    <style type="text/css">
+
+                                        .panel-votes-recents .entry-wrapper{
+                                            margin-bottom: 10px;
+
+                                        }
+
+
+                                        .panel-votes-recents .panel-main-body{
+                                            height: 360px;
+                                            overflow: auto;
+                                            overflow-x: hidden;
+                                            overflow-y: auto;
+                                            -webkit-overflow-scrolling: touch;
+                                            position: relative;
+                                        }
+
+                                        .panel-votes-recents .fatlink{
+                                            display:block;
+                                            text-decoration:none;
+                                            background-color: rgba(255,255,255,1);
+                                            -webkit-transition: background-color .3s;
+                                            -o-transition: background-color .3s;
+                                            transition: background-color .3s;
+
+                                        }
+                                        .panel-votes-recents .fatlink:hover{
+                                            background-color: rgba(142, 118, 116,.3);
+                                        }
+
+                                        .panel-votes-recents .panel-fiche{
+
+                                            font-size: 12px;
+                                        }
+
+
+                                        .panel-votes-recents .book_name{
+                                            width:calc(100% - 50px);
+                                            display: block;
+                                        }
+
+
+                                        .panel-votes-recents .avatar img{
+                                            vertical-align: top;
+
+                                        }
+
+                                        .panel-votes-recents .avatar{
+
+                                        }
+
+
+                                        .panel-votes-recents .panel-fiche{
+                                            clear:left;
+                                        }
+
+                                        .panel-votes-recents .col1{
+                                            float: left;
+                                            width: 50px;
+                                        }
+                                        .panel-votes-recents .col2{
+                                            float: left;
+                                            width: calc( 100% - 100px );
+                                        }
+
+                                        .panel-votes-recents .col3{
+                                            float: left;
+                                            width: 50px;
+                                        }
+
+
+                                        .panel-votes-recents .timediv{
+                                            color: grey;
+                                        }
+                                        .panel-votes-recents .booklink{
+                                            margin-left: 10px;
+                                        }
+                                        .panel-votes-recents .booklink img{
+                                            width: 40px;
+                                            height: 65px;
+                                        }
+                                        .panel-votes-recents .panel-fiche{
+                                            margin-bottom: 15px;
+                                        }
+
+
+
+
+                                        @media (max-width: 767px){
+                                            .panel-votes-recents .panel-fiche{
+                                                clear:none;
+                                            }
+
+
+                                            .panel-votes-recents .panel-main-body{
+                                                height:135px;
+                                                overflow: auto;
+                                            }
+
+                                            .panel-votes-recents .fiche-wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 0px;
+                                            }
+
+                                            .panel-votes-recents .panel-fiche{
+                                                width: 250px;
+                                                height:100%;
+                                                float:left;
+                                                margin-right:10px;
+                                            }
+
+
+
+
+
+
+
+                                        }
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+
+                                        .list-group li {
+                                            list-style: none;
+                                        }
+
+                                        .index-happens{
+                                            height: 444px;
+
+                                            overflow: auto;
+                                            -webkit-overflow-scrolling: touch;
+                                        }
+
+                                        .index-happens .panel{
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .index-happens .image{
+                                            float: right;
+                                            margin-left: 20px;
+                                            vertical-align: top;
+                                        }
+
+
+
+                                        .index-happens .book-link{
+                                            font-weight: bold;
+                                        }
+
+
+                                        /*stats*/
+                                        .index-happens .fiche-panel .panel-body{
+                                            position:relative;
+                                        }
+                                        .index-happens .fiche-panel .stats{
+
+                                            position:absolute;
+                                            bottom:5px;
+                                            right: 5px;
+                                            width:100%;
+                                            text-align:right;
+                                        }
+
+                                        .index-happens .stat{
+                                            display: inline-block;
+                                            margin-left: 5px;
+                                            margin-bottom: 5px;
+                                            border:1px solid #eee;
+                                            border-radius: 4px;
+                                            padding: 2px 0px;
+                                            width: 60px;
+                                            font-size: 85%;
+                                            color:gray;
+                                            -webkit-transition: all .3s;
+                                            -o-transition: all .3s;
+                                            transition: all .3s;
+                                            text-align: center;
+                                        }
+                                        .index-happens .stat:hover{
+                                            text-decoration: none;
+                                            background-color: rgba(142, 118, 116,.3);
+                                        }
+
+
+                                        .index-happens .momentjs-fromnow{
+                                            text-transform: capitalize;
+                                        }
+
+
+                                        @media (max-width: 767px){
+
+                                            .index-happens .stat{
+                                                width: 44px;
+                                            }
+                                            .index-happens .stat .count{
+                                                display: block;
+                                                text-align: center;
+                                            }
+
+                                        }
+
+                                        @media (max-width: 767px){
+
+
+                                            .index-happens{
+                                                height:210px;
+                                                overflow: auto;
+                                            }
+
+                                            .index-happens .fiche-wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 2080px;
+                                            }
+
+                                            .index-happens .fiche-wrapper .fiche-panel{
+                                                width: 250px;
+                                                height:100%;
+                                                float:left;
+                                                margin-right:10px;
+                                            }
+                                            .index-happens .image{
+                                                margin-right: 10px;
+                                            }
+
+                                            .index-happens .book-link{
+                                                /*font-weight: normal;*/
+                                                margin-bottom: 15px;
+                                                width: 100%;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                -o-text-overflow: ellipsis;
+                                                -webkit-text-overflow: ellipsis;
+                                            }
+
+
+
+
+
+                                        }
+
+
+
+
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <style type="text/css">
+                                        /*
+                                        .list-group li {
+                                            list-style: none;
+                                        }
+
+                                        .index-booknautes_moment{
+                                            height: 444px;
+
+                                            overflow: auto;
+                                            -webkit-overflow-scrolling: touch;
+                                        }
+
+                                        .index-booknautes_moment .panel{
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .index-booknautes_moment .image{
+                                            float: right;
+                                            margin-left: 20px;
+                                            vertical-align: top;
+                                        }
+
+
+
+                                        .index-booknautes_moment .book-link{
+                                            font-weight: bold;
+                                        }
+
+
+
+                                        .index-booknautes_moment .fiche-panel .panel-body{
+                                            position:relative;
+                                        }
+                                        .index-booknautes_moment .fiche-panel .stats{
+
+                                            position:absolute;
+                                            bottom:5px;
+                                            right: 5px;
+                                            width:100%;
+                                            text-align:right;
+                                        }
+
+
+
+                                        .index-booknautes_moment .momentjs-fromnow{
+                                            text-transform: capitalize;
+                                        }
+
+
+                                        @media (max-width: 767px){
+
+                                            .index-booknautes_moment .stat{
+                                                width: 44px;
+                                            }
+                                            .index-booknautes_moment .stat .count{
+                                                display: block;
+                                                text-align: center;
+                                            }
+
+                                        }
+
+                                        @media (max-width: 767px){
+
+
+                                            .index-booknautes_moment{
+                                                height:210px;
+                                                overflow: auto;
+                                            }
+
+                                            .index-booknautes_moment .fiche-wrapper{
+                                                margin:0;
+                                                padding:0;
+                                                height:100%;
+                                                width: 0px;
+                                            }
+
+                                            .index-booknautes_moment .fiche-wrapper .fiche-panel{
+                                                width: 250px;
+                                                height:100%;
+                                                float:left;
+                                                margin-right:10px;
+                                            }
+                                            .index-booknautes_moment .image{
+                                                margin-right: 10px;
+                                            }
+
+                                            .index-booknautes_moment .book-link{
+
+                                                margin-bottom: 15px;
+                                                width: 100%;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                -o-text-overflow: ellipsis;
+                                                -webkit-text-overflow: ellipsis;
+                                            }
+
+
+
+
+
+                                        }
+
+                                        */
+
+
+                                        .list-group-box{
+                                            padding: 0;
+                                            text-align: justify;
+                                        }
+
+                                        .list-group-box .avatar{
+                                            border-radius: 4px;
+                                        }
+
+                                        .list-group-box .box{
+                                            display: block;
+                                            display: inline-block;
+                                            /*float: left;*/
+                                            min-width: 21%;
+                                            text-align: center;
+                                            margin-bottom: 15px;
+                                        }
+
+
+                                        /*
+                                        @media (max-width: 991px){
+                                            .list-group-box .box{
+                                                width: 33%;
+                                            }
+                                        }
+                                        */
+
+
+
+                                        .index-booknautes_moment .box .username{
+                                            font-size: 85%;
+                                            width:70px;
+                                            margin:auto;
+                                            margin-top: 4px;
+                                        }
+
+                                        .index-booknautes_moment .box .stat{
+                                            font-size: 80%;
+                                            width:70px;
+                                            font-style: italic;
+                                        }
+
+                                    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </main>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <div style="margin: 60px 0;;padding-top:15px">
+        <!--border-top: 8px solid #eee-->
+        <!--googleoff: all-->
+
+
+        <style>
+            @media (min-width: 768px) {
+                .register-wide-col{
+                    padding-right: 0;
+                    padding-left: 0;
+
+                }
+
+            }
+
+            .wrap-register{
+                font-family:'Open Sans', arial;
+                margin-top: -15px;
+            }
+
+            .wrap-register .herotitle{
+                font-family:'Open Sans', arial;
+
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 50px;
+                color: #5A3D3E;
+
+                margin-bottom: 34px;
+
+            }
+
+            .wrap-register .herotitle2-wrapper{
+
+            }
+            .wrap-register .herotitle2{
+                font-family:'Open Sans', arial;
+
+                text-align: left;
+                font-size: 17px;
+                line-height: 40px;
+                color: #5A3D3E;
+
+            }
+
+            @media (max-width: 991px){
+                .wrap-register .herotitle2{
+                    line-height: 30px;
+                }
+                .wrap-register .herotitle{
+                    margin-bottom: 20px;
+                }
+            }
+
+
+            .wrap-register{
+
+                padding: 0px 0px 15px 0;
+                margin-bottom: 30px;
+                border-bottom: 8px solid #eee;
+            }
+
+            .wrap-register .form-group{
+                margin-bottom: 5px;
+            }
+
+            @media (max-width: 767px){
+
+                .display-block-xs{
+                    display: block;
+                }
+            }
+
+            body.habillage_enabled .wrap-register{
+                display: none;
+            }
+
+        </style>
+
+
+        <div class="wrap-register view connected-no" data-views="registerIncentive" data-position="footer">
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="register-step2 hidden " title="Bienvenue">
+                <h3>Votre profil Booknode a été créé !</h3>
+
+                <div class="well">
+                    <label>Vous êtes</label>
+
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="newsex" value="f" checked="">
+                            Une femme
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="newsex" value="m">
+                            Un homme
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="well">
+                    <div class="form-group">
+                        <label>Votre année de naissance</label>
+                        <select class="form-control" name="newbirth">
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="well text-center">
+                    <button class="btn btn-primary btn-finalstep btn-lg">Suivant</button>
+                    <button class="btn btn-primary btn-loader btn-lg hidden"><i class="fa fa-spinner fa-spin"></i></button>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="container">
+
+
+
+
+
+
+
+{#-------------------------------------------------------------------------------------------#}
+
+                {% block body %}
+
+                {% endblock %}
+
+                {#-------------------------------------------------------------------------------------------#}
+
+
+
+
+
+
+
+                                            {% block fos_user_content %}
+
+                                            {% endblock fos_user_content %}
+
+
+
+
+
+                <div class="row">
+                    <div class="col-sm-12  register-wide-col">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--googleon: all-->
+
+
+    </div>
+
+    <section id="site-footer">
+
+
+        <div class="site-footer-margin-top"></div>
+
+        <div class="footer-scrollup text-right">
+            <a href="javascript:void(0)" onclick="$(&#39;html,body&#39;).animate({scrollTop:0})"><img width="212" height="119" src="http:\\localhost\web_projet\web\Uploads\livre\scrollup.png"></a>
+        </div>
+
+
+        <article class="site-footer-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col12">
+                        Une remarque? Un conseil? Une question? <a href="mailto:info@booknode.com">info@booknode.com</a>
+                    </div>
+                    <div class="col-sm-2 col12 "><!--text-center-not-xs-->
+                        <a target="_blank" href="https://twitter.com/booknode?lang=fr">Nous suivre sur Twitter <i class="fa fa-twitter"></i></a>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-offset-1 "><!--text-right-not-xs-->
+                        <a href="https://booknode.com/quisommesnous.php">Qui sommes nous ?</a>
+                        |
+                        <a href="https://booknode.com/cgu.php">CGU</a>
+                        |
+                        <a href="https://booknode.com/mentions.php">Mentions légales</a>
+                        |
+                        <a href="https://booknode.com/liens.php">Liens</a>
+                        |
+                        <a href="http://cinenode.com/">Films&nbsp;et&nbsp;Cinéma</a>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-7 " style="margin-top:10px">
+                        <a href="https://booknode.com/aide/chers-auteurs">Vous êtes auteur ?</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </article>
+
+    </section>
+
+
+</main>
+
+
+
+
+
+
+<script class="hidden htmlsearchbox" type="text/template">
+
+
+    <style type="text/css">
+
+        .site-searchbox{
+            background-repeat: no-repeat;
+
+            background-position: center right;
+
+        }
+
+        .site-searchbox.searching{
+            background-image : url(https://booknode.com/pics/quicksearch/slowload.gif);
+        }
+
+        .qsearch_wrapper{
+            background: #fbfbfb;
+            border-radius: 2px;
+            -webkit-box-shadow: 1px 1px 8px rgba(50, 50, 50, 0.75);
+            box-shadow: 1px 1px 8px rgba(50, 50, 50, 0.75);
+
+            background-color: rgb(244, 244, 244);
+
+        }
+        .qsearch_wrapper .category{
+            overflow: hidden;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        .qsearch_wrapper .category .item{
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .qsearch_wrapper a{
+            text-decoration: none;
+        }
+
+        .qsearch_wrapper .category .item:hover, .qsearch_wrapper .category .item.hover{
+            background-color: #5a3d3e;
+            background-color: #BDB1B2;
+
+        }
+
+
+        .qsearch_wrapper .item{
+            display: flex;
+            align-items: center;
+            transition: opacity .1s ; /*ease-in-out*/
+            -webkit-transition: opacity .1s ; /*ease-in-out*/
+            /*transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            */
+            /*opacity: 1;*/
+        }
+
+        .qsearch_wrapper .item.loading{
+            /*transform: translate3d(10px, 0, 0);
+            -webkit-transform: translate3d(10px, 0, 0);
+            */
+            /*opacity: 0;*/
+        }
+
+        .qsearch_wrapper .category:nth-child(odd){
+            background-color: rgb(244, 244, 244);
+        }
+
+        .qsearch_wrapper header{
+            font-size: 85%;
+            background-color: #5a3d3e;
+            background-color: #3D1C1D;
+            color: white;
+            padding: 3px;
+            margin-top: 1px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .qsearch_wrapper .aligner{
+            display: flex;
+            align-items: center;
+        }
+        .qsearch_wrapper .name span{
+            padding-left: 5px;
+        }
+
+        .cover_wrapper img{
+            border:1px solid white;
+        }
+        .cover_wrapper{
+            border:1px solid lightgrey;
+            display: inline-block;
+        }
+
+    </style>
+
+    <main class="categories">
+        <section class="category books">
+            <header>Livres</header>
+            [#book]
+            <a href="[href]" class="row item ">
+                <div class="col-xs-1 text-center"><span class="cover_wrapper"><img height="40" src="[img]"></span></div>
+                <div class="col-xs-11 name">
+                    <span>[name]</span>
+                </div>
+            </a>
+            [/book]
+        </section>
+
+        <section class="category books">
+            <header>Auteurs</header>
+            [#author]
+            <a href="[href]" class="row item ">
+                <div class="col-xs-1 text-center"><span class="cover_wrapper"><img height="40" src="[img]"></span></div>
+                <div class="col-xs-11 name">
+                    <span>[name]</span>
+                </div>
+            </a>
+            [/author]
+        </section>
+
+        <section class="category books">
+            <header>Membres</header>
+            [#user]
+            <a href="[href]" class="row item ">
+                <div class="col-xs-1 text-center"><span class="cover_wrapper"><img height="40" src="[img]"></span></div>
+                <div class="col-xs-11 name">
+                    <span>[name]</span>
+                </div>
+            </a>
+            [/user]
+        </section>
+    </main>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hidden js-dialog" data-dialog="textedit" data-title="Modification / Suppression">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form">
+
+                <div class="form-group">
+                    <textarea class="form-control js-textfield" rows="10"></textarea>
+                </div>
+
+                <div class="row js-loader-bloc text-center hidden">
+                    <i class="fa fa-cog fa-spin"></i>
+                </div>
+
+                <div class="row js-action-bloc">
+
+                    <div class="col-xs-4 text-center">
+                        <div class="form-group">
+                            <button class="btn btn-danger js-delete">
+                                <span class="visible-xs"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                <span class="hidden-xs">Supprimer</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-4 text-center">
+                        <div class="form-group">
+                            <button class="btn btn-default js-spoiler">Spoiler</button>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4 text-center">
+                        <div class="form-group">
+                            <button class="btn btn-success js-save">
+                                <span class="visible-xs"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+                                <span class="hidden-xs">Enregistrer</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .addbook2biblio .groups-list button{
+        margin-bottom: 10px;
+
+    }
+    .addbook2biblio .lists-list button{
+        margin-bottom: 10px;
+    }
+</style>
+<div class="hidden js-dialog" data-dialog="addbook2biblio" data-title="Ajouter un livre en biblio">
+
+    <section class="addbook2biblio">
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="text-center loader">
+                    <i class="fa fa-cog fa-spin"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <style type="text/css">
+            /*.lists-list div.col-xs-6:nth-child(odd){
+                margin-left: 50%;
+            }*/
+        </style>
+        <div class="row js-container" style="display:none">
+            <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3">
+
+                <h2>Listes</h2>
+                <div class="lists-list">
+                    [#lists]
+                    <!--<button data-idliste="[id]" class="btn btn-block"  style="background-color:[bgcolor];color:[color]">[nom]</button>-->
+                    <div class="c!ol-xs-6">
+                        <button data-idliste="[id]" class="btn btn-block " style="background:white;border:[bgcolor] 6px solid">[nom]</button>
+                        <div class="clearfix visible"></div>
+                    </div>
+                    [/lists]
+                </div>
+
+            </div>
+            <div class="col-xs-12">
+
+                <h2>Groupes</h2>
+
+                <div class="groups-list">
+
+                    [#groups]
+                    <div class="col-sm-6 ">
+                        <!--<button data-idgroup="[id]" data-idliste="[listid]" class="btn btn-block" style="background-color:[listbgcolor];color:[listcolor]">[name]</button>-->
+                        <button data-idgroup="[id]" data-idliste="[listid]" class="btn btn-block text-one-line" style="background:white;border:[listbgcolor] 6px solid">[name]</button>
+                    </div>
+                    [/groups]
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<style type="text/css">
+    #btn-connect-facebook{
+        float:left;
+        background: #5977bd;
+        color:white;
+        border-color:white;
+    }
+    #btn-connect-facebook:hover{
+        background: #4868b5;
+    }
+</style>
+<div class="hidden js-dialog" data-dialog="connexion" data-title="Connexion">
+
+    <div class="row">
+
+
+        <div class="col-xs-12">
+            <form class="form-horizontal" role="form" action="https://booknode.com/dummy_signin" method="POST" onsubmit="return false">
+                <input type="hidden" name="pathname" value="/">
+                <div class="form-group">
+                    <label for="" class="col-sm-4 control-label">Nom d'utilisateur ou email</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="username" placeholder="Votre nom d&#39;utilisateur">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-4 control-label">Mot de passe</label>
+                    <div class="col-sm-7">
+                        <input type="password" name="password" class="form-control" placeholder="Votre mot de passe">
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-7 col-sm-offset-4 ">
+                        <a href="https://booknode.com/inscription.php" class="pull-right btn-xs btn-success">Pas encore inscrit ?</a>
+                        <a href="javascript:void(0)" class="show_forgotpass_form">Mot de passe oublié</a>
+                    </div>
+                </div>
+
+
+
+            </form>
+
+
+            <div class="alert alert-success" role="alert">Connexion acceptée, patientez un instant</div>
+            <div class="alert alert-warning" role="alert">Erreur, vérifiez vos nom d'utilisateur et mot de passe</div>
+
+
+            <div class="loader-area text-center" style="display:none">
+                <div class="loader-elegant">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+
+
+        </div><!--/.col-sm-12-->
+
+
+    </div>
+
+
+</div>
+
+
+
+<div class="hidden js-dialog" data-dialog="forgotpass" data-title="Mot de passe oublié">
+
+    <div class="row ">
+        <div class="col-sm-12">
+            <form class="form-horizontal" role="form" action="https://booknode.com/dummy_signin" method="POST" onsubmit="return false">
+
+                <div class="form-group">
+                    <label for="" class="col-sm-4 control-label">Nom d'utilisateur ou email</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="username" placeholder="Votre nom d&#39;utilisateur ou email">
+                    </div>
+
+                </div>
+            </form>
+
+        </div><!--/.col-sm-12-->
+
+
+        <div class="col-sm-12 row_newpass hidden">
+            <hr>
+            <p>Veuillez choisir un nouveau mot de passe et indiquer le code secret qui vient d'être envoyé sur votre email</p>
+
+            <form class="form-horizontal" role="form" action="https://booknode.com/dummy_signin" method="POST" onsubmit="return false">
+
+                <div class="form-group">
+                    <label for="" class="col-sm-4 control-label">Nouveau mot de passe</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="password" placeholder="Saisissez un nouveau mot de passe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-4 control-label">Code secret reçu par email</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="secret" placeholder="Saisissez le code secret">
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- Canvas and HTML5 polyfills Needed for IE 8 and under -->
+<!--[if lt IE 9 ]>
+<script src="/version/v2/global/lib/vendors/polyClip/js/libs/excanvas.compiled.js"></script>
+<script src="/version/v2/global/lib/vendors/polyClip/js/libs/html5.js"></script>
+<![endif]-->
+
+
+
+<script type="text/javascript" src="{{ asset('assets/front/include.js.download') }}"></script><style type="text/css">img[data-polyclip], img.polyClip { visibility: hidden; } </style><style type="text/css">img[data-polyclip], img.polyClip { visibility: hidden; } </style><style type="text/css">img[data-polyclip], img.polyClip { visibility: hidden; } </style><style type="text/css">img[data-polyclip], img.polyClip { visibility: hidden; } </style>
+
+
+
+
+<script type="text/javascript" src="{{ asset('assets/front/velocity.min.js.download') }}"></script>
+<script type="text/javascript">
+    $(function(){
+        return;
+
+        if((/\/liste\//).test(location.pathname) )return;
+        if(screen.width<768)return;
+        function rand(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var current=0;
+        var maxsimultaneous=20;
+        var $mainwrap=$('.header-first')
+        var popnew=function(){
+
+            if(current>maxsimultaneous){
+                return setTimeout(popnew, Math.random()*2*1000 );
+            }
+
+            var rev=Math.random()>.5?'reverse':'';
+            var fn=Math.floor(Math.random()*6)+1;
+            var duration=(Math.random()*10)+10;
+            var xpos=(Math.random()* ($(window).width()/2 + 100)  );
+
+            var rotateSpeed=Math.random()>.5?'slow':'normal';
+
+
+            var $div=$('<div class="flake_wrap"><div class="flake flake'+fn+' '+rotateSpeed+' '+rev+'"></div></div>');
+            $div.css('left',xpos+'px');
+            $div.css('top','-30px');
+            //$div.css('opacity', rand(2,10)/10   );
+            current++;
+            $mainwrap.prepend($div);
+
+
+            var timing='cubic-bezier(0.4, 0.0, 0.2, 1)';
+
+            setTimeout(function(){
+
+                var duration_s=(Math.round(duration*100)/100)
+                $div.css('-webkit-transition', 'transform '+duration_s+'s linear');
+                $div.css('transition', 'transform '+duration_s+'s linear');
+
+
+                $div.css('-webkit-transform', 'translateY(88px)  translateZ(0px)');
+                $div.css('transform', 'translateY(88px)  translateZ(0px)');
+            },100)
+
+            setTimeout(function(){
+                $div.remove();
+                current--;
+            },duration*1000)
+
+            /*
+            $div.velocity({
+                translateZ: 0,
+                translateY: [ 78+10, 'linear', 0 ]
+            }, {
+                'duration':duration*1000,
+                'complete':function(){
+                    $div.remove();
+                    current--;
+                }
+            });
+            */
+            setTimeout(popnew, Math.random()*2*1000 );
+
+        };
+        //window.popnew=popnew;
+        setTimeout(popnew,3000)
+        //popnew()
+    })
+</script>
+
+<style>
+    #header_top{
+        /*	position: relative;*/
+    }
+
+    @-webkit-keyframes infinite-spinning {
+        from {transform: rotate(0deg); }
+        to {transform: rotate(360deg); }
+    }
+    @-moz-keyframes infinite-spinning {
+        from {transform: rotate(0deg); }
+        to {transform: rotate(360deg); }
+    }
+    @-ms-keyframes infinite-spinning {
+        from {transform: rotate(0deg); }
+        to {transform: rotate(360deg); }
+    }
+
+    @keyframes infinite-spinning {
+        from {transform: rotate(0deg); }
+        to {transform: rotate(360deg); }
+    }
+
+    @-webkit-keyframes falling {
+        from {top: -30px; }
+        to {top: 78px; }
+    }
+    @-moz-keyframes falling {
+        from {top: -30px; }
+        to {top: 78px; }
+    }
+    @-ms-keyframes falling {
+        from {top: -30px; }
+        to {top: 78px; }
+    }
+
+    @keyframes falling {
+        from {top: -30px; }
+        to {top: 78px; }
+    }
+
+
+    .flake{
+        -webkit-transform-origin : 50% 50%;
+        -moz-transform-origin : 50% 50%;
+        -ms-transform-origin : 50% 50%;
+        transform-origin : 50% 50%;
+        background-color: pink;
+        background: url('https://cdn1.booknode.com/pics/snowflakes-50.png') ;
+        background-repeat: no-repeat;
+
+    }
+    .flake_wrap{
+        position: absolute;
+        z-index: 1;
+        -webkit-transition: transform 1s;
+        /*-webkit-transition-timing-function: linear;*/
+        -webkit-transform: translateY(0px) translateZ(0px);
+
+        transition: transform 1s;
+        /*transition-timing-function: linear;*/
+        transform: translateY(0px) translateZ(0px);
+    }
+    .reverse{
+        -webkit-animation-direction: reverse!important;
+        -moz-animation-direction: reverse!important;
+        -ms-animation-direction: reverse!important;
+        animation-direction: reverse!important;
+    }
+    .slow{
+        -webkit-animation: infinite-spinning 18s linear infinite; /* Safari 4+ */
+        -moz-animation:    infinite-spinning 18s linear infinite; /* Fx 5+ */
+        -ms-animation:     infinite-spinning 18s linear infinite; /* Opera 12+ */
+        animation:         infinite-spinning 18s linear infinite; /* IE 10+, Fx 29+ */
+
+
+
+    }
+    .normal{
+        -webkit-animation: infinite-spinning 12s linear infinite; /* Safari 4+ */
+        -moz-animation:    infinite-spinning 12s linear infinite; /* Fx 5+ */
+        -ms-animation:      infinite-spinning 12s linear infinite; /* Opera 12+ */
+        animation:         infinite-spinning 12s linear infinite; /* IE 10+, Fx 29+ */
+    }
+
+    .fast{
+        -webkit-animation: infinite-spinning 2s linear infinite; /* Safari 4+ */
+        -moz-animation:    infinite-spinning 2s linear infinite; /* Fx 5+ */
+        -ms-animation:      infinite-spinning 2s linear infinite; /* Opera 12+ */
+        animation:         infinite-spinning 2s linear infinite; /* IE 10+, Fx 29+ */
+    }
+
+
+
+
+
+
+    .flake1 {
+        background-position: -41px 0px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .flake2 {
+        background-position: -5px -26px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .flake3 {
+        background-position: -14px -210px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .flake4 {
+        background-position: -44px -83px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .flake5 {
+        background-position: -49px -117px;
+        width: 31px;
+        height: 31px;
+    }
+
+    .flake6 {
+        background-position: -32px -181px;
+        width: 27px;
+        height: 27px;
+    }
+
+</style>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+
+        return;
+
+        if( $(window).width()<768 ){
+            return;
+        }
+
+        var mouseX=0;
+        var mouseY=0;
+
+        $(window).on('mousemove',function(event){
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+
+        var current_angle=0;
+
+
+        var $box=$('#chimist-syringe-wrap');
+        var $syringe=$('#chimist-syringe');
+
+        function move(){
+
+            var boxCenter=[$box.offset().left+$box.width()/2, $box.offset().top+$box.height()/2];
+
+            var angle =  Math.atan2(mouseX- boxCenter[0], - (mouseY- boxCenter[1]) )
+
+
+            var angle_degree = angle*(180/Math.PI);
+
+            if(angle_degree<0){
+                angle_degree = 180+(180+angle_degree)
+            }
+
+            angle_degree+=180;
+
+
+            var diff = angle_degree-current_angle;
+
+
+
+            if(Math.abs(diff)<1){
+                return;
+            }
+
+            diff*=.05;
+            current_angle+=diff;
+
+
+            $syringe.css({
+                "-webkit-transform": 'rotate(' + current_angle + 'deg)',
+                '-moz-transform': 'rotate(' + current_angle + 'deg)',
+                'transform': 'rotate(' + current_angle + 'deg)'
+            });
+
+        }
+
+        function looper(){
+            move();
+            requestAnimationFrame(looper)
+        }
+
+        requestAnimationFrame(looper);
+
+        /*
+        setInterval(function(){
+            move();
+        },16);
+        */
+        /*
+        setTimeout(function(){
+            $('#chimist-syringe').css('display','block')
+
+        },500)
+        */
+    });
+</script>
+
+
+
+<!--<script type="text/javascript" src="/version/v2/global/js/include.js?v100.js"></script>-->
+
+
+
+
+
+<style type="text/css">
+    .readmore1 span {
+        cursor: pointer;
+        font-style: italic;
+        color: #888888;
+    }
+</style>
+
+
+
+<script id="bkn_app_data" type="text/data">{"connectedUser":0,"connectedUsername":0,"connectedMode":0,"ispremium":0,"booksOwned":[],"connectedAvatar60x60":"","user_rights":[],"memberage":"","membersex":"","listref":{"1":{"id":"1","nom":"Liste de diamant","shotname":"Diamant","shortname":"Diamant","userlink":"\/liste-1-liste-de-diamant","bgcolor":"#6493ad","color":"#FFFFFF","disp_order":"2","app_order":"3","badge_class":"diamant","badge_text":"diamant"},"2":{"id":"2","nom":"Liste d'Or","shotname":"Or","shortname":"Or","userlink":"\/liste-2-liste-d-or","bgcolor":"#C6A233","color":"#FFFFFF","disp_order":"3","app_order":"4","badge_class":"or","badge_text":"or"},"3":{"id":"3","nom":"Liste d'argent","shotname":"Argent","shortname":"Argent","userlink":"\/liste-3-liste-d-argent","bgcolor":"#5b5b5b","color":"#FFFFFF","disp_order":"4","app_order":"5","badge_class":"argent","badge_text":"argent"},"4":{"id":"4","nom":"Liste de bronze","shotname":"Bronze","shortname":"Bronze","userlink":"\/liste-4-liste-de-bronze","bgcolor":"#963e00","color":"#FFFFFF","disp_order":"5","app_order":"6","badge_class":"bronze","badge_text":"bronze"},"5":{"id":"5","nom":"J'ai lu aussi","shotname":"Lu aussi","shortname":"Lu aussi","userlink":"\/liste-5-j-ai-lu-aussi","bgcolor":"#D3D3D3","color":"#000000","disp_order":"8","app_order":"7","badge_class":"luaussi","badge_text":"lu aussi"},"6":{"id":"6","nom":"Mes envies","shotname":"Envies","shortname":"Envies","userlink":"\/liste-6-mes-envies","bgcolor":"#64AD9A","color":"#FFFFFF","disp_order":"7","app_order":"1","badge_class":"envies","badge_text":"envies"},"7":{"id":"7","nom":"Poubelle","shotname":"Poubelle","shortname":"Poubelle","userlink":"","bgcolor":"#D3D3D3","color":"#000000","disp_order":"10","app_order":"9","badge_class":"poubelle","badge_text":"poubelle"},"8":{"id":"8","nom":"Je suis en train de lire","shotname":"En train de lire","shortname":"En train de lire","userlink":"\/liste-8-je-suis-en-train-de-lire","bgcolor":"#996C61","color":"#FFFFFF","disp_order":"1","app_order":"7.5","badge_class":"encours","badge_text":"en cours"},"9":{"id":"9","nom":"Je n'ai pas appr\u00e9ci\u00e9","shotname":"Pas appr\u00e9ci\u00e9","shortname":"Pas appr\u00e9ci\u00e9","userlink":"\/liste-9-je-n-ai-pas-apprecie","bgcolor":"#D3D3D3","color":"#000000","disp_order":"9","app_order":"8","badge_class":"pasapprecie","badge_text":"pas appr\u00e9ci\u00e9"},"10":{"id":"10","nom":"Ma PAL(pile \u00e0 lire)","shotname":"PAL","shortname":"PAL","userlink":"\/liste-10-ma-pile-a-lire","bgcolor":"#AC6593","color":"#FFFFFF","disp_order":"6","app_order":"6.5","badge_class":"pal","badge_text":"pile \u00e0 lire"}}}</script>
+<script>
+    app.data={"connectedUser":0,"connectedUsername":0,"connectedMode":0,"ispremium":0,"booksOwned":[],"connectedAvatar60x60":"","user_rights":[],"memberage":"","membersex":"","listref":{"1":{"id":"1","nom":"Liste de diamant","shotname":"Diamant","shortname":"Diamant","userlink":"\/liste-1-liste-de-diamant","bgcolor":"#6493ad","color":"#FFFFFF","disp_order":"2","app_order":"3","badge_class":"diamant","badge_text":"diamant"},"2":{"id":"2","nom":"Liste d'Or","shotname":"Or","shortname":"Or","userlink":"\/liste-2-liste-d-or","bgcolor":"#C6A233","color":"#FFFFFF","disp_order":"3","app_order":"4","badge_class":"or","badge_text":"or"},"3":{"id":"3","nom":"Liste d'argent","shotname":"Argent","shortname":"Argent","userlink":"\/liste-3-liste-d-argent","bgcolor":"#5b5b5b","color":"#FFFFFF","disp_order":"4","app_order":"5","badge_class":"argent","badge_text":"argent"},"4":{"id":"4","nom":"Liste de bronze","shotname":"Bronze","shortname":"Bronze","userlink":"\/liste-4-liste-de-bronze","bgcolor":"#963e00","color":"#FFFFFF","disp_order":"5","app_order":"6","badge_class":"bronze","badge_text":"bronze"},"5":{"id":"5","nom":"J'ai lu aussi","shotname":"Lu aussi","shortname":"Lu aussi","userlink":"\/liste-5-j-ai-lu-aussi","bgcolor":"#D3D3D3","color":"#000000","disp_order":"8","app_order":"7","badge_class":"luaussi","badge_text":"lu aussi"},"6":{"id":"6","nom":"Mes envies","shotname":"Envies","shortname":"Envies","userlink":"\/liste-6-mes-envies","bgcolor":"#64AD9A","color":"#FFFFFF","disp_order":"7","app_order":"1","badge_class":"envies","badge_text":"envies"},"7":{"id":"7","nom":"Poubelle","shotname":"Poubelle","shortname":"Poubelle","userlink":"","bgcolor":"#D3D3D3","color":"#000000","disp_order":"10","app_order":"9","badge_class":"poubelle","badge_text":"poubelle"},"8":{"id":"8","nom":"Je suis en train de lire","shotname":"En train de lire","shortname":"En train de lire","userlink":"\/liste-8-je-suis-en-train-de-lire","bgcolor":"#996C61","color":"#FFFFFF","disp_order":"1","app_order":"7.5","badge_class":"encours","badge_text":"en cours"},"9":{"id":"9","nom":"Je n'ai pas appr\u00e9ci\u00e9","shotname":"Pas appr\u00e9ci\u00e9","shortname":"Pas appr\u00e9ci\u00e9","userlink":"\/liste-9-je-n-ai-pas-apprecie","bgcolor":"#D3D3D3","color":"#000000","disp_order":"9","app_order":"8","badge_class":"pasapprecie","badge_text":"pas appr\u00e9ci\u00e9"},"10":{"id":"10","nom":"Ma PAL(pile \u00e0 lire)","shotname":"PAL","shortname":"PAL","userlink":"\/liste-10-ma-pile-a-lire","bgcolor":"#AC6593","color":"#FFFFFF","disp_order":"6","app_order":"6.5","badge_class":"pal","badge_text":"pile \u00e0 lire"}}};
+    $(app.init)
+</script>
+
+<!--svg sharpen filter-->
+<svg width="0" height="0" style="position:absolute">
+    <filter id="standard_sharpen">
+        <feconvolvematrix order="3 3" preserveAlpha="true" kernelMatrix="-1.2 -1 -1.2    -1 14 -1   -1.2 -1 -1.2"></feconvolvematrix>
+    </filter>
+</svg>
+
+<!--svg sharpen filter-->
+<svg width="0" height="0" style="position:absolute">
+    <filter id="standard_sharpen1">
+        <feconvolvematrix order="3 3" preserveAlpha="true" kernelMatrix="-1 -1 -1 -1 12 -1 -1 -1 -1"></feconvolvematrix>
+    </filter>
+</svg>
+
+<svg width="0" height="0" style="position:absolute">
+    <filter id="standard_sharpen16">
+        <feconvolvematrix order="3 3" preserveAlpha="true" kernelMatrix="-1 -1 -1 -1 16 -1 -1 -1 -1"></feconvolvematrix>
+    </filter>
+</svg>
+
+<svg width="0" height="0" style="position:absolute">
+    <filter id="standard_sharpen18">
+        <feconvolvematrix order="3 3" preserveAlpha="true" kernelMatrix="-1 -1 -1 -1 18 -1 -1 -1 -1"></feconvolvematrix>
+    </filter>
+</svg>
+
+<svg width="0" height="0" style="position:absolute">
+    <filter id="standard_sharpen20">
+        <feconvolvematrix order="3 3" preserveAlpha="true" kernelMatrix="-1 -1 -1 -1 20 -1 -1 -1 -1"></feconvolvematrix>
+    </filter>
+</svg>
+
+
+<style type="text/css">
+    .sharpen-20{
+        filter: url(#standard_sharpen20);
+        -webkit-filter: url(#standard_sharpen20);
+    }
+    .sharpen{
+        filter: url(#standard_sharpen18);
+        -webkit-filter: url(#standard_sharpen18);
+    }
+</style>
+
+
+
+
+<script type="text/javascript">
+
+
+    ;(function(){
+
+        var echoSvg=function(w,h,prefix){
+
+            var c=function(x, y){
+                return (x*w/100)+' '+(y*h/100);
+            };
+
+
+            var svg='<svg width="0" height="0" style="position:absolute"><g>';
+
+            svg+='<clipPath id="'+prefix+'-1">'+
+                '<polygon points="'+c(0,0)+', '+c(60,0)+' , '+c(0,60)+'" >'+
+                ' </polygon>'+
+                '</clipPath>';
+
+            svg+='<clipPath id="'+prefix+'-2">'+
+                '<polygon points="'+c(61,0)+', '+c(100,0)+' , '+c(100,39)+', '+c(39,100)+', '+c(0,100)+', '+c(0,61)+'  " > </polygon>'+
+                '</clipPath>';
+
+            svg+='<clipPath id="'+prefix+'-3">'+
+                '<polygon points="'+c(40,100)+', '+c(100,40)+' , '+c(100,100)+'" > </polygon>'+
+                '</clipPath>';
+
+            svg+='</g></svg>';
+
+            document.write(svg);
+        }
+
+        echoSvg(264,432,'triple-card-mask264');
+        echoSvg(132,216,'triple-card-mask132');
+
+
+    }());
+
+</script><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask264-1"><polygon points="0 0, 158.4 0 , 0 259.2"> </polygon></clippath><clippath id="triple-card-mask264-2"><polygon points="161.04 0, 264 0 , 264 168.48, 102.96 432, 0 432, 0 263.52  "> </polygon></clippath><clippath id="triple-card-mask264-3"><polygon points="105.6 432, 264 172.8 , 264 432"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask132-1"><polygon points="0 0, 79.2 0 , 0 129.6"> </polygon></clippath><clippath id="triple-card-mask132-2"><polygon points="80.52 0, 132 0 , 132 84.24, 51.48 216, 0 216, 0 131.76  "> </polygon></clippath><clippath id="triple-card-mask132-3"><polygon points="52.8 216, 132 86.4 , 132 216"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask264-1"><polygon points="0 0, 158.4 0 , 0 259.2"> </polygon></clippath><clippath id="triple-card-mask264-2"><polygon points="161.04 0, 264 0 , 264 168.48, 102.96 432, 0 432, 0 263.52  "> </polygon></clippath><clippath id="triple-card-mask264-3"><polygon points="105.6 432, 264 172.8 , 264 432"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask132-1"><polygon points="0 0, 79.2 0 , 0 129.6"> </polygon></clippath><clippath id="triple-card-mask132-2"><polygon points="80.52 0, 132 0 , 132 84.24, 51.48 216, 0 216, 0 131.76  "> </polygon></clippath><clippath id="triple-card-mask132-3"><polygon points="52.8 216, 132 86.4 , 132 216"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask264-1"><polygon points="0 0, 158.4 0 , 0 259.2"> </polygon></clippath><clippath id="triple-card-mask264-2"><polygon points="161.04 0, 264 0 , 264 168.48, 102.96 432, 0 432, 0 263.52  "> </polygon></clippath><clippath id="triple-card-mask264-3"><polygon points="105.6 432, 264 172.8 , 264 432"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask132-1"><polygon points="0 0, 79.2 0 , 0 129.6"> </polygon></clippath><clippath id="triple-card-mask132-2"><polygon points="80.52 0, 132 0 , 132 84.24, 51.48 216, 0 216, 0 131.76  "> </polygon></clippath><clippath id="triple-card-mask132-3"><polygon points="52.8 216, 132 86.4 , 132 216"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask264-1"><polygon points="0 0, 158.4 0 , 0 259.2"> </polygon></clippath><clippath id="triple-card-mask264-2"><polygon points="161.04 0, 264 0 , 264 168.48, 102.96 432, 0 432, 0 263.52  "> </polygon></clippath><clippath id="triple-card-mask264-3"><polygon points="105.6 432, 264 172.8 , 264 432"> </polygon></clippath></g></svg><svg width="0" height="0" style="position:absolute"><g><clippath id="triple-card-mask132-1"><polygon points="0 0, 79.2 0 , 0 129.6"> </polygon></clippath><clippath id="triple-card-mask132-2"><polygon points="80.52 0, 132 0 , 132 84.24, 51.48 216, 0 216, 0 131.76  "> </polygon></clippath><clippath id="triple-card-mask132-3"><polygon points="52.8 216, 132 86.4 , 132 216"> </polygon></clippath></g></svg>
+
+
+
+
+
+
+
+<!--google analytics-->
+<script type="text/javascript">
+
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5548629-1']);
+    _gaq.push(['_setSiteSpeedSampleRate', 90]);
+
+
+
+
+    var path=location.pathname+location.search;
+
+
+
+
+    if('FLAGS' in window && window.FLAGS['google_analytics_nopagetrack']){
+        //google auto tracking disabled
+    }else{
+        _gaq.push(['_trackPageview',path]);
+    }
+
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.src= "https://cdn1.booknode.com/version/v1/global/js/trackers/google-analytics/ga.js";
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<!--getclicky-->
+<script type="text/javascript">
+    //disabled on 2018-08-20
+    /*
+    var clicky_site_id = "191249";
+    var sc_project=7455076;
+    var sc_invisible=1;
+    var sc_security="d48426ff";
+
+    var clicky_custom = {};
+
+    if(app.data.connectedMode==0){
+        clicky_custom.group='notconnected';
+    }else{
+        clicky_custom.group='connected';
+        clicky_custom.username=app.data.connectedUsername;
+    }
+
+
+    $(window).load(function(){
+
+        (function() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            //s.src = ( document.location.protocol == 'https:' ? 'https://static.getclicky.com' : 'http://static.getclicky.com' ) + '/js';
+            s.src="https://cdn1.booknode.com/version/v1/global/js/trackers/getclicky/js.js";
+            ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+        }());
+
+    });
+    */
+</script>
+
+
+
+
+
+
+<!-- Piwik -->
+<script type="text/javascript">
+    //in app js now
+
+    /*
+    var _paq = _paq || [];
+
+
+
+    if(app.data.connectedMode==0){
+        _paq.push(['setCustomDimension', 1, 'anon']);
+        _paq.push(['setCustomVariable', 1, 'usertype', 'anon', 'visit' ])
+    }else{
+        _paq.push(['setCustomDimension', 1, 'member']);
+        _paq.push(['setCustomVariable', 1, 'usertype', 'member', 'visit' ])
+        _paq.push(['setCustomVariable', 2, 'username', app.data.connectedUsername, 'visit' ])
+        _paq.push(['setUserId', app.data.connectedUsername ])
+
+    }
+
+
+//set connected_status
+
+
+var path=location.pathname+location.search;
+
+
+
+_paq.push(['enableHeartBeatTimer']);
+
+_paq.push(['setCustomUrl',path]);
+_paq.push(['trackPageView']);
+
+
+_paq.push(['enableLinkTracking']);
+
+
+
+
+(function() {
+var u="//pwk.booknode.com/";
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', '1']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+
+  */
+
+
+</script>
+<!-- End Piwik Code -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+    useripcountry="TN";
+
+
+</script>
+
+
+
+
+
+
+<style>
+    /*mobile banner style*/
+
+    .bk-mobile-ad{
+
+        z-index: 100;
+
+        display: block;
+        border-width: 0;
+
+        width: 100%;
+        height: 100px;
+
+        position: fixed;
+        bottom: 0px;
+
+
+        -webkit-transform: translateY(114px);
+        transform: translateY(114px);
+
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+
+        -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.65);
+        -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.65);
+        box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.65);
+
+    }
+
+
+    .bk-mobile-ad.bk-slide-in{
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+
+    }
+
+    .bk-mobile-ad .bk-close{
+        position: absolute;
+        top: -13px;
+        right: 1px;
+        z-index: 2;
+
+
+        background-color: rgba(0,0,0,.7);
+        color: white;
+
+    }
+
+
+    .bk-mobile-ad .bk-clickable{
+        z-index: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+
+
+
+</style>
+
+
+<style>
+    body.habillage_enabled{
+        /*position: relative;
+        z-index: 10;*/
+    }
+    body.habillage_enabled .view{
+        position: relative;
+        /*z-index: 2;*/
+    }
+
+    body.habillage_enabled .wrap_dfp_site{
+        position: relative;
+    }
+
+    body.habillage_enabled #main-menu{
+        position: relative;
+        z-index: 11;
+    }
+    body.habillage_enabled .header-first{
+        position: relative;
+        z-index: 12;
+    }
+    /* body.habillage_enabled .header-first{
+        z-index: 4;
+    } */
+
+    body.habillage_enabled .dfp_habillage{
+        top: -24px;
+        position: absolute;
+        height: 1200px;
+        width: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    body.habillage_enabled .site-content-container{
+
+        position: relative;
+        z-index: 2;
+    }
+    body.habillage_enabled .site-content-container-inner{
+
+        background: #fbfbfb;
+        padding-top: 10px;
+        border-radius: 5px;
+        padding-right: 30px;
+
+        -moz-box-shadow: 0px 0px 12px 0px rgba(255, 255, 255,1);
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(255, 255, 255,1);
+        box-shadow: 0px 0px 12px 0px rgba(255, 255, 255,1);
+
+        -moz-box-shadow: 0px 0px 12px 0px rgba(90, 61, 62,1);
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(90, 61, 62,1);
+        box-shadow: 0px 0px 12px 0px rgba(90, 61, 62,1);
+
+    }
+    body.habillage_enabled.pagetype-home .site-content-container-inner{
+        padding-right: 15px;
+    }
+    body.habillage_enabled.pagetype-home .column-bookscomposite{
+        width: calc(8.33333333% - 15px);
+    }
+
+
+
+    body.habillage_enabled #usermaindiv{
+        background:#fbfbfb;
+    }
+
+    /*home page first column*/
+    body.pagetype-home.habillage_enabled .column-bookscomposite{
+        /*background: rgba(142, 118, 116, 0.21);
+        background: #8e7674;*/
+
+        -webkit-box-shadow:  inset 0px 0px 11px 0px rgba(0,0,0,0.45);;
+        -moz-box-shadow:  inset 0px 0px 11px 0px rgba(0,0,0,0.45);;
+        box-shadow:  inset 0px 0px 11px 0px rgba(0,0,0,0.45);;
+
+        margin-top: -10px;
+        margin-top: 0px;
+        border-top-left-radius: 5px;
+        border-radius: 5px;
+        padding-top: 10px;
+    }
+
+</style>
+
+<style>
+    .DFP_pub_pave_index{
+        text-align:center;
+        margin-bottom:20px;
+        padding-top:15px;
+        padding-bottom:15px;
+        background-color:white;
+        border:1px solid #e8e8e8;
+        width:353px
+    }
+
+    .DFP_pub_pave_book{
+        margin-top: 15px;
+    }
+
+</style>
+
+
+<style type="text/css">
+
+
+    body.new-romance-habillage{
+        background-image: url('/pics/habillage/v2/1600x1100_habillage_booknode-FNR_990.jpg');
+        overflow-x:hidden;
+        background-attachment: scroll;
+
+        background-position: center 142px;
+        background-color: rgb(40,40,40);
+        background-repeat: no-repeat;
+    }
+
+
+
+    @media (min-width: 1200px){
+        body.new-romance-habillage{
+            background-image: url('/pics/habillage/v2/1600x1100_habillage_booknode-FNR_1170.jpg');
+        }
+
+    }
+
+
+    body.kobo-habillage{
+        background-image: url('/pics/habillage/kobo20171202/Noel-Habillage-BookNode-11-17-990.png');
+        overflow-x:hidden;
+        background-attachment: scroll;
+
+        background-position: center 142px;
+        background-color: rgb(198,13,13);
+        background-repeat: no-repeat;
+    }
+
+
+
+    @media (min-width: 1200px){
+        body.kobo-habillage{
+            background-image: url('/pics/habillage/kobo20171202/Noel-Habillage-BookNode-11-17-1170.png');
+        }
+
+    }
+
+</style>
+
+
+<script>
+    var browser = {
+        isIe: function () {
+            return navigator.appVersion.indexOf("MSIE") != -1;
+        },
+        navigator: navigator.appVersion,
+        getVersion: function() {
+            var version = 999; // we assume a sane browser
+            if (navigator.appVersion.indexOf("MSIE") != -1)
+            // bah, IE again, lets downgrade version number
+                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+            return version;
+        }
+    };
+
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+    var paveBeaconDeferred = $.Deferred();
+    var paveBeaconPromise = paveBeaconDeferred.promise();
+    $(function(){
+        paveBeaconDeferred.resolve();
+    });
+
+
+    app.tools.dfp=(function(){
+
+        function mobileBannerClosed(){
+            return Cookies.get('mobile_banner_closed') == '1';
+        }
+
+        function closeMobileBanner(){
+            var $ad = $('.bk-mobile-ad');
+            $ad.removeClass('bk-slide-in');
+            setTimeout(function(){
+                $ad.remove();
+            },600);
+
+            Cookies.set('mobile_banner_closed', '1', { expires: 3600*24 });
+
+        }
+
+        return {
+            mobileBannerClosed:mobileBannerClosed,
+            closeMobileBanner:closeMobileBanner
+        }
+    }())
+
+
+
+    window.dfp_function = function(){
+        if(!window.ad_vars){
+            return;
+        }
+        //on retire le pavé inadapté
+        /*
+        if(screen.width<768){
+            console.log('remove .dfp-pave.desktop')
+            $('.dfp-pave.desktop').remove();
+        }else{
+            console.log('remove .dfp-pave.mobile')
+            $('.dfp-pave.mobile').remove();
+        }
+        */
+
+
+
+        //return;
+        console.log('dfp_function start '+app.data.connectedUser)
+        // && (app.data.connectedUser == 9 || app.data.connectedUser == 1 )
+        if(screen.width<768 && !ad_ispremium()  ){
+
+            console.log('localads.displayMobileSlideBottom')
+
+            /*
+            app.tools.localads.displayMobileSlideBottom({
+                banner:'discoverbooks',
+                event_label:'discoverbooks',
+                allowed:function(){
+                    return false == (/decouverte\/decouverte/).test(location.href);
+                },
+                //displays_per_day:5, //unimplemented
+                hide_when_clicked:true,
+                hide_when_clicked_duration:1,
+                close_hide_duration:7
+            });
+            */
+            /*
+            app.tools.localads.displayMobileSlideBottom({
+                banner:'20180904-bayard',
+                event_label:'20180904-bayard',
+                allowed:function(){
+                    return false == (/les_ames_perdues_tome_1_les_terres_du_bas_02129393/).test(location.href);
+                },
+                //displays_per_day:5, //unimplemented
+                hide_when_clicked:true,
+                hide_when_clicked_duration:1,
+                close_hide_duration:7
+            });
+            */
+        }
+
+        //chrome ne marche pas avec DFP
+        // if(navigator.userAgent.match(/Chrome/) && !navigator.userAgent.match(/Edge/)){
+        // 	app.tools.mainEventBus.publish('regie-carre-pub', {'status':app.tools.regie.NO_AD_AVAILABLE});
+        // 	return;
+        // }
+
+        var is_adblck = function(){
+
+            return $('[id^=div-gpt-ad]:visible').length==0
+
+        }
+
+        var watch_adblck = function (){
+            if(is_adblck()){
+
+                _gaq.push(['_setCustomVar', 2, 'is_adblck', 'yes', 2 ]);
+
+                //_gaq.push(['_trackEvent','is_adblck', 'is_adblck', '', null, true]);
+
+                app.tools.mainEventBus.publish('regie-carre-pub', {'status':app.tools.regie.NO_AD_AVAILABLE});
+            }else{
+                setTimeout(watch_adblck,100);
+            }
+        }
+
+        setTimeout(watch_adblck,100);
+
+        paveBeaconPromise.then(function(){
+
+            _gaq.push(['_setCustomVar', 2, 'is_adblck', 'no', 2 ]);
+
+        })
+
+
+
+
+
+
+        ad_vars.member=false;
+        ad_vars.memberage=0;
+        ad_vars.membersex='';
+
+        if(app.data.connectedUser!=0){
+            ad_vars.member=true;
+            ad_vars.memberage = app.data.memberage;
+            ad_vars.membersex = app.data.membersex;
+        }
+
+        if(screen.width<=480){
+            ad_vars.screen_type="mobile";
+        }else if(screen.width<=768){
+            ad_vars.screen_type="tablet";
+        }else{
+            ad_vars.screen_type="desktop";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function ad_ispremium(){
+            return (app.data.ispremium==1 && app.data.connectedUser!=1 && app.data.connectedUser!=9 && app.data.connectedUser!=1214595)?1:0;
+        }
+        function disabled_ads(){
+
+        }
+
+        function checkEnabled(){
+
+
+            if (browser.isIe() && browser.getVersion() <= 9) {
+                return false;
+            }
+
+            if('ad_vars' in window){
+                if('disabled' in window.ad_vars){
+                    if(console)console.log('disabled : ad_vars.disabled=true')
+                    return false;
+                }
+            }
+
+            if(ad_ispremium()  ){
+                if(console)console.log('disabled : ispremium disable ads')
+                return false;
+            }
+
+            if( (/disable_ads=1/).test(location.search) ){
+                if(console)console.log('disabled : disabled')
+                return false;
+            }
+
+
+
+            if( !('ad_vars' in window) ){
+                if(console)console.log('disabled : undefined ad_vars')
+                return false;
+            }
+
+            if(  !('pagetype' in ad_vars)  ){
+                if(console)console.log('disabled : ad_vars.pagetype undefined')
+                return false;
+            }
+
+            if(location.host!='booknode.com'){
+                if(console)console.log('disabled : !booknode')
+                return false;
+            }
+
+            return true;
+        }
+
+        function hideBlocs(){
+            //$('.DFP_pub_pave_index, .DFP_pub_pave_book').hide();
+        }
+
+
+        if(!checkEnabled()){
+            hideBlocs()
+            return;
+        }
+
+        function validForHabillage(){
+            console.log('validForHabillage', $(window).width())
+            if($(window).width()<=1024)return false;
+
+            if( (/modos\//).test(location.href)){
+                return false;
+            }
+
+
+            return true;
+        }
+
+        function validForGrandAngle(){
+            //return true;
+            //if($(window).width()<=1024)return false;
+            if(screen.width<768)return false;
+
+
+            return true;
+        }
+
+        function validForMobilebanner(){
+
+            if(app.tools.dfp.mobileBannerClosed()){
+                return false;
+            }
+
+            return screen.width<768;
+        }
+
+
+        (function() {
+            var gads = document.createElement("script");
+            gads.async = true;
+            gads.type = "text/javascript";
+            var useSSL = "https:" == document.location.protocol;
+            gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+            var node =document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+
+
+
+        setDfpCookie();
+
+        var blocs={
+            'pave':'div-gpt-ad-1530564779324-0',
+            'hab':'div-gpt-ad-1531315006910-0',
+            'mobilebanner':'div-gpt-ad-1539096130960-0'
+        };
+
+        function addListener(){
+
+            googletag.pubads().addEventListener('ImpressionViewable', function(event){
+                console.log('ImpressionViewable', event)
+            })
+
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                var containsAd = !event.isEmpty;
+
+                if (event.slot.getSlotElementId() == blocs.mobilebanner ) {
+                    //console.log('rendered mobilebanner');
+                    if(containsAd){
+                        console.log('mobilebanner present')
+                        _gaq.push(['_trackEvent','DFP', 'mobilebanner', '', null, true]);
+                        // $('body').addClass('habillage_enabled ad_regie_habillage')
+                    }else{
+
+                    }
+                }
+
+                if (event.slot.getSlotElementId() == blocs.hab ) {
+                    //console.log('rendered hab');
+                    if(containsAd){
+                        console.log('habillage present')
+                        _gaq.push(['_trackEvent','DFP', 'habillage', '', null, true]);
+
+                        // $('body').addClass('habillage_enabled ad_regie_habillage')
+                    }else{
+
+                    }
+                }
+                if (event.slot.getSlotElementId() == blocs.pave ) {
+
+
+                    //console.log('slotRenderEnded pave '+(containsAd?'true':'false'));
+                    //console.log(event)
+                    if(containsAd){
+                        console.log('grand angle present')
+                        _gaq.push(['_trackEvent','DFP', 'pave', '', null, true]);
+
+                        $('.panel-publicitaire').removeClass('hidden');
+                        app.tools.mainEventBus.publish('regie-carre-pub', {'status':app.tools.regie.AD_EXISTING});
+                    }else{
+                        console.log('dfp publish a the no ad available status')
+                        app.tools.mainEventBus.publish('regie-carre-pub', {'status':app.tools.regie.NO_AD_AVAILABLE});
+                    }
+                }
+
+            });
+        }
+
+        googletag.cmd.push(function() {
+
+            setTargeting();
+
+            addListener();
+
+            if(validForGrandAngle()){
+                var slot = googletag.defineSlot('/5204206/bkn-GA', [[300, 600], [300, 250]], blocs.pave)
+                    .addService(googletag.pubads());
+            }
+
+            if(validForHabillage()){
+                console.log('start habillage');
+                var hab = googletag.defineSlot('/5204206/bkn-habillage', [1, 1], blocs.hab)
+                    .addService(googletag.pubads());
+            }
+
+            if(validForMobilebanner()){
+                console.log('start mobilebanner');
+                var hab = googletag.defineSlot('/5204206/bkn-mobilebanner', [1, 2], blocs.mobilebanner)
+                    .addService(googletag.pubads());
+            }
+
+
+            googletag.pubads().setCentering(true);
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+
+            if(validForGrandAngle()){
+                googletag.display(blocs.pave);
+            }else{
+                app.tools.mainEventBus.publish('regie-carre-pub', {'status':app.tools.regie.NO_AD_AVAILABLE});
+            }
+
+            if(validForHabillage()){
+
+                googletag.display(blocs.hab)
+            }
+            if(validForMobilebanner()){
+
+                googletag.display(blocs.mobilebanner)
+            }
+
+        });
+
+        //googletag.cmd.push(function() { googletag.display(blocs.pave); });
+
+
+        function setDfpCookie(){
+            var name="dfp_online";
+            var value="online";
+            var expires = "";
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+
+
+        function setTargeting(){
+            for(var k in ad_vars){
+                if((/,/).test(ad_vars[k]) ){
+                    var tmp=ad_vars[k].split(',')
+                    tmp.pop();tmp.shift()
+                    //console.log('set targetting', k, tmp)
+                    googletag.pubads().setTargeting(k, tmp);
+
+                }else{
+                    //console.log('set targetting', k, ad_vars[k])
+                    googletag.pubads().setTargeting(k, String(ad_vars[k]) );
+
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+    };
+
+
+
+
+
+</script>
+
+
+<!-- /5646810647/dfp-bkn-Interstitiel -->
+<!-- <div id='div-gpt-ad-1457808113000-2'></div> -->
+<!---->
+
+
+
+
+
+<!--g 0.0052897930145264-->
+
+<div id="polyClip-tmp"></div><div id="polyClip-tmp"></div><div id="polyClip-tmp"></div><div id="polyClip-tmp"></div></body></html>
+{#<link type="text/css" href="{{ asset('assets/front/include.css') }}" rel="stylesheet">#}
+{% endif %}

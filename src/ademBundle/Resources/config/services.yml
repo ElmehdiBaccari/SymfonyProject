@@ -1,0 +1,4 @@
+services:
+#    adem.example:
+#        class: ademBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
